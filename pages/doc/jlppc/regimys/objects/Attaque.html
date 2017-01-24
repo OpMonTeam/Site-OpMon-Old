@@ -29,7 +29,7 @@
 <h1><a class="anchor" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Classe
 jlppc.regimys.objects.Attaque</h1>
 <p>La classe qui définit une espèce de Pokémon.</p>
-<p><span class="keyword">public class</span> Attaque <span class="keyword">extends</span> <a href="RegimysObject.html">RegimysObject</a>
+<p><span class="keyword">public abstract class</span> Attaque <span class="keyword">extends</span> <a href="RegimysObject.html">RegimysObject</a>
 <span class="keyword">implements</span> <a href="http://docs.oracle.com/javase/8/docs/api/java/io/Serializable.html">Serializable</a></p>
 <ul>
   <li><a href="#vars">Variables</a></li>
@@ -42,29 +42,39 @@ Variables :
 <ul id="vars">
 
   <li><code></code><code><span class="keyword">protected</span> <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html">String</a> nom</code> : Le nom de l'attaque</li>
-  <li><code><span class="keyword">protected int</span>&nbsp;puissance</code> : La puissance de l'Attaque</li>
-  <li><code><span class="keyword">protected int</span>&nbsp;priorite</code> : Le niveau de priorité de l'Attaque</li>
-  <li><code><span class="keyword">protected short</span>&nbsp;precision</code> : La precision de l'Attaque</li>
+  <li><code><span class="keyword">protected int</span> puissance</code> : La puissance de l'Attaque</li>
+  <li><code><span class="keyword">protected int</span> priorite</code> : Le niveau de priorité de l'Attaque</li>
+  <li><code><span class="keyword">protected short</span> precision</code> : La precision de l'Attaque</li>
   <li><code><span class="keyword">protected</span>&nbsp;<a href="../Type.html">Type</a> type</code> : Le type de l'Attaque</li>
-  <li><code><span class="keyword">protected boolean</span>&nbsp;special</code> : <code class="keyword">true</code> si l'attaque est spéciale, <code class="keyword">false</code> si elle est physique.<br>
-  </li>
+  <li><code><span class="keyword">protected boolean</span> special</code> : <code class="keyword">true</code> si l'attaque est spéciale, <code class="keyword">false</code> si elle est physique.<br>
+  <li><code><span class="keyword">protected boolean</span> status</code> : Si c'est une atatque de status ou non</li>
+  <li><code><span class="keyword">protected int</span> part</code> : La partie de l'attaque. Variable utilisée lors des attaques a plusieurs parties.</li>
+  <li><code><span class="keyword">protected int</span> pp</code> : Les pp actuels de l'Attaque</li>
+  <li><code><span class="keyword">protected int</span> ppMax</code> : Les pp max de l'attaque</li>
+  <li><code><span class="keyword">protected int</span> chanceDeCoups</code> : La chance de coups critique (1 chance sur cette variable)</li>
+  <li><code><span class="keyword">protected boolean</span> rateJamais</code> : Si l'attaque ne rate jamais</li>
+  <li><code><span class="keyword">protected int</span> pvPerdus</code> : Contient les PV perdus par l'attaque, après le calcul des dégats</li>
+  
 
 </ul>
 
 Classes internes :
 <ul id="sousclasses">
-  <li><code><span id="courbexp" class="keyword"><br>
-    </span></code></li>
+  <li>Aucune classe interne n'est présente dans cette classe.</li>
 </ul>
 Constructeurs :
 <ul id="constructeurs">
-  <li><code><span class="keyword"><br>
-    </span></code></li>
-</ul>
+  <li><code><span class="keyword">protected</span> Attaque(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html">String</a> nom, <span class="keyword">int</span> puissance, <a href="../enums/Typ.htmle">Type</a> type, <span class="keyword">int</span> precision, <span class="keyword">boolean</span> special, <span class="keyword">boolean</span> status, <span class="keyword">int</span> chanceDeCoups, <span class="keyword">boolean</span> rateJamais, <span class="keyword">int</span> ppMax)</code> : Constructeur normal.</li>
+<li><code><span class="keyword">protected</span> Attaque(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html">String</a> nom, <span class="keyword">int</span> puissance, <a href="../enums/Typ.htmle">Type</a> type, <span class="keyword">int</span> precision, <span class="keyword">boolean</span> special, <span class="keyword">boolean</span> status, <span class="keyword">int</span> chanceDeCoups, <span class="keyword">boolean</span> rateJamais, <span class="keyword">int</span> ppMax, <span class="keyword">int</span> priorite)</code> : Constructeur avec la priorite.</li>
+  </ul>
 Methodes :
 <ul id="methodes">
-  <li><br>
-  </li>
+  <li>Je ne documente pas les setters et getters</li>
+  <li><code><span class="keyword">public final void</span> attack(<a href="Pokemon/html">Pokemon</a> atk, <a href="Pokemon/html">Pokemon</a> def) </code> : Lance une attaque du pokemon attaquant (atk) contre le pokemon defenseur (def)</li>
+  <li>AVERTISSEMENT : Dans les prochaines methodes, il y aura les paramètres de type Pokemon atk et def qui ne seront pas documentés car il signifient la meme chose que l'attaque d'au dessus</li>
+  <li><code><span class="keyword">public abstract void</span> effetAvant(<a href="Pokemon/html">Pokemon</a> atk, <a href="Pokemon/html">Pokemon</a> def)</code> : Methode a redefinir permettant d'effectuer une action avant le calcul des dégats.</li>
+  <li><code><span class="keyword">public abstract void</span> effetApres(<a href="Pokemon/html">Pokemon</a> atk, <a href="Pokemon/html">Pokemon</a> def)</code> : Methode a redefinir permettant d'effectuer une action après le calcul des dégats.</li>
+  <li><code><span class="keyword">public void</span> siEchoue(<a href="Pokemon/html">Pokemon</a> atk, <a href="Pokemon/html">Pokemon</a> def)</code> : methode vide dont la redefinition n'est pas obligatoire permettant d'effectuer une action lorsque l'attaque echoue.</li>
 </ul>
 </div>
 
