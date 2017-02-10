@@ -1,7 +1,7 @@
 body {
   margin: 0;
   padding: 0;
-  background-image:radial-gradient(black, white);
+background-image:linear-gradient(to right, white, black);
   color: #eaeaea;
   font: 16px;
   line-height: 1.5;
