@@ -1,8 +1,10 @@
 body {
   margin: 0;
   padding: 0;
-  background-image:linear-gradient(90deg, white, black);
+  background-image:linear-gradient(, black);
   color: #eaeaea;
+  background: -moz-linear-gradient(left, rgba(255,255,255,1) 0%, rgba(0,0,0,1) 42%, rgba(0,0,0,1) 58%, rgba(255,255,255,1) 100%);
+  background: -webkit-linear-gradient(left, rgba(255,255,255,1) 0%,rgba(0,0,0,1) 42%,rgba(0,0,0,1) 58%,rgba(255,255,255,1) 100%);
   font: 16px;
   line-height: 1.5;
   font-family: Monaco, "Bitstream Vera Sans Mono", "Lucida Console", Terminal, monospace;
