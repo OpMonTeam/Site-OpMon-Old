@@ -1,4 +1,4 @@
-# Site du projet Pokemon Regimys
+# Site de OpMon Lazulli
 
 Informations generales:<br/>
 Ce dépot est dédié au site du projet de jeu vidéo libre "OpMon Lazulli" créé par Jlppc<br/>
