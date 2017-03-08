@@ -1,4 +1,4 @@
-# Site de OpMon Lazulli
+# Site de OpMon Lazuli
 
 Informations generales:<br/>
 Ce dépot est dédié au site du projet de jeu vidéo libre "OpMon Lazulli" créé par Jlppc<br/>
