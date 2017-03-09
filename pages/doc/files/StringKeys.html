@@ -8,7 +8,7 @@
     <link rel="stylesheet" type="text/css" href="http://opmon-game.ga/stylesheets/github-dark.css" media="screen">
     <link rel="stylesheet" type="text/css" href="http://opmon-game.ga/stylesheets/print.css" media="print">
 
-    <title>OpMon Lazuli - Documentation - main.hpp</title>
+    <title>OpMon Lazuli - Documentation - StringKeys.hpp</title>
   </head>
 
    <body>
@@ -29,16 +29,16 @@
     <div class="container">
       <section id="main_content">
         <h1>
-<a class="anchor" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>main.hpp</h1>
+<a class="anchor" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>StringKeys.hpp</h1>
 <h2><p>Liste des éléments :</p></h2><code>
 <ul>
     <li><a href="#stringkeys"><code>namespace StringKeys</code></a><ul>
         <li><a href="#keysFile"><code>std::ifstream keysFile</code></a></li>
-        <li><a><code>std::vector&lt;std::string&gt; keys</code></a></li>
-        <li><a><code>std::vector&lt;std::string&gt; strings</code></a></li>
-        <li><a><code>std::string get(std::string)</code></a></li>
-        <li><a><code>void initialize()</code></a></li>
-        <li><a><code>std::string split(std::string, char, int)</code></a></li>
+        <li><a href="#keys"><code>std::vector&lt;std::string&gt; keys</code></a></li>
+        <li><a href="#strings"><code>std::vector&lt;std::string&gt; strings</code></a></li>
+        <li><a href="#get"><code>std::string get(std::string)</code></a></li>
+        <li><a href="#initialize"><code>void initialize()</code></a></li>
+        <li><a href="#split"><code>std::string split(std::string, char, int)</code></a></li>
     </ul></li>
 
 </ul></code>
@@ -59,6 +59,12 @@ Contenu:<ul>
     <p>Fonction permettant de récuperer une chaine de caractères a partir de la clée associée, envoyée en paramètre (<code>key</code>). Si la clée n'existe pas, renvoie une chaine vide.</p></li>
     <li><h3 id="initialize"><code>void initialize()</code></h3>
     <p>Lit et enregistre les clées et les chaines de caractères.</p></li>
+    <li><h3 id="split"><code>std::string split(std::string str, char splitter, int part)</code></h3>
+    <p>Fonction séparant une chaine de caractère par rapport a un caractère et renvoyant une partie. <br/>Paramètres:<ul>
+        <li><code>std::string str</code> : La chaine de caractère a separer.</li>
+        <li><code>char splitter</code> : Le caractère spéparant la chaine.</li>
+        <li><code>int part</code>: La partie de la chaine séparée a renvoyer. Si le nombre est au dessus du nombre de parties, renvoie une chaine vide.</li>
+    </ul></ul></p></li>
 </ul>
       </section>
 
