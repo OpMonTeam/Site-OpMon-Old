@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+   <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+
+    <link rel="stylesheet" type="text/css" href="http://opmon-game.ga/stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="http://opmon-game.ga/stylesheets/github-dark.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="http://opmon-game.ga/stylesheets/print.css" media="print">
+
+    <title>OpMon Lazuli - Documentation - main.hpp</title>
+  </head>
+
+   <body>
+     <header>
+      <div class="container">
+        <h1><img src= https://raw.githubusercontent.com/jlppc/OpMon/master/Ressources/Autres/opmon_icon.png alt=Icone du jeu />Documentation OPMon Lazuli</h1>
+        <h2>Documentation du jeu OpMon Lazuli</h2>
+
+        <section id="downloads">
+          <a href="http://opmon-game.ga" class="btn">Accueil</a>
+          <a href="../../downloads.html" class="btn">Téléchargements</a>
+          <a href="../index.html" class="btn">Doc</a>
+          <a href="https://github.com/jlppc/OpMon" class="btn btn-github">Voir Github</a>
+          <a href="https://github.com/jlppc/OpMon/wiki" class="btn btn-github">Wiki</a>
+        </section>
+      </div>
+</header>
+    <div class="container">
+      <section id="main_content">
+        <h1>
+<a class="anchor" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>main.hpp</h1>
+<h2><p>Liste des éléments :</p></h2><code>
+<ul>
+    <li><a href="#stringkeys"><code>namespace StringKeys</code></a><ul>
+        <li><a href="#keysFile"><code>std::ifstream keysFile</code></a></li>
+        <li><a><code>std::vector&lt;std::string&gt; keys</code></a></li>
+        <li><a><code>std::vector&lt;std::string&gt; strings</code></a></li>
+        <li><a><code>std::string get(std::string)</code></a></li>
+        <li><a><code>void initialize()</code></a></li>
+        <li><a><code>std::string split(std::string, char, int)</code></a></li>
+    </ul></li>
+
+</ul></code>
+<br/>
+<br/>
+<br/>
+<h2>Namespace</h2>
+<h3 id="stringkeys"><code>namespace StringKeys</code></h3>
+<p>Ce namespace contient toutes les methodes affiliées a StringKeys. StringKeys permet de lire des chaines de caractère dans un fichier et de les associer a des clées, permettant une traduction de ces chaines de caractères sans besoin de recompilation et de recherche dans le code.</p>
+Contenu:<ul>
+    <li><h3 id="keysFile"><code>std::ifstream keysFile</code></h3>
+    <p>Flux d'entrée sur le fichier contenant les chaines de caractères.</p></li>
+    <li><h3 id="keys"><code>std::vector&lt;std::string&gt; keys</code></h3>
+    <p>Vector contenant les clées associées aux chaines de caractères.</p></li>
+    <li><h3 id="strings"><code>std::vector&lt;std::string&gt; strings</code></h3>
+    <p>Vector contenant les chaines de caractère, dans le même ordre que le vector des clées.</p></li>
+    <li><h3 id="get"><code>std::string get(std::string keys)</code></h3>
+    <p>Fonction permettant de récuperer une chaine de caractères a partir de la clée associée, envoyée en paramètre (<code>key</code>). Si la clée n'existe pas, renvoie une chaine vide.</p></li>
+    <li><h3 id="initialize"><code>void initialize()</code></h3>
+    <p>Lit et enregistre les clées et les chaines de caractères.</p></li>
+</ul>
+      </section>
+
+    </div>
+
+
+  </body>
+</html>
