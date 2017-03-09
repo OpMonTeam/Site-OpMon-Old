@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+   <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+
+    <link rel="stylesheet" type="text/css" href="http://opmon-game.ga/stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="http://opmon-game.ga/stylesheets/github-dark.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="http://opmon-game.ga/stylesheets/print.css" media="print">
+
+    <title>OpMon Lazuli - Documentation - Initializer.hpp</title>
+  </head>
+
+   <body>
+     <header> <li><a href="#listeOp">Espece *listeOp[]</a></li>
+  <li><a>std::vector&lt;NumberedArray&lt;Class&lt;Attaque* &gt; &gt; &gt; opOpLvl</a></li>
+    <li><a>std::vector&lt;int&gt; evs[]</a></li>
+    <li><a>void init()</a></li>
+      <div class="container">
+        <h1><img src= https://raw.githubusercontent.com/jlppc/OpMon/master/Ressources/Autres/opmon_icon.png alt=Icone du jeu />Documentation OPMon Lazuli</h1>
+        <h2>Documentation du jeu OpMon Lazuli</h2>
+
+        <section id="downloads">
+          <a href="http://opmon-game.ga" class="btn">Accueil</a>
+          <a href="../../downloads.html" class="btn">Téléchargements</a>
+          <a href="../index.html" class="btn">Doc</a>
+          <a href="https://github.com/jlppc/OpMon" class="btn btn-github">Voir Github</a>
+          <a href="https://github.com/jlppc/OpMon/wiki" class="btn btn-github">Wiki</a>
+        </section>
+      </div>
+</header>
+    <div class="container">
+      <section id="main_content">
+        <h1>
+<a class="anchor" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Initializer.hpp</h1>
+<h2><p>Liste des éléments :</p></h2><code>
+<ul>
+
+    <li><a href="#ATK_LIST">ATK_LIST(OpId)</a></li>
+    <li><a href="#ATK_ADD_LIST">ATK_ADD_LIST(OpID, atkLength)</a></li>
+    <li><a href="#OP_NUMBER">OP_NUMBER</a></li>
+    <li><a href="#nInitializer">namespace Initializer</a><ul>
+        <li><a href="#listeOp">Espece *listeOp[]</a></li>
+        <li><a href="#opOpLvl">std::vector&lt;NumberedArray&lt;Class&lt;Attaque* &gt; &gt; &gt; opOpLvl[]</a></li>
+        <li><a href="#evs">std::vector&lt;int&gt; evs[]</a></li>
+        <li><a href="#init">void init()</a></li>
+    </ul></li>
+
+</ul></code>
+<br/>
+<br/>
+<br/>
+<h2>Macros</h2>
+<h3 id="ATK_LIST"><code>ATK_LIST(OpId)</code></h3>
+<p>Macro permettant de raccourcir l'ajout des attaques. OpId est l'identifiant de l'espece OpMon a qui rajouter l'attaque dans le tableau listeOp. Il faut ensuite faire suivre ce macro de <code>ATK_LIST(ID) = {NumberedArray(attaque, niveau), NumberedArray(attaque, niveau), ect...}</code>.</p>
+<h3 id="ATK_ADD_LIST"><code>ATK_ADD_LIST(OpID, atkLength)</code></h3>
+<p>Macro permettant de raccourcir l'ajout des attaques initialisées grace a ATK_LIST. OpID est le numéro de l'espece OpMon dans le tableau listeOp et atkLength représente le nombre d'attaques par niveau entrées dans le tableau déclaré avec ATK_LIST</p>
+<h3 id="OP_NUMBER"><code>OP_NUMBER</code></h3>
+<p>Constante contenant le nombre total d'especes de OpMon, et qui permet de regler la taille des tableaux.</p>
+<h2>Namespace</h2>
+<h3 id="nInitializer"><code>namespace Initializer</code></h3>
+<p>Namespace contenant les fonctions et variables permettant de charger et d'initialiser les éléments du jeu.</p>
+Contenu : <ul>
+    <li><h3 id="listeOp"><code><a href="Espece.html#cEspece">Espece</a> *listeOp[OP_NUMBER]</code></h3>
+    <p>Tableau de pointeurs contenant la liste des Especes OpMon du jeu.</p></li>
+    <li><h3 id="opOpLvl"><code>std::vector&lt;NumberedArray&lt;Class&lt;Attaque* &gt; &gt; &gt; opOpLvl[OP_NUMBER]</code></h3>
+    Contient les attaques par niveau des especes.</li>
+    <li><h3 id="evs"><code>std::vector&lt;int&gt; evs[OP_NUMBER]</code></h3>
+    Contient les Ev de tous les OpMon.</li>
+    <li><h3 id="init"><code>void init()</code></h3>
+    <p>Initialise tous les éléments du jeu.</p></li>
+</ul>
+
+
+      </section>
+
+    </div>
+
+
+  </body>
+</html>
