@@ -1,2 +1,2 @@
 User-agent: *
-Disallow: /pages/doc/jlppc/
+Disallow: /pages/doc/files/
