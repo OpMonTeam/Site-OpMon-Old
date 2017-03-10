@@ -78,13 +78,118 @@
           <li><a href="#tauxCapture">int tauxCapture</a></li>
       </ul></li>
       <li>PUBLIC:<ul>
-          <li>TODO.</li>
+          <li><a href="#falsif">bool falsif</a></li>
+          <li><a href="#confus">bool confus</a></li>
+          <li><a href="#peur">bool peur</a></li>
+          <li><a href="#amour">bool amour</a></li>
+          <li><a href="#vampigraine">bool vampigraine</a></li>
+          <li><a href="#malediction">bool malediction</a></li>
+          <!--<li><a href="#ctorOpMon1">OpMon()</a></li>-->
+          <li><a href="#ctorOpMon2">OpMon(std::string, Espece, int, Attaque*[], CaractereClass)</a></li>
+          <li><a href="#captured">bool captured(I_Opball&amp;)</a></li>
+          <li><a href="#setStat">void setStat(std::string&amp;, int)</a></li>
+          <li><a href="#levelUp">void levelUp()</a></li>
+          <li><a href="#isHoldingItem">bool isHoldingItem()</a></li>
+          <li><a href="#win">int win(OpMon&amp;)</a></li>
+          <li><a href="#itemUsed">bool itemUsed(Item*)</a></li>
+          <li><a href="#hold">Item* hold(Item*)</a></li>
+          <li><a href="#traded">void traded()</a></li>
+          <!--<li><a href="#toolEvTrade()">void toolEvTrade()</a></li>-->
+          <li><a href="#evolve">void evolve()</a></li>
+          <li><a href="#setStats">void setStats(int[], Attaque*[], Espece*, int[])</a></li>
+          <li><a href="#attacked">void attacked(int)</a></li>
+          <li><a href="#changeATK">bool changeATK(int)</a></li>
+          <li><a href="#changeDEF">bool changeDEF(int)</a></li>
+          <li><a href="#changeATKSPE">bool changeATKSPE(int)</a></li>
+          <li><a href="#changeDEFSPE">bool changeDEFSPE(int)</a></li>
+          <li><a href="#changeVIT">bool changeVIT(int)</a></li>
+          <li><a href="#changeESQ">bool changeESQ(int)</a></li>
+          <li><a href="#changePRE">bool changePRE(int)</a></li>
+          <li><a href="#setStatus">bool setStatus(int)</a></li>
+          <li><a href="#heal">void heal(int)</a></li>
+          <li><a href="#operator==">bool operator==(OpMon&amp;)</a></li>
+          <li><a href="#operator!=">bool operator!=(OpMon&amp;)</a></li>
       </ul></li>
   </ul></li>
 </ul></code>
 <br/>
 <br/>
 <br/>
+<h2>Namespace</h2>
+<h3 id="nCalcCourbes">namespace CalcCourbes</h3>
+<p>Ce namespace contient des fonctions permettant de calculer sur les courbes d'experience des OpMon.</p>
+<h2>Classe</h2>
+<h3 id="cOpMon">class OpMon</h3>
+<p>Cette classe contient tout ce qui définit un OpMon.</p>
+Contenu :<ul>
+    <li>Private:<ul>
+        <li><h3 id="surnom">std::string surnom</h3>
+        <p>Contient le surnom de l'OpMon</p></li>
+
+        <li><h3 id="atkIV">int atkIV</h3>
+        <p>Contient les IV attaque de l'OpMon. Contient un nombre aléatoire entre 0 et 31.</p></li>
+
+         <li><h3 id="defIV">int defIV</h3>
+        <p>Contient les IV défense de l'OpMon. Contient un nombre aléatoire entre 0 et 31.</p></li>
+
+         <li><h3 id="atkSpeIV">int atkSpeIV</h3>
+        <p>Contient les IV attaque spéciale de l'OpMon. Contient un nombre aléatoire entre 0 et 31.</p></li>
+
+         <li><h3 id="defSpeIV">int defSpeIV</h3>
+        <p>Contient les IV défense spéciale de l'OpMon. Contient un nombre aléatoire entre 0 et 31.</p></li>
+
+         <li><h3 id="vitIV">int vitIV</h3>
+        <p>Contient les IV vitesse de l'OpMon. Contient un nombre aléatoire entre 0 et 31.</p></li>
+
+         <li><h3 id="pvIV">int pvIV</h3>
+        <p>Contient les IV PV de l'OpMon. Contient un nombre aléatoire entre 0 et 31.</p></li>
+
+         <li><h3 id="atkEV">int atkEV</h3>
+        <p>Contient les EV attaque de l'OpMon. </p></li>
+
+         <li><h3 id="defEV">int defEV</h3>
+        <p>Contient les EV défense de l'OpMon. </p></li>
+
+         <li><h3 id="atkSpeEV">int atkSpeEV</h3>
+        <p>Contient les EV attaque spéciale de l'OpMon. </p></li>
+
+         <li><h3 id="defSpeEV">int defSpeEV</h3>
+        <p>Contient les EV défense spéciale de l'OpMon. </p></li>
+
+         <li><h3 id="vitEV">int vitEV</h3>
+        <p>Contient les EV vitesse de l'OpMon. </p></li>
+
+         <li><h3 id="pvEV">int pvEV</h3>
+        <p>Contient les EV PV de l'OpMon. </p></li>
+
+        <li><h3 id="statATK">int statATK</h3>
+        <p>Contient la statistique d'attaque de l'OpMon</p></li>
+
+        <li><h3 id="statDEF">int statDEF</h3>
+        <p>Contient la statistique d'défense de l'OpMon</p></li>
+
+        <li><h3 id="statATKSPE">int statATKSPE</h3>
+        <p>Contient la statistique d'attaque spéciale de l'OpMon</p></li>
+
+        <li><h3 id="statDEFSPE">int statDEFSPE</h3>
+        <p>Contient la statistique de défense spéciale de l'OpMon</p></li>
+
+        <li><h3 id="statVIT">int statVIT</h3>
+        <p>Contient la statistique de vitesse de l'OpMon</p></li>
+
+        <li><h3 id="statESQ">int statESQ</h3>
+        <p>Contient la statistique d'esquive de l'OpMon</p></li>
+
+        <li><h3 id="statPRE">int statPRE</h3>
+        <p>Contient la statistique de précision de l'OpMon</p></li>
+
+        <li><h3 id="statPV">int statPV</h3>
+        <p>Contient la statistique de PV de l'OpMon</p></li>
+
+
+
+    </ul></li>
+</ul>
       </section>
 
     </div>
