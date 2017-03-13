@@ -85,7 +85,7 @@
           <li><a href="#vampigraine">bool vampigraine</a></li>
           <li><a href="#malediction">bool malediction</a></li>
           <!--<li><a href="#ctorOpMon1">OpMon()</a></li>-->
-          <li><a href="#ctorOpMon2">OpMon(std::string, Espece, int, Attaque*[], CaractereClass)</a></li>
+          <li><a href="#ctorOpMon2">OpMon(std::string, Espece*, int, Attaque*[], CaractereClass)</a></li>
           <li><a href="#captured">bool captured(I_Opball&amp;)</a></li>
           <li><a href="#setStat">void setStat(std::string&amp;, int)</a></li>
           <li><a href="#levelUp">void levelUp()</a></li>
@@ -255,6 +255,106 @@ Contenu :<ul>
     <li>Public:<ul>
         <li><h3 id="falsif">bool falsif</h3>
         <p>Permet de differencier un OpMon d'un OpMon vide (utilisé dans Equipe)</p></li>
+
+        <li><h3 id="confus">bool confus</h3>
+        <p>Si true, l'OpMon est confus</p></li>
+
+        <li><h3 id="peur">bool peur</h3>
+        <p>Si true, l'OpMon est apeuré</p></li>
+
+        <li><h3 id="amour">bool amour</h3>
+        <p>Si true, l'OpMon est amoureux</p></li>
+
+        <li><h3 id="vampigraine">bool vampigraine</h3>
+        <p>Si true, l'OpMon est affecté par vampigraine</p></li>
+
+        <li><h3 id="malediction">bool malediction</h3>
+        <li>Si true, l'OpMon est affecté par malediction</li></li>
+
+        <li><h3 id="ctorOpMon2">OpMon(std::string surnom, Espece *espece, int level, Attaque *attaques[], CaractereClass caractere)</h3>
+        <p>Constructeur permettant de construire un OpMon. Les paramètres sont associés aux variables du même nom.</p></li>
+
+        <li><h3 id="captured">bool captured(I_Opball &opball)</h3>
+        <p>Retourne true si l'OpMon est capturé en utilisant l'opball donné en paramètre.</p></li>
+
+        <li><h3 id="setStat">void setStat(std::string &stat, int newStat)</h3>
+        <p>Permet de changer une statistique par le paramètre newStat, selon la chaine de caractère entrée : <ul>
+            <li>ATK : Change l'attaque</li>
+            <li>DEF : Change la défense</li>
+            <li>ATKSPE : Change l'attaque spéciale</li>
+            <li>DEFSPE : Change la défense spéciale</li>
+            <li>VIT : Change la vitesse</li>
+            <li>PV : Change les PV max</li>
+        </ul></p></li>
+
+        <li><h3 id="levelUp">void levelUp()</h3>
+        <p>Methode appelée lors d'une montée de niveau</p></li>
+
+        <li><h3 id="isHoldingItem">bool isHoldingItem() const</h3>
+        <p>Permet de vérifier si l'OpMon tient un item</p></li>
+
+        <li><h3 id="win">int win(OpMon &vaincu)</h3>
+        <p>Methode appelée lorsque l'OpMon gagne un combat. Le paramètre contient une référence vers l'OpMon vaincu.</p></li>
+
+        <li><h3 id="calcStats">void calcStats</h3>
+        <p>Recalcule les statistiques a partir de l'espece et du caractère</p></li>
+
+        <li><h3 id="itemUsed">bool itemUsed(Item *used)</h3>
+        <p>Methode appelée lors de l'utilisation d'un item sur l'OpMon. Elle retourne true si l'item doit être supprimé de l'inventaire du joueur</p></li>
+
+        <li><h3 id="hold">Item* hold(Item *item)</h3>
+        <p>Permet de faire tenir un objet a l'OpMon. Renvoie l'item précédemment tenu, ou NULL si aucun item n'était présent. Pour retirer un item, il est possible de mettre NULL en paramètre.</p></li>
+
+        <li><h3 id="traded">void traded()</h3>
+        <p>Methode appelée lors d'un échange</p></li>
+
+        <li><h3 id="toolEvTrade">void toolEvTrade()</h3>
+        <p>SPOILERS!</p></li>
+
+        <li><h3 id="evolve">void evolve()</h3>
+        <p>Methode appelée lors de l'évolution de l'OpMon.</p></li>
+
+        <li><h3 id="setStats">void setStats(int stats[], Attaque *attacks, Espece *espace, int types[])</h3>
+        <p>Permet de reregler differentes variables. A utiliser avec moderation. Les stats doivent etre dans cet ordre dans le tableau : Attaque, Défense, Attaque Spe, Defense Spé, Vitesse, PV.</p></li>
+
+        <li><h3 id="attacked">void attacked(int pvPerdus)</h3>
+        <p>Fait perdre des PV a l'OpMon actuel</p></li>
+
+        <li><h3 id="changeATK">bool changeATK(int power)</h3>
+        <p>Fait baisse la statistique d'attaque selon la puissance donnée en paramètre</p></li>
+
+        <li><h3 id="changeDEF">bool changeDEF(int power)</h3>
+        <p>Fait baisse la statistique de défense selon la puissance donnée en paramètre</p></li>
+
+        <li><h3 id="changeATKSPE">bool changeATKSPE(int power)</h3>
+        <p>Fait baisse la statistique d'attaque spéciale selon la puissance donnée en paramètre</p></li>
+
+        <li><h3 id="changeDEFSPE">bool changeDEFSPE(int power)</h3>
+        <p>Fait baisse la statistique de défense spéciale selon la puissance donnée en paramètre</p></li>
+
+        <li><h3 id="changeVIT">bool changeVIT(int power)</h3>
+        <p>Fait baisse la statistique de vitesse selon la puissance donnée en paramètre</p></li>
+
+        <li><h3 id="changePV">bool changePV(int power)</h3>
+        <p>Fait baisse la statistique de PV selon la puissance donnée en paramètre</p></li>
+
+        <li><h3 id="changeESQ">bool changeESQ(int power)</h3>
+        <p>Fait baisse la statistique d'esquive selon la puissance donnée en paramètre</p></li>
+
+        <li><h3 id="changePRE">bool changePRE(int power)</h3>
+        <p>Fait baisse la statistique de précision selon la puissance donnée en paramètre</p></li>
+
+        <li><h3 id="setStatus">bool setStatus(int status)</h3>
+        <p>Permet de changer le status. Retourne false si le status n'a pas pu être changé</p></li>
+
+        <li><h3 id="heal">void heal(int PV)</h3>
+        <p>Soigne l'OpMon avec le nombre de PV donné en paramètre</p></li>
+
+        <li><h3 id="operator==">bool operator==(OpMon &a)</h3>
+        <p>Cet opérateur ne compare pas deux OpMon mais verifie si l'OpMon comparé est falsif ou non. Si les deux sont falsifs, retourne true, si les deux ne sont pas falsifs, retourne true, dans le reste des cas, retourne false.</p></li>
+
+        <li><h3 id="operator!=">bool operator!=(OpMon &a)</h3>
+        <p>Renvoie l'inverse de <a href="#operator==">operator==</a></p></li>
     </ul></li>
 </ul>
       </section>
