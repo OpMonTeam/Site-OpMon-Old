@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+   <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+
+    <link rel="stylesheet" type="text/css" href="http://opmon-game.ga/stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="http://opmon-game.ga/stylesheets/github-dark.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="http://opmon-game.ga/stylesheets/print.css" media="print">
+
+    <title>OpMon Lazuli - Documentation - Espece.hpp</title>
+  </head>
+
+   <body>
+     <header>
+      <div class="container">
+        <h1><img src="https://raw.githubusercontent.com/jlppc/OpMon/master/Ressources/Autres/opmon_icon.png" alt="Icone du jeu" />Documentation OPMon Lazuli</h1>
+        <h2>Documentation du jeu OpMon Lazuli</h2>
+
+        <section id="downloads">
+          <a href="http://opmon-game.ga" class="btn">Accueil</a>
+          <a href="../../downloads.html" class="btn">Téléchargements</a>
+          <a href="../index.html" class="btn">Doc</a>
+          <a href="https://github.com/jlppc/OpMon" class="btn btn-github">Voir Github</a>
+          <a href="https://github.com/jlppc/OpMon/wiki" class="btn btn-github">Wiki</a>
+        </section>
+      </div>
+</header>
+    <div class="container">
+      <section id="main_content">
+        <h1>
+<a class="anchor" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Espece.hpp</h1>
+<h2><p>Liste des éléments :</p></h2><code>
+<ul>
+  <li><a href="#nCourbeExp">namespace CourbeExp</a><ul>
+      <li>ERRATIQUE=0</li>
+      <li>FLUCTUANTE=1</li>
+      <li>LENTE=2</li>
+      <li>MOYENNE=3</li>
+      <li>PARABOLIQUE=4</li>
+      <li>RAPIDE=5</li>
+</ul></li>
+    <li><a href="#cEspece">class Espece</a><ul>
+        <li>PRIVATE:<ul>
+            <li><a href="#nom">std::string nom</a></li>
+            <li><a href="#numeroOpdex">int numeroOpdex</a></li>
+            <li><a href="#evolution">Espece *evolution</a></li>
+            <li><a href="#niveauEvolution">int niveauEvolution</a></li>
+            <li><a href="#evolType">Evolution *evolType</a></li>
+            <li><a href="#type1">int type1</a></li>
+            <li><a href="#type2">int type2</a></li>
+            <li><a href="#atksByLevels">NumberedArray< Class< Attaque > > atksByLevels[]</a></li>
+            <li><a href="#entreeOpdex">std::string entreeOpdex</a></li>
+            <li><a href="#taille">float taille</a></li>
+            <li><a href="#poids">float poids</a></li>
+            <li><a href="#ctCompatibles">CT ctCompatibles[]</a></li>
+            <li><a href="#baseAtk">int baseAtk</a></li>
+            <li><a href="#baseDef">int baseDef</a></li>
+            <li><a href="#baseAtkSpe">int baseAtkSpe</a></li>
+            <li><a href="#baseDefSpe">int baseDefSpe</a></li>
+            <li><a href="#baseVit">int baseVit</a></li>
+            <li><a href="#basePV">int basePV</a></li>
+            <li><a href="#courbe">int courbe</a></li>
+            <li><a href="#expMax">int expMax</a></li>
+            <li><a href="#EVgiven">int *EVgiven</a></li>
+            <li><a href="#expGiven">int expGiven</a></li>
+            <li><a href="#tauxDeCapture">int tauxDeCapture</a></li>
+            <li><a href="#evSize">int evSize</a></li>
+        </ul></li>
+        <li>PUBLIC:<ul>
+            <li><a href="#ctorEspece">Espece(int, int, int, int, int, int, std::string, int, int, int, int, int, Evolution*, std::vector< int > , float, float, std::string, int, int, int, int)</a></li>
+            <li><a href="#checkEvol">void checkEvol()</a></li>
+            <li><a href="#checkAtkLvls">void checkAtkLvls()</a></li>
+        </ul></li>
+    </ul></li>
+</ul></code>
+<br/>
+<br/>
+<br/>
+<h2>Namespace</h2>
+<h3 id="nCourbeExp">namespace CourbeExp</h3>
+<p>Namespace contenant une énumération : <ul>
+    <li>ERRATIQUE=0</li>
+      <li>FLUCTUANTE=1</li>
+      <li>LENTE=2</li>
+      <li>MOYENNE=3</li>
+      <li>PARABOLIQUE=4</li>
+      <li>RAPIDE=5</li>
+</ul></p>
+<h2>Classe</h2>
+<h3>class Espece</h3>
+<p>Définit une Espece d'OpMon.</p>
+Contenu :
+<ul>
+    <li>PRIVATE:<ul>
+        <li><h3 id="nom">std::string nom</h3>
+        <p>Contient le nom de l'Espece d'OpMon</p></li>
+        <li><h3 id="numeroOpdex">int numeroOpdex</h3>
+        <p>Contient le numero qui identifie l'Espece dans le Opdex</p></li>
+        <li><h3 id="evolution">Espece *evolution</h3>
+        <p>Contient un pointeur vers l'espece en laquelle cette espece evolue</p></li>
+        <li><h3 id="niveauEvolution">int niveauEvolution</h3>
+        <p>Contient le niveau auquel cette Espece evolue (Si elle evolue par niveau, sinon cette variable vaut -1)</p></li>
+        <li><h3 id="evolType">Evolution *evolType</h3>
+        <p>Contient le type d'évolution de cette Espece (voir evolutions.hpp)</p></li>
+        <li><h3 id="type1">int type1</h3>
+        <p>Contient le type premier de l'espece. Attend un élément de l'énumération "Type"</p></li>
+    </ul></li>
+</ul>
+
+      </section>
+
+    </div>
+
+
+  </body>
+</html>
