@@ -32,7 +32,12 @@
 
 </head>
 <body id="top" data-spy="scroll" data-target=".navbar-collapse" data-offset="50">
-
+<script>
+function goTo(url){
+	location.href=url;
+	reload();
+}
+</script>
 <!-- Preloader section -->
 <div class="preloader">
 	<div class="sk-spinner sk-spinner-pulse"></div>
@@ -93,7 +98,7 @@
       <div class="col-md-offset-2 col-md-8 col-sm-offset-1 col-sm-10">
           <div class="wow fadeInUp section-title" data-wow-delay="0.6s"><br/><br/><br/><br/><br/>
             <h2 >Telechargement</h2>
-            <h4>du jeu, par système</h4>
+            <h4>Jeu version Alpha 0.08.1</h4>
           </div>
       </div>
 
@@ -126,11 +131,10 @@
           <div class="feature-icon">
             <span><img src="https://image.flaticon.com/icons/png/128/39/39385.png"></i></span>
           </div>
-<script>function linuxDown(){
-alert("Attention ! Ceci va télécharger le dossier complet du dépot. Pour installer OpMon sous Linux, il vous suffit d'aller dans le dossier exeLinux et de lancer le Install.sh.");
-location.href="https://github.com/jlppc/OpMon/archive/master.zip";
-reload();
-
+<script>
+function linuxDown(){
+	alert("Attention ! Ceci va télécharger le dossier complet du dépot. Pour installer OpMon sous Linux, il vous suffit d'aller dans le dossier exeLinux et de lancer le Install.sh.");
+	goTo("https://github.com/jlppc/OpMon/archive/master.zip");
 }
 </script>
            <h3>Linux</h3>
@@ -139,9 +143,22 @@ reload();
         </div>
       </div>
 
+<div class="col-md-4 col-sm-6 wow fadeInUp" data-wow-delay="0.6s">
+      </div>
+<div class="col-md-4 col-sm-6 wow fadeInUp" data-wow-delay="0.6s">
+        <div class="feature-thumb">
+          <div class="feature-icon">
+            <span><img src=""></i></span>
+          </div>
+          <h3>Autres téléchargements</h3>
+          <p>Toutes plateformes</p>
+ <a href="downloads.html" class="wow fadeInUp btn btn-default hvr-bounce-to-top smoothScroll" data-wow-delay="1.3s">Voir tous les téléchargements</a>
+        </div>
+      </div>
+
     </div>
   </div>
-</section>
+</section><br/><br/>
 <!-- Feature section -->
 <section id="feature" class="parallax-section">
   <div class="container">
@@ -538,7 +555,7 @@ reload();
 	</div>
 </footer>
 
-<!-- Copyright section -->
+<!-- Copyleft section -->
 <section id="copyright">
   <div class="container">
     <div class="row">
