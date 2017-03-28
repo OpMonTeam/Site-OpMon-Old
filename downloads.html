@@ -79,7 +79,7 @@ function goTo(url){
       <div class="col-md-offset-2 col-md-8 col-sm-offset-1 col-sm-10">
           <div class="wow fadeInUp section-title" data-wow-delay="0.6s"><br/><br/><br/><br/><br/>
             <h2 >Telechargement</h2>
-            <h4>Jeu version Alpha 0.08.1</h4>
+            <h4>Jeu version Alpha 0.09</h4>
           </div>
       </div>
 
@@ -91,7 +91,7 @@ function goTo(url){
              <span><img src="https://blogs-images.forbes.com/erikkain/files/2012/02/335158-windows-8-window-e1329576588804.jpg?width=128&height=0" alt="Icone du jeu"></span>
           </div>
           <h3>Windows</h3>
-          <p>Windows 7/8.1/10</p>
+          <p>Windows XP ou + (32 ou 64 bits)</p>
  <a href="http://downloads.opmon-game.ga/pages/last.html" class="wow fadeInUp btn btn-default hvr-bounce-to-top smoothScroll" data-wow-delay="1.3s">Télécharger pour Windows</a>
         </div>
       </div>
@@ -110,22 +110,25 @@ function goTo(url){
       <div class="col-md-4 col-sm-6 wow fadeInUp" data-wow-delay="0.9s">
         <div class="feature-thumb">
           <div class="feature-icon">
-            <span><img src="https://image.flaticon.com/icons/png/128/39/39385.png"></i></span>
+            <span><img src="https://image.flaticon.com/icons/png/128/39/39385.png"/></span>
           </div>
 <script>
 function linuxDown(){
-	alert("Attention ! Ceci va télécharger le dossier complet du dépot. Pour installer OpMon sous Linux, il vous suffit d'aller dans le dossier exeLinux et de lancer le Install.sh.");
-	goTo("https://github.com/jlppc/OpMon/archive/master.zip");
+	alert("Pour installer OpMon sous Linux, il vous suffit de lancer le Install.sh pour installer les dépendences, de regler le fichier \"OpMon\" executable puis de le lancer.");
+	goTo("https://github.com/jlppc/OpMon/releases/download/alpha-v0.09/OpMon-Linux.tar.gz");
 }
 function warnLinux(){
-	alert("Désolé, les versions de développements ne sont actuellement pas disponibles sous Linux, du fait que Linux est toujours sur la dernière compilation.");
+	alert("Désolé, les versions de développements ne sont actuellement pas encore disponibles sous Linux. Patientez!");
 }
 function instruction(){
 	alert("Si vous avez un autre système, vous pouvez compiler vous même le code si gcc est disponible sur votre système grace au Makefile ou au fichier Code::blocks (Le fichier code::blocks est plus fiable ;-) ) N'oubliez pas d'installer les bibliothèques tierces sur votre ordinateur et de décompresser le zip SDL_Elements !");
 }
+function noDev(){
+	alert("Aucune version de développement n'est disponible actuellement! La dernière version est stable!");
+}
 </script>
            <h3>Linux</h3>
-           <p>Debian 8+/Ubuntu 16+/LinuxMint 18+</p>
+           <p>Debian 8+/Ubuntu 16+/LinuxMint 18+ (64 bits)</p>
  <a href="javascript:linuxDown();" class="wow fadeInUp btn btn-default hvr-bounce-to-top smoothScroll" data-wow-delay="1.3s">Télécharger pour Linux</a>
         </div>
       </div>
@@ -137,8 +140,8 @@ function instruction(){
           </div>
           <h3>Version de développement</h3>
           <p>Linux, Windows, Mac</p>
- <a href="http://downloads.opmon-game.ga/pages/source.html" class="wow fadeInUp btn btn-default hvr-bounce-to-top smoothScroll" data-wow-delay="1.3s">Télécharger pour Windows & Mac (wine)</a>
- <a href="javascript:warnLinux()" class="wow fadeInUp btn btn-default hvr-bounce-to-top smoothScroll" data-wow-delay="1.3s">Télécharger pour Linux</a>
+ <a href="javascript:noDev();" class="wow fadeInUp btn btn-default hvr-bounce-to-top smoothScroll" data-wow-delay="1.3s">Télécharger pour Windows & Mac (wine)</a>
+ <a href="javascript:warnLinux();" class="wow fadeInUp btn btn-default hvr-bounce-to-top smoothScroll" data-wow-delay="1.3s">Télécharger pour Linux</a>
         </div>
       </div>
 
@@ -163,7 +166,7 @@ function instruction(){
 	   <a href="https://github.com/jlppc/OpMon/archive/master.zip" class="wow fadeInUp btn btn-default hvr-bounce-to-top smoothScroll" data-wow-delay="1.3s">Télécharger le dépot (.zip)</a>
         </div>
       </div>
-<br/><br/><br/><br/><br/><br/><br/>
+	  <br/><br/><br/><br/><br/><br/><br/></div>
 </section>
 
 <!-- Footer section -->
