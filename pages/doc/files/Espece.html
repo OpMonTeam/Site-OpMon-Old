@@ -49,7 +49,7 @@
             <li><a href="#evolType">Evolution *evolType</a></li>
             <li><a href="#type1">int type1</a></li>
             <li><a href="#type2">int type2</a></li>
-            <li><a href="#atksByLevels">NumberedArray< Class< Attaque > > atksByLevels[]</a></li>
+            <li><a href="#atksByLevels">NumberedArray atksByLevels[]</a></li>
             <li><a href="#entreeOpdex">std::string entreeOpdex</a></li>
             <li><a href="#taille">float taille</a></li>
             <li><a href="#poids">float poids</a></li>
@@ -79,7 +79,7 @@
 <br/>
 <h2>Namespace</h2>
 <h3 id="nCourbeExp">namespace CourbeExp</h3>
-<p>Namespace contenant une énumération : <ul>
+<p>Namespace contenant l'énumération des differentes courbes d'experience : <ul>
     <li>ERRATIQUE=0</li>
       <li>FLUCTUANTE=1</li>
       <li>LENTE=2</li>
@@ -105,7 +105,54 @@ Contenu :
         <p>Contient le type d'évolution de cette Espece (voir evolutions.hpp)</p></li>
         <li><h3 id="type1">int type1</h3>
         <p>Contient le type premier de l'espece. Attend un élément de l'énumération "Type"</p></li>
+		<li><h3 id="type2">int type2</h3>
+		<p>Contient le second type de l'espece. Attend un élément de l'énumération "Type"</p></li>
+		<li><h3 id="atksByLevels">NumberedArray atksByLevels[]</h3>
+		<p>Contient les attaques et les niveaux associées aux apprentissages de celles-ci par l'espece</p></li>
+		<li><h3 id="entreeOpdex">std::string entreeOpdex</h3>
+		<p>Contient la description opdex de l'espece d'OpMon</p></li>
+		<li><h3 id="taille">float taille</h3>
+		<p>Contient la taille de l'OpMon</p>
+		<li><h3 id="poids">float poids</h3>
+		<p>Contient le poids de l'Opmon</p></li>
+		<li><h3 id="ctCompatibles">CT ctCompatibles[]</h3>
+		<p>Contient les CT compatibles avec l'Espece</p></li>
+		<li><h3 id="baseAtk">int baseAtk</h3>
+		<p>Contient la statistique de base d'attaque de l'espece</p></li>
+		<li><h3 id="baseDef">int baseAtk</h3>
+		<p>Contient la statistique de base de défense de l'espece</p></li>
+		<li><h3 id="baseAtkSpe">int baseAtk</h3>
+		<p>Contient la statistique de base d'attaque spéciale de l'espece</p></li>
+		<li><h3 id="baseDefSpe">int baseAtk</h3>
+		<p>Contient la statistique de base de défense sépciale de l'espece</p></li>
+		<li><h3 id="basePV">int baseAtk</h3>
+		<p>Contient les PV de base de l'espece</p></li>
+		<li><h3 id="baseAtk">int baseVit</h3>
+		<p>Contient la statistique de base de vitesse de l'espece</p></li>
+		<li><h3 id="courbe">int courbe</h3>
+		<p>Contient la courbe d'exp de l'espece. Attend un élément de l'énumération CourbeExp</p></li>
+		<li><h3 id="expMax">int expMax</h3>
+		<p>Contient l'exp de l'espece d'OpMon au niveau 100</p></li>
+		<li><h3 id="EVgiven">int *EVgiven</h3>
+		<p>Tableau contenant les EV donnés lors de la victoire sur cette espece</p></li>
+		<li><h3 id="expGiven">int expGiven</h3>
+		<p>Contient les exp de base donnés lors de la victoire du cette espece</p></li>
+		<li><h3 id="tauxDeCapture">int tauxDeCapture</h3>
+		<p>Contient le taux de capture de l'espece</p></li>
+		<li><h3 id="evSize">int evSize</h3>
+		<p>Contient la taille du tableau d'ev (EVgiven)</p></li>
     </ul></li>
+	<li>PUBLIC<ul>
+		<li><h3 id="ctorEspece">Espece(int atk, int def, int atkSpe, int defSpe, int vit, int pv, std::string name, int type1, int type2, int maniereEvolution, int niveauEvolution, Evolution *evolType, std::vector<int> EVGiven, float taille, float poids, std::string entreeOpdex, int expGiven, int expMax, int tauxDeCapture, int numeroOpdex)</h3>
+		<p>Constructeur d'espece. Les noms des paramètres sont normalement assez explicites, mais quelques indications sur ceux-ci:<ul>
+		<li>EVGiven contient la liste des ev donnés de l'espece qui seront mis dans EVgiven</li>
+		<li>niveauEvolution doit être a -1 si l'OpMon n'évolue pas par niveau (ou n'évolue pas tout court)</li></ul>
+	</ul></p></li>
+		<li><h3 id="checkEvol">void checkEvol()</h3>
+		<p>Cette methode permet de récuperer l'espece d'évolution après l'initialisation de toutes les especes</p></li>
+		<li><h3 id="checkAtkLvls">void checkAtkLvls()</h3>
+		<p>Cette methode permet de récuperer les attaques par niveau pour les initialiser en différé de l'initialisation de l'espece</p></li>
+	</ul></li>
 </ul>
 
       </section>
