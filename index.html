@@ -37,6 +37,14 @@ function goTo(url){
 	location.href=url;
 	reload();
 }
+	
+if (navigator.browserLanguage)
+	var language = navigator.browserLanguage; 
+else
+	var language = navigator.language; 
+
+if(language.indexOf('en') > -1)
+	goTo("eng.html");
 </script>
 <!-- Preloader section -->
 <div class="preloader">
@@ -85,7 +93,6 @@ function goTo(url){
         <!--<li><a href="#gallery" class="smoothScroll">Captures  d'écrans</a></li>-->
         <li><a href="#contact" class="smoothScroll">Contact</a></li>
 	<li><a href="pages/doc/index.html">Documentation</a></li>
-	<li><a href="eng.html">LOOK IN ENGLISH</a></li>
       </ul>
     </div>
 
