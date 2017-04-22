@@ -99,7 +99,7 @@ function goTo(url){
       <div class="col-md-4 col-sm-6 wow fadeInUp" data-wow-delay="0.6s">
         <div class="feature-thumb">
           <div class="feature-icon">
-            <span><img src="https://cdn4.iconfinder.com/data/icons/business-services-vol-1/26/35_apple_ios_logo_mac_os_platform_system-128.png"></i></span>
+            <span><img src="https://cdn4.iconfinder.com/data/icons/business-services-vol-1/26/35_apple_ios_logo_mac_os_platform_system-128.png"/></span>
           </div>
           <h3>macOS</h3>
           <p>MacOS 10.9 et +</p>
@@ -117,14 +117,15 @@ function linuxDown(){
 	alert("Pour installer OpMon sous Linux, il vous suffit de lancer le Install.sh pour installer les dépendences, de regler le fichier \"OpMon\" executable puis de le lancer.");
 	goTo("https://github.com/jlppc/OpMon/releases/download/alpha-v0.09/OpMon-Linux.tar.gz");
 }
-function warnLinux(){
-	alert("Désolé, les versions de développements ne sont actuellement pas encore disponibles sous Linux. Patientez!");
-}
 function instruction(){
 	alert("Si vous avez un autre système, vous pouvez compiler vous même le code si gcc est disponible sur votre système grace au Makefile ou au fichier Code::blocks (Le fichier code::blocks est plus fiable ;-) ) N'oubliez pas d'installer les bibliothèques tierces sur votre ordinateur et de décompresser le zip SDL_Elements !");
 }
-function noDev(){
+function warnDevWin(){
 	alert("Aucune version de développement n'est disponible actuellement! La dernière version est stable!");
+}
+function warnDevLinux(){
+	alert("Les versions de développement ne sont pas stables mais contiennent des fonctionalitées en avance. Ces versions sont par contre possiblement bugés.");
+	goTo("http://downloads.opmon-game.ga/installer/OpMon-Linux.tar.gz");
 }
 </script>
            <h3>Linux</h3>
@@ -140,8 +141,8 @@ function noDev(){
           </div>
           <h3>Version de développement</h3>
           <p>Linux, Windows, Mac</p>
- <a href="javascript:noDev();" class="wow fadeInUp btn btn-default hvr-bounce-to-top smoothScroll" data-wow-delay="1.3s">Télécharger pour Windows & Mac (wine)</a>
- <a href="javascript:warnLinux();" class="wow fadeInUp btn btn-default hvr-bounce-to-top smoothScroll" data-wow-delay="1.3s">Télécharger pour Linux</a>
+ <a href="javascript:warnDevWin();" class="wow fadeInUp btn btn-default hvr-bounce-to-top smoothScroll" data-wow-delay="1.3s">Télécharger pour Windows & Mac (wine)</a>
+ <a href="javascript:warnDevLinux();" class="wow fadeInUp btn btn-default hvr-bounce-to-top smoothScroll" data-wow-delay="1.3s">Télécharger pour Linux</a>
         </div>
       </div>
 
@@ -166,7 +167,7 @@ function noDev(){
 	   <a href="https://github.com/jlppc/OpMon/archive/master.zip" class="wow fadeInUp btn btn-default hvr-bounce-to-top smoothScroll" data-wow-delay="1.3s">Télécharger le dépot (.zip)</a>
         </div>
       </div>
-	  <br/><br/><br/><br/><br/><br/><br/></div>
+	    <br/><br/><br/><br/><br/><br/><br/></div></div>
 </section>
 
 <!-- Footer section -->
