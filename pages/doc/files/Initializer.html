@@ -12,7 +12,7 @@
   </head>
 
    <body>
-     <header>
+      <header>
       <div class="container">
         <img src="https://raw.githubusercontent.com/jlppc/OpMon/master/Ressources/Autres/opmon-icone.png" alt="Icone du jeu" /><h1>OPMon Lazuli</h1>
         <h2>Documentation du jeu OpMon Lazuli</h2>
@@ -32,44 +32,39 @@
 <a class="anchor" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Initializer.hpp</h1>
 <h2><p>Liste des éléments :</p></h2><code>
 <ul>
+    <li><a href="#OP_NUMBER">#define OP_NUMBER</a></li>
+    <li><a href="#ATK_LIST">#define ATK_LIST(OpId)</a></li>
+    <li><a href="#ATK_ADD_LIST">#define ATK_ADD_LIST(OpID, atkLenght)</a></li>
 
-    <li><a href="#ATK_LIST">ATK_LIST(OpId)</a></li>
-    <li><a href="#ATK_ADD_LIST">ATK_ADD_LIST(OpID, atkLength)</a></li>
-    <li><a href="#OP_NUMBER">OP_NUMBER</a></li>
-    <li><a href="#nInitializer">namespace Initializer</a><ul>
-        <li><a href="#listeOp">Espece *listeOp[]</a></li>
-        <li><a href="#opOpLvl">std::vector&lt;NumberedArray&lt;Class&lt;Attaque* &gt; &gt; &gt; opOpLvl[]</a></li>
-        
-		<li><a href="#evs">std::vector&lt;int&gt; evs[]</a></li>
-        <li><a href="#init">void init()</a></li>
-		<li><a href="#initSprites">void initSprites()</a></li>
-    </ul></li>
-
+  <li><a href="#nInitializer">namespace Initializer</a>
+  <ul><li><a href="#listeOp">Espece *listeOp[]</a></li>
+  <li><a href="#opOpLvl">std::vector&lt;NumberedArray&gt; opOpLvl[]</a></li>
+  <li><a href="#ne">Evolutions::E_Nope *ne</a></li>
+  <li><a href="#faubourgEuvi">Plan *faubourgEuvi</a></li>
+  <li><a href="#evs">std::vector&lt;int&gt; evs[]</a></li>
+  <li><a href="#initEvs">void initEvs()</a></li>
+  <li><a href="#initOpMons">void initOpMons()</a></li>
+  <li><a href="#initAtkLvls">void initAtkLvls()</a></li>
+  <li><a href="#initSprites">void initSprites()</a></li>
+  <li><a href="#initBackgrounds">void initBackgrounds()</a></li>
+  <li><a href="#initKeys">void initKeys()</a></li>
+  <li><a href="#init">void init()</a></li></ul></li>
 </ul></code>
 <br/>
 <br/>
 <br/>
 <h2>Macros</h2>
-<h3 id="ATK_LIST"><code>ATK_LIST(OpId)</code></h3>
-<p>Macro permettant de raccourcir l'ajout des attaques. OpId est l'identifiant de l'espece OpMon a qui rajouter l'attaque dans le tableau listeOp. Il faut ensuite faire suivre ce macro de <code>ATK_LIST(ID) = {NumberedArray(attaque, niveau), NumberedArray(attaque, niveau), ect...}</code>.</p>
-<h3 id="ATK_ADD_LIST"><code>ATK_ADD_LIST(OpID, atkLength)</code></h3>
-<p>Macro permettant de raccourcir l'ajout des attaques initialisées grace a ATK_LIST. OpID est le numéro de l'espece OpMon dans le tableau listeOp et atkLength représente le nombre d'attaques par niveau entrées dans le tableau déclaré avec ATK_LIST</p>
-<h3 id="OP_NUMBER"><code>OP_NUMBER</code></h3>
-<p>Constante contenant le nombre total d'especes de OpMon, et qui permet de regler la taille des tableaux.</p>
+<h3 id="OP_NUMBER">#define OP_NUMBER </h3>
+<p>Constante contenant le nombre d'OpMon au total.</p>
+<h3 id="ATK_LIST">#define ATK_LIST(OpId)</h3>
+<p>Macro aidant a la déclaration des attaques par niveau. Renvoie le nom d'un tableau contenant les attaques selon le numéro donné en paramètre.</p>
+<h3 id="ATK_ADD_LIST">#define ATK_ADD_LIST(OpID, atkLenght)</h3>
+<p>Ajoute les attaques du tableau contenant les attaques de l'OpMon dans le vecteur pour l'envoyer dans l'objet Espece.</p>
 <h2>Namespace</h2>
-<h3 id="nInitializer"><code>namespace Initializer</code></h3>
-<p>Namespace contenant les fonctions et variables permettant de charger et d'initialiser les éléments du jeu.</p>
-Contenu : <ul>
-    <li><h3 id="listeOp"><code><a href="Espece.html#cEspece">Espece</a> *listeOp[OP_NUMBER]</code></h3>
-    <p>Tableau de pointeurs contenant la liste des Especes OpMon du jeu.</p></li>
-    <li><h3 id="opOpLvl"><code>std::vector&lt;NumberedArray&lt;Class&lt;Attaque* &gt; &gt; &gt; opOpLvl[OP_NUMBER]</code></h3>
-    Contient les attaques par niveau des especes.</li>
-    <li><h3 id="evs"><code>std::vector&lt;int&gt; evs[OP_NUMBER]</code></h3>
-    Contient les Ev de tous les OpMon.</li>
-    <li><h3 id="init"><code>void init()</code></h3>
-    <p>Initialise tous les éléments du jeu.</p></li>
-	<li><h3 id="initSprites"><code>void initSprites()</code></h3>
-	<p>Initialise les éléments nécessitant le renderer (Après l'ouverture de la fenetre)</p></li>
+<h3 id="nInitializer">namespace Initializer</h3>
+<p>Contient les methodes nécessaires pour Initialiser et charger en mémoire les composants du programme. Contient les variables qui stockent ces derniers.</p>
+<ul>
+    <li><h3 id="listeOp">Espece *listeOp[OP_NUMBER]</h3></li>
 </ul>
 
 
