@@ -79,7 +79,7 @@ function goTo(url){
       <div class="col-md-offset-2 col-md-8 col-sm-offset-1 col-sm-10">
           <div class="wow fadeInUp section-title" data-wow-delay="0.6s"><br/><br/><br/><br/><br/>
             <h2 >Telechargement</h2>
-            <h4>Jeu version Alpha 0.1 (28/05/2017)</h4>
+            <h4>Jeu version Alpha 0.1 (30/05/2017)</h4>
           </div>
       </div>
 
@@ -114,24 +114,21 @@ function goTo(url){
           </div>
 <script>
 function linuxDown(){
-	alert("Erreur, impossible de demarrer le telechargement");
-	goTo("https://github.com/jlppc/OpMon/releases/download/alpha-v0.09/OpMon-Linux.tar.gz");
+	goTo("https://github.com/jlppc/OpMon/releases/download/alpha-v0.1/OpMon_0.1-bin.deb");
 }
 function instruction(){
-	alert("Si vous avez un autre système, vous pouvez compiler vous même le code si gcc est disponible sur votre système grace au Makefile ou au fichier Code::blocks (Le fichier code::blocks est plus fiable ;-) ) N'oubliez pas d'installer les bibliothèques tierces sur votre ordinateur et de décompresser le zip SDL_Elements !");
+	alert("Si vous avez un autre système, vous pouvez compiler vous même le code si gcc est disponible sur votre système grace au Makefile. Il y a deux makefiles, Linux et Windows, prenez celui qui vous convient le mieux selon votre système. N'oubliez pas d'installer sfml sur votre ordinateur ou de décompresser le zip libSFML si vous êtes sous windows !");
 }
 function warnDevWin(){
-	alert("Les versions de développement ne sont pas stables mais contiennent des fonctionalitées en avance. Ces versions sont par contre possiblement buguées.");
-	goTo("https://github.com/jlppc/OpMon/blob/master/installer/OpMon-Windows.zip?raw=true");
+	alert("La dernière version est stable!");
 }
 function warnDevLinux(){
-	alert("Les versions de développement ne sont pas stables mais contiennent des fonctionalitées en avance. Ces versions sont par contre possiblement buguées.");
-	goTo("https://github.com/jlppc/OpMon/blob/master/installer/OpMon-Linux.tar.gz?raw=true");
+	alert("La dernière version est stable!");
 }
 </script>
            <h3>Linux</h3>
            <p>Debian 8+/Ubuntu 16+/LinuxMint 18+ (64 bits)</p>
- <a href="INSERER LE .DEB">Télécharger pour Linux</a>
+ <a href="https://github.com/jlppc/OpMon/releases/download/alpha-v0.1/OpMon_0.1-bin.deb">Télécharger pour Linux</a>
         </div>
       </div>
 
