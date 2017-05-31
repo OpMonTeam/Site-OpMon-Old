@@ -37,14 +37,6 @@ function goTo(url){
 	location.href=url;
 	reload();
 }
-	
-if (navigator.browserLanguage)
-	var language = navigator.browserLanguage; 
-else
-	var language = navigator.language; 
-
-if(language.indexOf('en') > -1)
-	goTo("eng.html");
 </script>
 <!-- Preloader section -->
 <div class="preloader">
@@ -142,7 +134,7 @@ if(language.indexOf('en') > -1)
 <script>
 function linuxDown(){
 	alert("Pour installer OpMon sous Linux, il vous suffit de lancer le Install.sh pour installer les dépendences, de regler le fichier \"OpMon\" executable puis de le lancer.");
-	goTo("https://github.com/jlppc/OpMon/releases/download/alpha-v0.09/OpMon-Linux.tar.gz");
+	goTo("https://github.com/jlppc/OpMon/releases/download/alpha-v0.1/OpMon_0.1-bin.deb");
 }
 </script>
            <h3>Linux</h3>
