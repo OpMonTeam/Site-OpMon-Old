@@ -36,16 +36,6 @@
 function goTo(url){
 	location.href=url;
 	reload();
-
-if (navigator.browserLanguage)
-	var language = navigator.browserLanguage;
-else
-	var language = navigator.language;
-
-if(language.indexOf('en') > -1)
-	goTo("eng.html");
-if(language.indexOf('fr') > -1)
-	goTo("index.html");
 }
 </script>
 <!-- Preloader section -->
@@ -145,7 +135,7 @@ if(language.indexOf('fr') > -1)
           </div>
 <script>
 function linuxDown(){
-	goTo("https://github.com/jlppc/OpMon/releases/download/alpha-v0.1/OpMon_0.1-bin.deb");
+	goTo("https://github.com/jlppc/OpMon/releases/download/alpha-v0.11/OpMon_0.11-bin.deb");
 }
 </script>
            <h3>Linux</h3>
@@ -163,7 +153,7 @@ function linuxDown(){
           </div>
           <h3>Otras Descargas</h3>
           <p>Todas plateformas</p>
- <a href="downloads.html" class="wow fadeInUp btn btn-default hvr-bounce-to-top smoothScroll" data-wow-delay="1.3s">Ver todas las descargas</a>
+ <a href="downloads-en.html" class="wow fadeInUp btn btn-default hvr-bounce-to-top smoothScroll" data-wow-delay="1.3s">Ver todas las descargas</a>
 	</div></div></div>
 </section><br/><br/>
 <!-- Feature section -->
