@@ -1,2 +1,9 @@
 User-agent: *
-Disallow: /pages/doc/files/
+Disallow: /pages/
+Disallow: macdownload.html
+Disallow: infosCpp.html
+Disallow: google6f9c74a9b68b6e51.html
+Disallow: 404.html
+Disallow: /fr/
+Disallow: /en/
+Disallow: /es/
