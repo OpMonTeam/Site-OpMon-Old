@@ -28,13 +28,26 @@ const ABOUTTEXT        = document.getElementById("aboutText");
 const NEWS             = document.getElementById("news");
 const DEMOTITLE        = document.getElementById("demoTitle");
 const DEMOTEXT         = document.getElementById("demoText");
-const GOTOYOUTUBE      = document.getElemen tById("goToYoutube");
+const GOTOYOUTUBE      = document.getElementById("goToYoutube");
 const TEAMTITLE        = document.getElementById("teamTitle");
 const TEAMSUBTITLE     = document.getElementById("teamSubTitle");
 const JLPPCDESC        = document.getElementById("jlppcDesc");
 const NAVET56DESC      = document.getElementById("navet56Desc");
 const AERZIADESC       = document.getElementById("aerziaDesc");
-
+const GITHUBHELP       = document.getElementById("githubHelp");
+const CREDITSTITLE     = document.getElementById("creditsTitle");
+const FULLCREDITS      = document.getElementById("fullCredits");
+const ALLCAT           = document.getElementById("allCat");
+const CATREGIMYS       = document.getElementById("catRegimys");
+const CATFIGHT         = document.getElementById("catFight");
+const CATCITY          = document.getElementById("catCity");
+const CATINTERFACE     = document.getElementById("catInterface");
+const REPORTBUGS       = document.getElementById("reportBugs");
+const GOISSUES         = document.getElementById("goIssues");
+const SEEISSUES        = document.getElementById("seeIssues");
+const CREATEISSUE      = document.getElementById("createIssue");
+const JLPPCROLE        = document.getElementById("jlppcRole");
+const NAVET56ROLE      = document.getElementById("navet56Role");
 
 
 function goTo(url){
@@ -88,28 +101,77 @@ var textFr = {
     jlppcDesc : "Créateur, initiateur du projet et programmeur du jeu",
     navet56Desc : "Co-Créateur, game-designer et graphiste du jeu",
     aerziaDesc : "Collaborateur principal, aide à la programmation et à l'innovation",
-    
-    
-    
-    
-    
-    
+    githubHelp : "Nous avons besoin d'aide, et même si vous n'avez aucunes connaissances en programmation, vous pouvez quand même nous aider, en nous faisant part des bugs que vous avez trouvé, ou en nous suggerant des améliorations!",
+    creditsTitle : "Crédits entiers",
+    fullCredits : 'Voir les crédits entiers : <a href="https://github.com/jlppc/OpMon/blob/master/Credits.md">Crédits</a>',
+    allCat : "Toutes catégories",
+    catRegimys : "La région Regimys",
+    catFight : "En combat",
+    catCity : "Les villes",
+    catInterface : "Interface du jeu",
+    reportBugs : "Reportez des bugs ou donnez des suggestions !",
+    goIssues : "Allez sur Github section Issues !",
+    seeIssues : "Voir les Issues sur Github",
+    createIssue : "Créer une Issue sur Github",
+    jlppcRole : "Programmation et aide sur le projet",
+    navet56Role : "Aide graphique, fan-arts"
     
 };
 
 var textEn = {
-    langTitle : "The game inspred by pokémon.",
-    langDesc : "Prenez place dans cette aventure faites de monstres et d'explorations, dans la jolie region de Regimys !",
-    langDownTitle : "Télécharger le jeu",
+    langTitle : "A game inspired by Pokemon !",
+    langDesc : "Go for an adventure with exploration and many monsters, in the wonderful region of Regimys !",
+    langDownTitle : "Download the game",
     menu : {
-	down : "Téléchargements",
-	features : "Fonctionnalitées",
-	about : "A propos du jeu",
-	team : "Le Team OPMon",
-	contact : "Contact",
+	down : "Downloads",
+	features : "Features",
+	about : "About the game",
+	team : "The OPMon Team",
+	contact : "Contacts",
 	doc : "Documentation"
-    }
-    
+    },
+    langDown : "Download",
+    langGameVers : "Game version : Alpha " + version,
+    langDownWin : "Download for Windows",
+    langDownMac : "Download for Mac",
+    langDownLin : "Download for Linux",
+    langODown : "Other downloads",
+    langOSDown : "All platforms",
+    langAllDown : "See all downloads",
+
+    featuresTitle : "New features long awaited",
+    featuresSubTitle : "by the Pokemon fans",
+    feature1T : "Developed by a volunteer team",
+    feature1 : "OpMon is developed by a team completely composed of volunteers! We ask nothing, but your happiness!",
+    feature2T : "An open source game",
+    feature2 : "OPMon is totally open source, and we even use open source software to create it: Linux, Code::blocks, Gimp, Git and many others!",
+    feature3T : "Created by fans for fans",
+    feature3 : "The game contains plenty of small Easters Eggs to the universe of Nintendo and mediavisual while adding new features that give a wind of freshness to the license.",
+    aboutTitle : "Game totally free",
+    aboutText : "The game was imagined in 2012 and made concrete in 2016 by a very small team of fans, the game is free, the source code is open to all, so you can come and help us and improve the game.",
+    news : "<h2>Game development news!</h2><p>The last news on the game's development!</p><ul><li>08/08/17 - New release ! Alpha 0.12.1 is out, bringing many optimisation improvements!</li></ul>",
+    demoTitle : "OPMon demo",
+    demoText : "A video showing the Alpha 0.1 version of the game!",
+    goToYoutube : "Go to the Youtube Channel",
+    teamTitle : "The OPMon Team",
+    teamSubTitle : '(all other contributors are on Github, see them <a href="https://github.com/jlppc/OpMon/blob/master/Credits.md">here</a>',
+    jlppcDesc : "Foundator and programmer",
+    navet56Desc : "Co-Creator, game-designer and graphic designer",
+    aerziaDesc : "Most important collaborator",
+    githubHelp : "We need help, and even if you have not any knowledge in programmation, you can help us anyway by telling us the bugs you have found, or by proposing us enhancements!",
+    creditsTitle : "Crédits entiers",
+    fullCredits : 'Full credits : <a href="https://github.com/jlppc/OpMon/blob/master/Credits.md">Credits</a>',
+    allCat : "All screenshots",
+    catRegimys : "The region of Regimys",
+    catFight : "In fight",
+    catCity : "The cities",
+    catInterface : "Game HUD",
+    reportBugs : "To report bugs and make suggestions on GitHub :",
+    goIssues : "Go on Github Issues",
+    seeIssues : "See all OpMon's Issues on Github",
+    createIssue : "Create an Issue on Github",
+    jlppcRole : "Programmation and questions about the project",
+    navet56Role : "Game-designer and graphist"
 };
 
 var textEs = {
@@ -152,10 +214,24 @@ function printLang(id){
     DEMOTEXT.innerHTML = lang.demoText;
     GOTOYOUTUBE.innerHTML = lang.goToYoutube;
     ABOUTTITLE.innerHTML = lang.aboutTitle;
-    ABOUTSUBTITLE.innerHTML = lang.aboutSubTitle;
+    ABOUTTEXT.innerHTML = lang.aboutText;
     JLPPCDESC.innerHTML = lang.jlppcDesc;
     NAVET56DESC.innerHTML = lang.navet56Desc;
     AERZIADESC.innerHTML = lang.aerziaDesc;
+    GITHUBHELP.innerHTML = lang.githubHelp;
+    CREDITSTITLE.innerHTML = lang.creditsTitle;
+    FULLCREDITS.innerHTML = lang.fullCredits;
+    ALLCAT.innerHTML = lang.allCat;
+    CATREGIMYS.innerHTML = lang.catRegimys;
+    CATFIGHT.innerHTML = lang.catFight;
+    CATCITY.innerHTML = lang.catCity;
+    CATINTERFACE.innerHTML = lang.catInterface;
+    REPORTBUGS.innerHTML = lang.reportBugs;
+    GOISSUES.innerHTML = lang.goIssues;
+    SEEISSUES.innerHTML = lang.seeIssues;
+    CREATEISSUE.innerHTML = lang.createIssue;
+    JLPPCROLE.innerHTML = lang.jlppcRole;
+    NAVET56ROLE.innerHTML = lang.navet56Role;
     
     
 }
