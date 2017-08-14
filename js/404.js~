@@ -1,0 +1,3 @@
+const NOWHERE          = document.getElementById("nowhere");
+const JLPPCROLE        = document.getElementById("jlppcRole");
+const NAVET56ROLE      = document.getElementById("navet56Role");

@@ -48,9 +48,9 @@
           <div class="col-md-offset-2 col-md-8 col-sm-12">
 	<img src="http://opmon-game.ga/opmon_title.png" alt="OpMon"/><br/>
               <h1 class="wow fadeInUp" data-wow-delay="0.6s">404!</h1>
-              <p class="wow fadeInUp" data-wow-delay="1.0s">You are nowhere..</p>
-              <a href="javascript:history.back()" class="wow fadeInUp btn btn-default hvr-bounce-to-top smoothScroll" data-wow-delay="1.3s">Return to the reality.</a>
-	      <br/><a href="https://en.wikipedia.org/wiki/HTTP_404" class="wow fadeInUp btn btn-default hvr-bounce-to-top smoothScroll" data-wow-delay="1.3s">All you always wanted to know on 404.</a>
+              <p class="wow fadeInUp" data-wow-delay="1.0s" id="nowhere">You are nowhere..</p>
+              <a href="javascript:history.back()" class="wow fadeInUp btn btn-default hvr-bounce-to-top smoothScroll" data-wow-delay="1.3s" id="reality">Return to the reality.</a>
+	      <br/><a href="https://en.wikipedia.org/wiki/HTTP_404" class="wow fadeInUp btn btn-default hvr-bounce-to-top smoothScroll" data-wow-delay="1.3s" id="info404">All you always wanted to know on 404.</a>
           </div>
 
       </div>
@@ -95,14 +95,13 @@
 
               <div class="wow fadeInUp col-md-4 col-sm-4" data-wow-delay="1.6s">
                 <h3>Jlppc</h3>
-                <strong>Programmation et aide sur le projet</strong>
-                <p>jlppcprog@gmail.com</p>
+                <strong id="jlppcRole"></strong>
+                <p>jlppcprog@ntymail.com</p>
               </div>
 
               <div class="wow fadeInUp col-md-4 col-sm-4" data-wow-delay="1.9s">
                 <h3>Navet56</h3>
-                <strong>Game-designer et graphiste</strong>
-                <p>Pour toute question au niveau bugs graphiques, créations ou fan art personnels ou simples questions</p>
+                <strong id="navet56Role"></strong>
                 <p>evandib@gmail.com</p>
               </div>
 
@@ -147,6 +146,8 @@
 <script src="http://opmon-game.ga/js/wow.min.js"></script>
 
 <script src="http://opmon-game.ga/js/custom.js"></script>
+<script src="http://opmon-game.ga/js/site.js"></script>
+<script src="http://opmon-game.ga/js/404.js"></script>
 
 </body>
 </html>

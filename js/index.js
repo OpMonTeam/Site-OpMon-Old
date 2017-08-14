@@ -1,4 +1,4 @@
-const LANGTITLE        = document.getElementById("langTitle");
+ï»¿const LANGTITLE        = document.getElementById("langTitle");
 const LANGDESC         = document.getElementById("langDesc");
 const LANGDOWNTITLE    = document.getElementById("langDownTitle");
 const MENUDOWN         = document.getElementById("menuDown");
@@ -50,57 +50,57 @@ const JLPPCROLE        = document.getElementById("jlppcRole");
 const NAVET56ROLE      = document.getElementById("navet56Role");
 
 var textFr = {
-    langTitle : "Le jeu inspiré de Pokémon !",
+    langTitle : "Le jeu inspirÃ© de PokÃ©mon !",
     langDesc : "Prenez place dans cette aventure faites de monstres et d'explorations, dans la jolie region de Regimys !",
-    langDownTitle : "Télécharger le jeu",
+    langDownTitle : "TÃ©lÃ©charger le jeu",
     menu : {
-	down : "Téléchargements",
-	features : "Fonctionnalitées",
+	down : "TÃ©lÃ©chargements",
+	features : "FonctionnalitÃ©es",
 	about : "A propos du jeu",
 	team : "Le Team OPMon",
 	contact : "Contact",
 	doc : "Documentation"
     },
-    langDown : "Téléchargement",
+    langDown : "TÃ©lÃ©chargement",
     langGameVers : "Jeu version Alpha " + version,
-    langDownWin : "Télécharger pour Windows",
-    langDownMac : "Télécharger pour Mac",
-    langDownLin : "Télécharger pour Debian Linux",
-    langODown : "Autres téléchargements",
+    langDownWin : "TÃ©lÃ©charger pour Windows",
+    langDownMac : "TÃ©lÃ©charger pour Mac",
+    langDownLin : "TÃ©lÃ©charger pour Debian Linux",
+    langODown : "Autres tÃ©lÃ©chargements",
     langOSDown : "Toutes plateformes",
-    langAllDown : "Voir tous les téléchargements",
+    langAllDown : "Voir tous les tÃ©lÃ©chargements",
 
-    featuresTitle : "Des nouveautés attendues depuis longtemps",
+    featuresTitle : "Des nouveautÃ©s attendues depuis longtemps",
     featuresSubTitle : "par les fans des jeux Pokemons",
-    feature1T : "Développé par une équipe volontaire",
-    feature1 : "OpMon est développé par une équipe formée a 100% de bénévoles! Nous ne demandons rien Ã  part votre bonheur!",
+    feature1T : "DÃ©veloppÃ© par une Ã©quipe volontaire",
+    feature1 : "OpMon est dÃ©veloppÃ© par une Ã©quipe formÃ©e a 100% de bÃ©nÃ©voles! Nous ne demandons rien ÃƒÂ  part votre bonheur!",
     feature2T : "Un jeu open-source",
-    feature2 : "OpMon est un jeu totalement open source, et nous utilisons mÃªme des logiciels open sources pour le créer: Linux, Code::blocks, Gimp, Git ect...",
+    feature2 : "OpMon est un jeu totalement open source, et nous utilisons mÃƒÂªme des logiciels open sources pour le crÃ©er: Linux, Code::blocks, Gimp, Git ect...",
     feature3T : "Fait par des fans, pour des fans",
-    feature3 : "Le jeu regeorge(ra) de petits Easters Eggs et clins d'oeils Ã  l'univers de Nintendo et médiavisuel tout en ajoutant des nouveautés qui redonnent un vent de fraicheur Ã  la license.",
+    feature3 : "Le jeu regeorge(ra) de petits Easters Eggs et clins d'oeils ÃƒÂ  l'univers de Nintendo et mÃ©diavisuel tout en ajoutant des nouveautÃ©s qui redonnent un vent de fraicheur ÃƒÂ  la license.",
     aboutTitle : "Jeu totalement gratuit et libre de droit",
-    aboutText : "Le jeu a été imaginé en 2012 et concrétisé en 2016 par une toute petite équipe de fans, le jeu est libre, le code source est ouvert à tous, vous pouvez donc venir nous aider et améliorer le jeu.",
-    news : "<h2>Les news du jeu</h2><p>Voici les dernières infos sur le développement du jeu!</p><ul><li>19/07/17 - Le developpement se met en pause jusqu'a debut aout, bonnes vacances !</li><li>15/07/17 - La version Alpha 0.12 stable est sortie!</li><li>28/06/17 - La version Alpha 0.11 stable est sortie!</li><li>31/05/17 - La version Alpha 0.1 stable est sortie !</li><li>29/05/17 - Le jeu a changé de moteur graphique et est passsé a SFML</li><li>02/05/17 - Un nouveau Bilan Mensuel est sorti! </li><li>22/04/17 - Une nouvelle version de developpement est sortie!</li><li>28/03/17 - La version 0.09 est sortie!!!</li><li>22/03/17 - Le site a une toute nouvelle interface! </li><li>21/03/17 - Le systeme de sauvegarde est terminé! Le début du travail sur la ville de départ commence!</li></ul>",
-    demoTitle : "Démo d'OPMon",
-    demoText : "Voici une brève presentation en action du jeu, c'est la ville de départ du personnage principal. Une demo sortira a chaques grosses nouvelles version (0.1, 0.2, 0.3 etc.. jusqu'a la version 1.0)",
-    goToYoutube : "Accéder à la page YouTube :",
-    teamTitle : "L'équipe de developpement du jeu",
+    aboutText : "Le jeu a Ã©tÃ© imaginÃ© en 2012 et concrÃ©tisÃ© en 2016 par une toute petite Ã©quipe de fans, le jeu est libre, le code source est ouvert Ã  tous, vous pouvez donc venir nous aider et amÃ©liorer le jeu.",
+    news : "<h2>Les news du jeu</h2><p>Voici les derniÃ¨res infos sur le dÃ©veloppement du jeu!</p><ul><li>19/07/17 - Le developpement se met en pause jusqu'a debut aout, bonnes vacances !</li><li>15/07/17 - La version Alpha 0.12 stable est sortie!</li><li>28/06/17 - La version Alpha 0.11 stable est sortie!</li><li>31/05/17 - La version Alpha 0.1 stable est sortie !</li><li>29/05/17 - Le jeu a changÃ© de moteur graphique et est passsÃ© a SFML</li><li>02/05/17 - Un nouveau Bilan Mensuel est sorti! </li><li>22/04/17 - Une nouvelle version de developpement est sortie!</li><li>28/03/17 - La version 0.09 est sortie!!!</li><li>22/03/17 - Le site a une toute nouvelle interface! </li><li>21/03/17 - Le systeme de sauvegarde est terminÃ©! Le dÃ©but du travail sur la ville de dÃ©part commence!</li></ul>",
+    demoTitle : "DÃ©mo d'OPMon",
+    demoText : "Voici une brÃ¨ve presentation en action du jeu, c'est la ville de dÃ©part du personnage principal. Une demo sortira a chaques grosses nouvelles version (0.1, 0.2, 0.3 etc.. jusqu'a la version 1.0)",
+    goToYoutube : "AccÃ©der Ã  la page YouTube :",
+    teamTitle : "L'Ã©quipe de developpement du jeu",
     teamSubTitle : "(Sans compter les contributeurs occasionels, que vous retrouverez sur Github)",
-    jlppcDesc : "Créateur, initiateur du projet et programmeur du jeu",
-    navet56Desc : "Co-Créateur, game-designer et graphiste du jeu",
-    aerziaDesc : "Collaborateur principal, aide à la programmation et à l'innovation",
-    githubHelp : "Nous avons besoin d'aide, et même si vous n'avez aucunes connaissances en programmation, vous pouvez quand même nous aider, en nous faisant part des bugs que vous avez trouvé, ou en nous suggerant des améliorations!",
-    creditsTitle : "Crédits entiers",
-    fullCredits : 'Voir les crédits entiers : <a href="https://github.com/jlppc/OpMon/blob/master/Credits.md">Crédits</a>',
-    allCat : "Toutes catégories",
-    catRegimys : "La région Regimys",
+    jlppcDesc : "CrÃ©ateur, initiateur du projet et programmeur du jeu",
+    navet56Desc : "Co-CrÃ©ateur, game-designer et graphiste du jeu",
+    aerziaDesc : "Collaborateur principal, aide Ã  la programmation et Ã  l'innovation",
+    githubHelp : "Nous avons besoin d'aide, et mÃªme si vous n'avez aucunes connaissances en programmation, vous pouvez quand mÃªme nous aider, en nous faisant part des bugs que vous avez trouvÃ©, ou en nous suggerant des amÃ©liorations!",
+    creditsTitle : "CrÃ©dits entiers",
+    fullCredits : 'Voir les crÃ©dits entiers : <a href="https://github.com/jlppc/OpMon/blob/master/Credits.md">CrÃ©dits</a>',
+    allCat : "Toutes catÃ©gories",
+    catRegimys : "La rÃ©gion Regimys",
     catFight : "En combat",
     catCity : "Les villes",
     catInterface : "Interface du jeu",
     reportBugs : "Reportez des bugs ou donnez des suggestions !",
     goIssues : "Allez sur Github section Issues !",
     seeIssues : "Voir les Issues sur Github",
-    createIssue : "Créer une Issue sur Github",
+    createIssue : "CrÃ©er une Issue sur Github",
     jlppcRole : "Programmation et aide sur le projet",
     navet56Role : "Aide graphique, fan-arts"
     
@@ -147,7 +147,7 @@ var textEn = {
     navet56Desc : "Co-Creator, game-designer and graphic designer",
     aerziaDesc : "Most important collaborator",
     githubHelp : "We need help, and even if you have not any knowledge in programmation, you can help us anyway by telling us the bugs you have found, or by proposing us enhancements!",
-    creditsTitle : "Crédits entiers",
+    creditsTitle : "CrÃ©dits entiers",
     fullCredits : 'Full credits : <a href="https://github.com/jlppc/OpMon/blob/master/Credits.md">Credits</a>',
     allCat : "All screenshots",
     catRegimys : "The region of Regimys",
@@ -164,7 +164,7 @@ var textEn = {
 
 var textEs = {
     langTitle : "Un juego inspirado de Pokemon !",
-    langDesc : "Venís en la aventura donde hay muchos de monstruos y exploráis<!--Mettre a l'impératif--> la guapa región de Regimys!",
+    langDesc : "VenÃ­s en la aventura donde hay muchos de monstruos y explorÃ¡is<!--Mettre a l'impÃ©ratif--> la guapa regiÃ³n de Regimys!",
     langDownTitle : "Descargar el juego",
     menu : {
 	down : "Descargas",
@@ -172,10 +172,10 @@ var textEs = {
 	about : "Acerca del juego",
 	team : "El equipo de OpMon",
 	contact : "Contacto",
-	doc : "Documentación"
+	doc : "DocumentaciÃ³n"
     },
     langDown : "Descargas",
-    langGameVers : "Juego versión Alpha " + version,
+    langGameVers : "Juego versiÃ³n Alpha " + version,
     langDownWin : "Descargar para Windows",
     langDownMac : "Descargar para Mac",
     langDownLin : "Descargar para Debian Linux",
@@ -188,21 +188,21 @@ var textEs = {
     feature1T : "Creado por un equipo voluntario",
     feature1 : "OpMon fue creado por un equipo unicamente constituido de benevolos! No pedimos nada mas que su placer !",
     feature2T : "Un juego open-source",
-    feature2 : "OpMon es un juego totalemente open source, y utilisamos programas open sources para crearlo: Linux, Code::blocks, Gimp, Git etcétera...",
+    feature2 : "OpMon es un juego totalemente open source, y utilisamos programas open sources para crearlo: Linux, Code::blocks, Gimp, Git etcÃ©tera...",
     feature3T : "Hecho por fans, para los fans",
-    feature3 : "El juego esconde muchos Easters Eggs y referencias à l'universo de Nintendo y mediavisual agregando novedades que dan una ola de cambio a la licencia.",
-    aboutTitle : "Juego totalemente gratís et libre de derechos",
-    aboutText : "El juego fue imaginado en 2012 y hecho en 2016 , el codigo del juego esta abierto a todos, podeís venir ayudarnos y mejorar el juego.",
-    news : "<h2>Las noticias del juego</h2><p>aqui tiene las ultimas informaciónes del juego!</p><ul><li>08/08/17 - Le version Alpha 0.12.1 salio!</li></ul>",
+    feature3 : "El juego esconde muchos Easters Eggs y referencias Ã  l'universo de Nintendo y mediavisual agregando novedades que dan una ola de cambio a la licencia.",
+    aboutTitle : "Juego totalemente gratÃ­s et libre de derechos",
+    aboutText : "El juego fue imaginado en 2012 y hecho en 2016 , el codigo del juego esta abierto a todos, podeÃ­s venir ayudarnos y mejorar el juego.",
+    news : "<h2>Las noticias del juego</h2><p>aqui tiene las ultimas informaciÃ³nes del juego!</p><ul><li>08/08/17 - Le version Alpha 0.12.1 salio!</li></ul>",
     demoTitle : "Demo de OPMon",
     demoText : "Deme de la version Alpha 0.1",
     goToYoutube : "La pagina Youtube:",
     teamTitle : "El equipo que ha creado el juego",
     teamSubTitle : '(no hay los contribuyentes, que estan en la pagina Github)',
     jlppcDesc : "Creador del juego",
-    navet56Desc : "Artista gráfico del juego",
+    navet56Desc : "Artista grÃ¡fico del juego",
     aerziaDesc : "Contribuyente primario, ayuda al desarrollo",
-    githubHelp : "Tenemos de la ayuda, si no teneis de conocimiento en programación, podeis ayudar nos, podeis dar consejor para mejorar el juego",
+    githubHelp : "Tenemos de la ayuda, si no teneis de conocimiento en programaciÃ³n, podeis ayudar nos, podeis dar consejor para mejorar el juego",
     creditsTitle : "Contribuyentes",
     fullCredits : 'Ver todos los contribuyentes : <a href="https://github.com/jlppc/OpMon/blob/master/Credits.md">contribuyente',
     allCat : "All screenshots",
@@ -274,7 +274,7 @@ function printLang(id){
     NAVET56ROLE.innerHTML = lang.navet56Role;
     if(id == 1){
 	const DISCLAMER = document.getElementById("disclamer");
-	DISCLAMER.innerHTML = "Este sitio no está completamente traducido, y algunos de sus pasajes se traducen gracias a un software de traducción. Si usted desea ayudar, puede contactar con nosotros jlppcprog@ntymail.com.";
+	DISCLAMER.innerHTML = "Este sitio no estÃ¡ completamente traducido, y algunos de sus pasajes se traducen gracias a un software de traducciÃ³n. Si usted desea ayudar, puede contactar con nosotros jlppcprog@ntymail.com.";
     }
     
     
