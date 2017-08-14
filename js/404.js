@@ -1,12 +1,12 @@
-const NOWHERE          = document.getElementById("nowhere");
+ï»¿const NOWHERE          = document.getElementById("nowhere");
 const REALITY          = document.getElementById("reality");
 const INFO404          = document.getElementById("info404");
 const JLPPCROLE        = document.getElementById("jlppcRole");
 const NAVET56ROLE      = document.getElementById("navet56Role");
 
 var textFr = {
-    nowhere : "Vous n'êtes nulle part.",
-    reality : "Retour a la réalité.",
+    nowhere : "Vous n'Ãªtes nulle part.",
+    reality : "Retour a la rÃ©alitÃ©.",
     info404 : "Tout ce que vous avez toujours voulu savoir sur 404.",
     jlppcRole : "Programmation et aide sur le projet",
     navet56Role : "Aide graphique, fan-arts"
