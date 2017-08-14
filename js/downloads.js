@@ -1,4 +1,4 @@
-function linuxDown(){
+﻿function linuxDown(){
     goTo("https://github.com/jlppc/OpMon/releases/download/alpha-v" + version + "/OpMon_" + version  + "-bin.deb");
 }
 
@@ -69,7 +69,15 @@ var textEn = {
     },
     langTitle : "Download",
     langSubTitle : "Game version : Alpha " + version + " (08/08/2017)",
-
+    winDown : "Download for Windows",
+    winNiDown : '<a href="https://github.com/jlppc/OpMon/releases/download/alpha-v' + version + '/OpMon-Win_NoInstall.zip" class="wow fadeInUp btn btn-default hvr-bounce-to-top smoothScroll" data-wow-delay="1.3s" id="winNIDown">Download for Windows (Without installation)</a>',
+    macDown : "Download for Mac",
+    debDown : '<a href="https://github.com/jlppc/OpMon/releases/download/alpha-v' + version + '/OpMon_' + version + '-bin.deb"  class="wow fadeInUp btn btn-default hvr-bounce-to-top smoothScroll" data-wow-delay="1.3s">Download for Debian</a>',
+    linDown : '<a href="https://github.com/jlppc/OpMon/releases/download/alpha-v' + version + '/OpMon-Linux_NoInstall.zip" class="wow fadeInUp btn btn-default hvr-bounce-to-top smoothScroll" data-wow-delay="1.3s">Download for Linux</a>',
+    otherDown : "Other versions",
+    seeGithub : "See on Github",
+    otherSystems : "Other systems",
+    repoDown : "Download the repository (.zip)",
     jlppcRole : "Programmation and questions about the project",
     navet56Role : "Game-designer and graphist"
 };
@@ -83,7 +91,17 @@ var textEs = {
 	contact : "Contacto",
 	doc : "Documentación"
     },
-
+    langTitle : "Download",
+    langSubTitle : "Game version : Alpha " + version + " (08/08/2017)",
+    winDown : "Download for Windows",
+    winNiDown : '<a href="https://github.com/jlppc/OpMon/releases/download/alpha-v' + version + '/OpMon-Win_NoInstall.zip" class="wow fadeInUp btn btn-default hvr-bounce-to-top smoothScroll" data-wow-delay="1.3s" id="winNIDown">Download for Windows (Without installation)</a>',
+    macDown : "Download for Mac",
+    debDown : '<a href="https://github.com/jlppc/OpMon/releases/download/alpha-v' + version + '/OpMon_' + version + '-bin.deb"  class="wow fadeInUp btn btn-default hvr-bounce-to-top smoothScroll" data-wow-delay="1.3s">Download for Debian</a>',
+    linDown : '<a href="https://github.com/jlppc/OpMon/releases/download/alpha-v' + version + '/OpMon-Linux_NoInstall.zip" class="wow fadeInUp btn btn-default hvr-bounce-to-top smoothScroll" data-wow-delay="1.3s">Download for Linux</a>',
+    otherDown : "Other versions",
+    seeGithub : "See on Github",
+    otherSystems : "Other systems",
+    repoDown : "Download the repository (.zip)",
     jlppcRole : "Programmation and questions about the project",
     navet56Role : "Game-designer and graphist"
 };
