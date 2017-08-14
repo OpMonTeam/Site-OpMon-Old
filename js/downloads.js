@@ -48,7 +48,7 @@ var textFr = {
 	doc : "Documentation"
     },
     langTitle : "Téléchargement",
-    langSubTitle : "Jeu en version Alpha " + version + " (08/08/2017)",
+    langSubTitle : "Jeu en version Alpha " + version + date,
     winDown : "Télécharger pour Windows",
     winNIDown : '<a href="https://github.com/jlppc/OpMon/releases/download/alpha-v' + version + '/OpMon-Win_NoInstall.zip" class="wow fadeInUp btn btn-default hvr-bounce-to-top smoothScroll" data-wow-delay="1.3s" id="winNIDown">Télécharger pour Windows (Sans installation)</a>',
     macDown : "Télécharger pour Mac",
@@ -77,7 +77,7 @@ var textEn = {
 	doc : "Documentation"
     },
     langTitle : "Download",
-    langSubTitle : "Game version : Alpha " + version + " (08/08/2017)",
+    langSubTitle : "Game version : Alpha " + version + date,
     winDown : "Download for Windows",
     winNiDown : '<a href="https://github.com/jlppc/OpMon/releases/download/alpha-v' + version + '/OpMon-Win_NoInstall.zip" class="wow fadeInUp btn btn-default hvr-bounce-to-top smoothScroll" data-wow-delay="1.3s" id="winNIDown">Download for Windows (Without installation)</a>',
     macDown : "Download for Mac",
@@ -102,8 +102,8 @@ var textEs = {
 	contact : "Contacto",
 	doc : "Documentación"
     },
-    langTitle : "Download",
-    langSubTitle : "Game version : Alpha " + version + " (08/08/2017)",
+    langTitle : "Descargas",
+    langSubTitle : "Version del juego : Alpha " + version + date,
     winDown : "Download for Windows",
     winNiDown : '<a href="https://github.com/jlppc/OpMon/releases/download/alpha-v' + version + '/OpMon-Win_NoInstall.zip" class="wow fadeInUp btn btn-default hvr-bounce-to-top smoothScroll" data-wow-delay="1.3s" id="winNIDown">Download for Windows (Without installation)</a>',
     macDown : "Download for Mac",
