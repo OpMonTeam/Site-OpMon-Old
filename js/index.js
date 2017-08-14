@@ -62,7 +62,7 @@ var textFr = {
 	doc : "Documentation"
     },
     langDown : "Téléchargement",
-    langGameVers : "Jeu version Alpha " + version,
+    langGameVers : "Jeu version Alpha " + version + date,
     langDownWin : "Télécharger pour Windows",
     langDownMac : "Télécharger pour Mac",
     langDownLin : "Télécharger pour Debian Linux",
@@ -119,7 +119,7 @@ var textEn = {
 	doc : "Documentation"
     },
     langDown : "Download",
-    langGameVers : "Game version : Alpha " + version,
+    langGameVers : "Game version : Alpha " + version + date,
     langDownWin : "Download for Windows",
     langDownMac : "Download for Mac",
     langDownLin : "Download for Debian Linux",
@@ -175,7 +175,7 @@ var textEs = {
 	doc : "Documentación"
     },
     langDown : "Descargas",
-    langGameVers : "Juego versión Alpha " + version,
+    langGameVers : "Juego versión Alpha " + version + date,
     langDownWin : "Descargar para Windows",
     langDownMac : "Descargar para Mac",
     langDownLin : "Descargar para Debian Linux",
