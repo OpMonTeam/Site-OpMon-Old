@@ -1,5 +1,5 @@
-var main = {
-    title : "main.hpp",
+var main = [
+    "main.hpp",
     {
 	name : "PRINT_TICKS",
 	shortName : "PRINT_TICKS",
@@ -10,7 +10,7 @@ var main = {
 	shortName : "UNS",
 	description : "Shortcut for using namespace std;"
     }
-}
+];
 
 
-var files = {main};
+var files = [main, null];
