@@ -169,4 +169,45 @@ var initializer = [
     }
 ];
 
-var files = [main, initializer];
+var opstring = [
+    "OpString.hpp",
+    {
+	name : "class OpString",
+	shortName : "cOpString",
+	description : "This class represents a String with objects. It replaces every '~' in a string given by a key (See StringKeys) by a string given on the constructor parameter."
+	elements : [
+	    {
+		name : "OpString(std::string const&, ...)",
+		shortName : "ctorOpString1",
+		description : "Constructs an OpStrings. The first parameters ask for the key allowing to get the string in StringKeys. You can after add pointers to std::string objects. Please do not give other things than std::string pointers, this could make bugs and errors. The strings will be, when the method getString() is called, added in replacement of every '~' on the string. If there is more string pointers than '~' in the string, the exedent of objects will be ignored. In the reverse case, the '~' will just vanish from the string."
+	    },
+	    {
+		name : "OpString()",
+		shortName : "ctorOpString2",
+		description : "The default constructor, doing nothing. If you call any method of this class on a OpString constructed with this constructor, it will return an empty string. This constructor is useful only when you want to declare a variable without defining it."
+	    },
+	    {
+		name : "std::string getObject(int const&)",
+		shortName : "getObject",
+		description : "When called, this method returns the string pointed by the pointer at the index given. This method do not return the pointer."
+	    },
+	    {
+		name : "std::string getKey()",
+		shortName : "getKey",
+		description : "Returns the key, used to get the string with StringKeys::get."
+	    },
+	    {
+		name : "sf::String getString()",
+		shortName : "getString",
+		description : "Return the string, with the '~' replaced by the strings indicated in the constructor. The string is an sf::String from sfml because it works better with the non-ascii characters."
+	    },
+	    {
+		name : "static OpString voidStr",
+		shortName : "voidStr",
+		description : "This static variable contains a OpString generated with the default constructor. It is used for memory saving, using only one variable than creating many."
+	    },
+	]
+    },
+];
+
+var files = [main, initializer, opstring];
