@@ -10,16 +10,37 @@ function printDoc(id){
 	id = 0;
     }
     var file = files[id];
+
     TITLE.innerHTML = file[0];
-    LIST.innerHTML = "<code><ul>";
+    var titleStr = "";
+    var descStr = "";
+    titleStr = "<code><ul>";
+    
     for(var i = 1; i < file.length; i++){
-	LIST.innerHTML += '<li><a href="#' + file[i].shortName + '">' + file[i].name + '</a></li>';
+	titleStr += ('<li><a href="#' + file[i].shortName + '">' + file[i].name + '</a>');
+	if(file[i].elements){
+	    titleStr += "<ul>";
+	    for(var j = 0; j < file[i].elements.length; j++){
+		titleStr += ('<li><a href="#' + file[i].shortName + '-' + file[i].elements[j].shortName + '">' + file[i].elements[j].name + '</a></li>');
+	    }
+	   titleStr += "</ul>";
+	}
+	titleStr += '</li>';
     }
-    LIST.innerHTML += "</ul></code>";
-    DESCRIPTION.innerHTML = "";
+    titleStr += "</ul></code>";
+    LIST.innerHTML = titleStr;
+    
     for(var i = 1; i < file.length; i++){
-	DESCRIPTION.innerHTML += '<h3 id="' + file[i].shortName + '"><code>' + file[i].name + '</code></h3><p>' + file[i].description + '</p>';
+	descStr += '<h3 id="' + file[i].shortName + '"><code>' + file[i].name + '</code></h3><p>' + file[i].description + '</p>';
+	if(file[i].elements){
+	    descStr += "<ul>";
+	    for(var j = 0; j < file[i].elements.length; j++){
+		descStr += '<li id="' + file[i].shortName + '-' + file[i].elements[j].shortName + '"><span class="likeH"><code>' + file[i].elements[j].shortName + '</code></span><p>' + file[i].elements[j].description + '</p></li>';
+	    }
+	   descStr += '</ul>'
+	}
     }
+    DESCRIPTION.innerHTML = descStr;
 }
 
 if(docId == NaN){

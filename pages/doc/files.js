@@ -93,5 +93,80 @@ var main = [
 
 ];
 
+var initializer = [
+    "Initializer.hpp",
+    {
+	name : "ATK_LIST",
+	shortName : "ATK_LIST",
+	description : "Macro declaring a variable \"AtkArray\". This macro takes one parameter, a numbers, used to name the variable (tabNumber). If the parameter is 5, the variable will be called tab5."
+    },
+    {
+	name : "ATK_ADD_LIST",
+	shortName : "ATK_ADD_LIST",
+	description : "Macro shortcut to the addition of an attack in the attack array of an OpMon."
+    },
+    {
+	name : "OP_NUMBER",
+	shortName : "OP_NUMBER",
+	description : "Constant containing the number of OpMons"
+    },
+    {
+	name : "namespace Initializer",
+	shortName : "nInitializer",
+	description : "Namespace containing variables and functions that loads the resources in memory.",
+	elements : [
+	    {
+		name : "Espece *listeOp[OP_NUMBER]",
+		shortName : "listeOp",
+		description : "Array containing all the OpMons species."
+	    },
+	    {
+		name :  "std::vector<NumberedArray> opOpLvl[OP_NUMBER]",
+		shortName : "opOpLvl",
+		description : "Array of NumberedArray, defining the attacks learnt by level for each OpMon."
+	    },
+	    {
+		name : "Evolutions::E_Nope *ne",
+		shortName : "ne",
+		description : "Variable containing an object E_Nope, avoiding allowing a lot of memory for these objects."
+	    },
+	    {
+		name : "std::vector<Map*> maps",
+		shortName : "maps",
+		descriptions : "Vector containing the maps"
+	    },
+	    {
+		name : "std::vector<sf::Music*> townMusics",
+		shortName : "townMusics",
+		description : "Vector containing the maps' musics"
+	    },
+	    {
+		name : "sf::Texture texturePP[4]",
+		shortName : "texturePP",
+		description : "Array containing the principal character's textures"
+	    },
+	    {
+		name : "sf::Texture marchePP[4]",
+		shortName : "marchePP",
+		description : "Array containing the principal character's walking textures"
+	    },
+	    {
+		name : "sf::Texture marchePP2[4]",
+		shortName : "marchePP2",
+		description : "Array containing other principal character's walking textures"
+	    },
+	    {
+		name : "std::vector<std::vector<sf::Texture > > doorsTextures",
+		shortName : "doorsTextures",
+		description : "Double vector containing the doors textures."
+	    },
+	    {
+		name : "std::vector<int> evs[OP_NUMBER]",
+		shortName : "evs",
+		description : "Array of vectors containing the evs for each OpMon"
+	    },
+	]
+    }
+];
 
-var files = [main, null];
+var files = [main, initializer];
