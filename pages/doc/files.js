@@ -174,7 +174,7 @@ var opstring = [
     {
 	name : "class OpString",
 	shortName : "cOpString",
-	description : "This class represents a String with objects. It replaces every '~' in a string given by a key (See StringKeys) by a string given on the constructor parameter."
+	description : "This class represents a String with objects. It replaces every '~' in a string given by a key (See StringKeys) by a string given on the constructor parameter.",
 	elements : [
 	    {
 		name : "OpString(std::string const&, ...)",
