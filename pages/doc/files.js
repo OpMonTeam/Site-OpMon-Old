@@ -58,17 +58,19 @@ var main = [
     {
 	name : "namespace Main",
 	shortName : "nMain",
-	description : "Namespace containing useful thing for the program."
-    },
-    {
-	name : "void Main::main()",
-	shortName : "nMain-main",
-	description : "Function in the namespace Main booting the program."
-    },
-    {
-	name : "Player Main::player",
-	shortName : "nMain-player",
-	description : "Variable containing the player"
+	description : "Namespace containing useful thing for the program.",
+	elements : [
+	    {
+		name : "void Main::main()",
+		shortName : "main",
+		description : "Function in the namespace Main booting the program."
+	    },
+	    {
+		name : "Player Main::player",
+		shortName : "player",
+		description : "Variable containing the player"
+	    }
+	]
     },
     {
 	name : "int main(int, char**)",
@@ -76,18 +78,18 @@ var main = [
 	description : "The program's main."
     },
     {
-	name : "std::string& operator<<(std::string, std::string const&)",
-	shortName : "operator<<1",
+	name : "std::string& operator&lt;&lt;(std::string, std::string const&)",
+	shortName : "operator&lt;&lt;1",
 	description : "Operator concatenating two strings using a string stream."
     },
     {
-	name : "std:string& operator<<(std::string, int const&)",
-	shortName : "operator<<2",
+	name : "std:string& operator&lt;&lt;(std::string, int const&)",
+	shortName : "operator&lt;&lt;2",
 	description : "Operator concatenating a string with an int using a string stream."
     },
     {
-	name : "std::string operator<<(std::string, char*)",
-	shortName : "operator<<3",
+	name : "std::string& operator&lt;&lt;(std::string, char*)",
+	shortName : "operator&lt;&lt;3",
 	description : "Operator concatenating a C++ string with a C string using a string stream."
     }
 
@@ -121,7 +123,7 @@ var initializer = [
 		description : "Array containing all the OpMons species."
 	    },
 	    {
-		name :  "std::vector<NumberedArray> opOpLvl[OP_NUMBER]",
+		name :  "std::vector&lt;NumberedArray&gt; opOpLvl[OP_NUMBER]",
 		shortName : "opOpLvl",
 		description : "Array of NumberedArray, defining the attacks learnt by level for each OpMon."
 	    },
@@ -131,12 +133,12 @@ var initializer = [
 		description : "Variable containing an object E_Nope, avoiding allowing a lot of memory for these objects."
 	    },
 	    {
-		name : "std::vector<Map*> maps",
+		name : "std::vector&lt;Map*&gt; maps",
 		shortName : "maps",
 		descriptions : "Vector containing the maps"
 	    },
 	    {
-		name : "std::vector<sf::Music*> townMusics",
+		name : "std::vector&lt;sf::Music*&gt; townMusics",
 		shortName : "townMusics",
 		description : "Vector containing the maps' musics"
 	    },
@@ -156,12 +158,12 @@ var initializer = [
 		description : "Array containing other principal character's walking textures"
 	    },
 	    {
-		name : "std::vector<std::vector<sf::Texture > > doorsTextures",
+		name : "std::vector&lt;std::vector&lt;sf::Texture &gt; &gt; doorsTextures",
 		shortName : "doorsTextures",
 		description : "Double vector containing the doors textures."
 	    },
 	    {
-		name : "std::vector<int> evs[OP_NUMBER]",
+		name : "std::vector&lt;int&gt; evs[OP_NUMBER]",
 		shortName : "evs",
 		description : "Array of vectors containing the evs for each OpMon"
 	    },
@@ -177,7 +179,7 @@ var opstring = [
 	description : "This class represents a String with objects. It replaces every '~' in a string given by a key (See StringKeys) by a string given on the constructor parameter.",
 	elements : [
 	    {
-		name : "OpString(std::string const&, ...)",
+		name : "OpString(std::string const& key, ...)",
 		shortName : "ctorOpString1",
 		description : "Constructs an OpStrings. The first parameters ask for the key allowing to get the string in StringKeys. You can after add pointers to std::string objects. Please do not give other things than std::string pointers, this could make bugs and errors. The strings will be, when the method getString() is called, added in replacement of every '~' on the string. If there is more string pointers than '~' in the string, the exedent of objects will be ignored. In the reverse case, the '~' will just vanish from the string."
 	    },
@@ -187,7 +189,7 @@ var opstring = [
 		description : "The default constructor, doing nothing. If you call any method of this class on a OpString constructed with this constructor, it will return an empty string. This constructor is useful only when you want to declare a variable without defining it."
 	    },
 	    {
-		name : "std::string getObject(int const&)",
+		name : "std::string getObject(int const& index)",
 		shortName : "getObject",
 		description : "When called, this method returns the string pointed by the pointer at the index given. This method do not return the pointer."
 	    },
@@ -210,4 +212,56 @@ var opstring = [
     },
 ];
 
-var files = [main, initializer, opstring];
+var stringkeys = [
+    "StringKeys.hpp",
+    {
+	name : "namespace StringKeys",
+	shortName : "nStringKeys",
+	description : "StringKeys is a tool reading strings and keys in a file, allowing to change files and translate the game. It associate a key with a string, according to the read file.",
+	elements : [
+	    {
+		name : "std::vector&lt;std::string&gt; keys",
+		shortName : "keys",
+		description : 'Vector containing every key. If you pick a key at an index, you will have the corresponding string with the same index in the vector "strings".'
+	    },
+	    {
+		name : "std::vector&lt;sf::String&gt; strings",
+		shortName : "strings",
+		description : 'Vector containing every string. If you pick a string at an index, you will have the corresponding key with the same index in the vector "key". The strings\' type is sf::String, from sfml, because this format is better for non-ascii characters.'
+	    },
+	    {
+		name : "sf::String& get(std::string key)",
+		shortName : "get",
+		description : "Function returning a reference to the string associated with the given key."
+	    },
+	    {
+		name : "void initialize(std::string const& file)",
+		shortName : "initialize",
+		description : "Read the strings and the keys from the file given, and save them in the vectors keys and strings."
+	    },
+	    {
+		name : "sf::String split(sf::String const&, char const& splitter, int const& part",
+		shortName : "split1",
+		description : "Deprecated. Use the other StringKeys::split. <br/>Splits a string from the char given, and returns the part asked. This function is deprecated because the other split returns directly the array."
+	    },
+	    {
+		name : "std::vector&lt;sf::String&gt; split(sf::String const, char const& splitter)",
+		shortName : "split2",
+		description : "Splits a string from the char given and returns a vector containing all the parts."
+	    },
+	    {
+		name : "std::string sfStringtoStdString(sf::String const&)",
+		shortName : "sfStringtoStdString",
+		description : "Converts a sf::String to a std::String."
+	    },
+	    {
+		name : "int countInstances(sf::String const&, char const&)",
+		shortName : "countInstances",
+		description : "Returns the number of instances of the char given in the string given."
+	    }
+
+	]
+    },
+];
+
+var files = [main, initializer, opstring, stringkeys];

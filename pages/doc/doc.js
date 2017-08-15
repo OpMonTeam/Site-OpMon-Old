@@ -35,7 +35,7 @@ function printDoc(id){
 	if(file[i].elements){
 	    descStr += "<ul>";
 	    for(var j = 0; j < file[i].elements.length; j++){
-		descStr += '<li id="' + file[i].shortName + '-' + file[i].elements[j].shortName + '"><span class="likeH"><code>' + file[i].elements[j].shortName + '</code></span><p>' + file[i].elements[j].description + '</p></li>';
+		descStr += '<li id="' + file[i].shortName + '-' + file[i].elements[j].shortName + '"><span class="likeH"><code>' + file[i].elements[j].name + '</code></span><p>' + file[i].elements[j].description + '</p></li>';
 	    }
 	   descStr += '</ul>'
 	}
