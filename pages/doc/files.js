@@ -1,5 +1,4 @@
 var main = [
-    "main.hpp",
     {
 	name : "UNS",
 	shortName : "UNS",
@@ -61,12 +60,12 @@ var main = [
 	description : "Namespace containing useful thing for the program.",
 	elements : [
 	    {
-		name : "void Main::main()",
-		shortName : "main",
+		name : "void main()",
+		shortName : "nMain-main",
 		description : "Function in the namespace Main booting the program."
 	    },
 	    {
-		name : "Player Main::player",
+		name : "Player player",
 		shortName : "player",
 		description : "Variable containing the player"
 	    }
@@ -96,7 +95,6 @@ var main = [
 ];
 
 var initializer = [
-    "Initializer.hpp",
     {
 	name : "ATK_LIST",
 	shortName : "ATK_LIST",
@@ -172,7 +170,6 @@ var initializer = [
 ];
 
 var opstring = [
-    "OpString.hpp",
     {
 	name : "class OpString",
 	shortName : "cOpString",
@@ -213,7 +210,6 @@ var opstring = [
 ];
 
 var stringkeys = [
-    "StringKeys.hpp",
     {
 	name : "namespace StringKeys",
 	shortName : "nStringKeys",
@@ -265,7 +261,6 @@ var stringkeys = [
 ];
 
 var internalfiles = [
-    "InternalFiles.hpp",
     {
 	name : "namespace InternalFiles",
 	shortName : "nInternalFiles",
@@ -300,4 +295,7 @@ var internalfiles = [
     },
 ];
 
+
+
 var files = [main, initializer, opstring, stringkeys, internalfiles];
+var fnames = ["main.hpp", "Initializer.hpp", "OpString.hpp", "StringKeys.hpp", "InternalFiles.hpp"];
