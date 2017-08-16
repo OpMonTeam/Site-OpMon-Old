@@ -264,4 +264,40 @@ var stringkeys = [
     },
 ];
 
-var files = [main, initializer, opstring, stringkeys];
+var internalfiles = [
+    "InternalFiles.hpp",
+    {
+	name : "namespace InternalFiles",
+	shortName : "nInternalFiles",
+	description : "This namespace contains strings in an array. Theses internal files are useful for files that the player must not modify, like the collisions",
+	elements : [
+	    {
+		name : "std::vector&lt;std::string&gt; filesNames",
+		shortName : "filesNames",
+		description : "This vector contains all the files' names. The indexes in this vector are associated with the indexes in the vector \"files\"."
+	    },
+	    {
+		name : "std::vector&lt;std::string&gt; files",
+		shortName : "files",
+		description : "This vector contains all the files content. The names corresponding to a file is in the \"filesNames\" vector."
+	    },
+	    {
+		name : "void registerFiles()",
+		shortName : "registerFiles",
+		description : "This function registers the files in the vectors."
+	    },
+	    {
+		name : "std::ostringstream *openFileOut(std::string const& name)",
+		shortname : "openFileOut",
+		description : "This function opens an out stringstream to the string with the name given in parameters. Returns the pointer to the std::ostringstream created. If no files exists with the name given, the function returns NULL"
+	    },
+	    {
+		name : "std::istringstream openFileIn(std::string const& name)",
+		shortName : "openFileIn",
+		description : "This function opens an in stringstream to the string with the name given in parameters. Returns the pointer to the std::istringstream created. If no files exists with the name given, the function returns NULL"
+	    }
+	]
+    },
+];
+
+var files = [main, initializer, opstring, stringkeys, internalfiles];
