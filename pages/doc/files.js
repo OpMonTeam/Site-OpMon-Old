@@ -374,8 +374,93 @@ var optionssave = [
 		description : "Returns true if the parameter exists, false if not."
 	    }
 	]
+    }
+];
+
+var save = [
+    {
+	name : "namespace Save",
+	shortName : "nSave",
+	description : "Namespace containing the functions for saving the game and the player.",
+	elements : [
+	    {
+		name : "int save(Player *toSave, std::string const& file)",
+		shortName : "save",
+		description : "Functions saving the player in a file with the name given. Always returns 0."
+	    },
+	    {
+		name : "Player* loadPlayer(std::string const& fileIn)",
+		shortName : "loadPlayer",
+		description : "Loads a player from a file with the name given in parameter."
+	    }
+	]
+    }
+];
+
+var equipe = [
+    {
+	name : "class Equipe",
+	shortName : "cEquipe",
+	description : "Class defining a OpMon team",
+	elements : [
+	    {
+		name : "Equipe(std::string const& nom)",
+		shortName : "ctorEquipe",
+		description : "Constructs a Equipe object with a name, and without any OpMons."
+	    },
+	    {
+		name : "OpMon** getEquipe()",
+		shortName : "getEquipe",
+		description : "Returns the OpMon team."
+	    },
+	    {
+		name : "void heal()",
+		shortName : "heal",
+		description : "Heals the team."
+	    },
+	    {
+		name : "bool addOpMon(OpMon *toAdd)",
+		shortName : "addOpMon",
+		description : "Adds an OpMon to the team, returns true if the OpMon have been added, false if the team is full."
+	    },
+	    {
+		name : "void removeOp(int number)",
+		shortName : "removeOp",
+		description : "Removes an OpMon of the team, at the index given in parameter."
+	    },
+	    {
+		name : "OpMon *operator[](int id) const",
+		shortName : "operator[]",
+		description : "Operator returning the opmon at the specified index."
+	    },
+	    {
+		name : "bool isKo() const",
+		shortName : "isKo",
+		description : "Returns true if the team is K.O"
+	    },
+	    {
+		name : "int getSize() const",
+		shortName : "getSize",
+		description : "Returns the number of OpMons in the team.",
+	    },
+	    {
+		name : "void operator+=(OpMon*)",
+		shortName : "operator+=",
+		description : "Same effect than \"addOpMon\""
+	    },
+	    {
+		name : "void operator-=(int id)",
+		shortName : "operator-=",
+		description : "Same effet than \"removeOp\""
+	    },
+	    {
+		name : "void save()",
+		shortName : "save",
+		description : "Saves the OpMon team in Save::saveOutput"
+	    },
+	];
     },
 ];
 
-var files = [main, initializer, opstring, stringkeys, internalfiles, optionssave];
-var fnames = ["main.hpp", "Initializer.hpp", "OpString.hpp", "StringKeys.hpp", "InternalFiles.hpp", "OptionsSave.hpp"];
+var files = [main, initializer, opstring, stringkeys, internalfiles, optionssave, save, equipe];
+var fnames = ["main.hpp", "Initializer.hpp", "OpString.hpp", "StringKeys.hpp", "InternalFiles.hpp", "OptionsSave.hpp", "Save.hpp", "Equipe.hpp"];
