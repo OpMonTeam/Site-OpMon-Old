@@ -458,7 +458,7 @@ var equipe = [
 		shortName : "save",
 		description : "Saves the OpMon team in Save::saveOutput"
 	    },
-	];
+	]
     },
 ];
 
