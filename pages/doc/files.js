@@ -295,7 +295,87 @@ var internalfiles = [
     },
 ];
 
+var optionssave = [
+    {
+	name : "addParam",
+	shortName : "addParam",
+	description : "Writing this is equal to write modifyParam or addOrModifyParam. This macro's point is to indicate wich use the function is called. See addOrModifParam for more informations."
+    },
+    {
+	name : "modifyParam",
+	shortName : "modifyParam",
+	description : "Writing this is equal to write addParam or addOrModifyParam. This macro's point is to indicate wich use the function is called. See addOrModifParam for more informations."
+    },
+    {
+	name : "namespace OptionsSave",
+	shortName : "nOptionsSave",
+	description : "Namespace containing elements to save the game's parameters, and edit them easily.",
+	elements : [
+	    {
+		name : "class Param",
+		shortName : "cParam",
+		description : "This class defines a parameter, with it's name and it's value",
+		elements : [
+		    {
+			name : "Param(std::string name, std::string value)",
+			shortName : "ctorParam",
+			description : "Constructs a parameter with it's name and it's value."
+		    },
+		    {
+			name : "std::string getName() const",
+			shortName : "getName",
+			description : "Return the parameter's name."
+		    },
+		    {
+			name : "std::string getValue() const",
+			shortName : "getValue",
+			description : "Return the parameter's value."
+		    },
+		    {
+			name : "void setValue(std::string value)",
+			shortName : "setValue",
+			description : "Change the parameter's value."
+		    }
+		]
+	    },
+	    {
+		name : "std::vector&lt;Param&gt; paramList",
+		shortName : "paramList",
+		description : "Vector containing all the parameters read in the parameters save file."
+	    },
+	    {
+		name : "Param getParam(std::string const& nom)",
+		shortName : "getParam",
+		description : 'Returns the parameter with the given name. If no parameter exists, returns a parameter named "NULL" and having the value "NULL."'
+	    },
+	    {
+		name : "void addOrModifParam(std::string const& nom, std::string const& value)",
+		shortName : "addOrModifParam",
+		description : "This function adds a parameter to the list, or modify it if it already exists. To specify the usage of this function, use the two macros addParam and modifyParam."
+	    },
+	    {
+		name : "Param deleteParam(std::string const& nom)",
+		shortName : "deleteParam",
+		description : 'Delete the parameter with the name given and returns it. If no parameter with this name exists, returns a parameter named "NULL" and having the value "NULL".' 
+	    },
+	    {
+		name : "void saveParams(std::string const& file)",
+		shortName : "saveParams",
+		description : "Saves the parameters in a file with the given name."
+	    },
+	    {
+		name : "void initParams(std::string const& file)",
+		shortName : "initParams",
+		description : "Reads the parameters in a file with the given name."
+	    },
+	    {
+		name : "bool checkParam(std::string const& name)",
+		shortName : "checkParam",
+		description : "Returns true if the parameter exists, false if not."
+	    }
+	]
+    },
+];
 
-
-var files = [main, initializer, opstring, stringkeys, internalfiles];
-var fnames = ["main.hpp", "Initializer.hpp", "OpString.hpp", "StringKeys.hpp", "InternalFiles.hpp"];
+var files = [main, initializer, opstring, stringkeys, internalfiles, optionssave];
+var fnames = ["main.hpp", "Initializer.hpp", "OpString.hpp", "StringKeys.hpp", "InternalFiles.hpp", "OptionsSave.hpp"];
