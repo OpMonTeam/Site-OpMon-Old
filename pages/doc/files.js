@@ -462,5 +462,126 @@ var equipe = [
     },
 ];
 
-var files = [main, initializer, opstring, stringkeys, internalfiles, optionssave, save, equipe];
-var fnames = ["main.hpp", "Initializer.hpp", "OpString.hpp", "StringKeys.hpp", "InternalFiles.hpp", "OptionsSave.hpp", "Save.hpp", "Equipe.hpp"];
+var player = [
+    {
+	name : "class Player",
+	shortName : "cPlayer",
+	description : "Class defining a Player, with it's sprite, items and team.",
+	elements : [
+	    {
+		name : "Player(std::string const& name)",
+		shortName : "ctorPlayer1",
+		description : "Constructor creating a Player with a name."
+	    },
+	    {
+		name : "Player()",
+		shortName : "ctorPlayer2",
+		description : "Constructor creating a Player without a name."
+	    },
+	    {
+		name : "Player(std::ifstream &in, std::string &name)",
+		shortName : "ctorPlayer3",
+		description : "Constructs a player from the file and the name given."
+	    },
+	    {
+		name : "void addItem(int itemID)",
+		shortName : "addItem",
+		description : "Adds one object with the given ID to the player."
+	    },
+	    {
+		name : "int checkItem(int itemID)",
+		shortName : "checkItem",
+		description : "Returns the number of the item associated with the given number the player have."
+	    },
+	    {
+		name : "bool deleteItem(int itemID)",
+		shortItem : "deleteItem",
+		description : "Delete one item with the given ID. If the player do not have this item, the function returns false."
+	    },
+	    {
+		name : "std::string getName() const",
+		shortItem : "getName",
+		description : "Returns the player's name."
+	    },
+	    {
+		name : "const std::string* getNameP() const",
+		shortItem : "getNameP",
+		description : "Returns a constant pointer to the player's name."
+	    },
+	    {
+		name : "void setName(std::string const& name)",
+		shortItem : "setName",
+		description : "Changes the player's name by the name given in parameter."
+	    },
+	    {
+		name : "int getDressID() const",
+		shortName : "getDressID",
+		description : "Returns the player's trainer ID"
+	    },
+	    {
+		name : "void addOpMonToPC(OpMon *toAdd)",
+		shortName : "addOpMonToPC",
+		description : "Adds a OpMon to the player's PC"
+	    },
+	    {
+		name : "OpMon* getOp(int ID) const",
+		shortName : "getOp",
+		description : "Returns the OpMon corresponding to the index given from the team."
+	    },
+	    {
+		name : "OpMon* getPcOp(int ID) const",
+		shortName : "getPcOp",
+		description : "Returns the OpMon in the place given in the PC."
+	    },
+	    {
+		name : "void healOp()",
+		shortName : "healOp",
+		description : "Heals all OpMons in the team."
+	    },
+	    {
+		name : "bool addOpToEquipe(OpMon *toAdd)",
+		shortName : "addOpToEquipe",
+		description : "Adds a OpMon to the team, returns false if the team is full."
+	    },
+	    {
+		name : "void save()",
+		shortName : "save",
+		description : "Saves the player's data in Save::saveOutput"
+	    },
+	    {
+		name : "void setMap(int ID)",
+		shortName : "setMap",
+		description : "Sets the map where the player currently is."
+	    },
+	    {
+		name : "std::Sprite& getSprite()",
+		shortName : "getSprite",
+		description : "Returns a reference to the Player's sprite."
+	    },
+	    {
+		name : "int getppDir()",
+		shortName : "getppDir",
+		description : "Returns the player's direction."
+	    },
+	    {
+		name : "void setppDirPointer(int *ppDir)",
+		shortName : "setppDirPointer",
+		description : "Sets the ppDir pointer. ppDir will follow the variable given."
+	    },
+	    {
+		name : "void setppDir(int ppDir)",
+		shortName : "setppDir",
+		description : "Changes the player's direction."
+	    },
+	    {
+		name : "bool gameIsOver",
+		shortName : "gameIsOver",
+		description : "If true, the game shuts down. Used in some functions of newGui."
+	    }
+	    
+	]
+    },
+];
+
+var files = [main, initializer, opstring, stringkeys, internalfiles, optionssave, save, equipe, player];
+var fnames = ["main.hpp", "Initializer.hpp", "OpString.hpp", "StringKeys.hpp", "InternalFiles.hpp", "OptionsSave.hpp", "Save.hpp", "Equipe.hpp", "Player.hpp"];
