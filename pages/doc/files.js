@@ -583,5 +583,133 @@ var player = [
     },
 ];
 
-var files = [main, initializer, opstring, stringkeys, internalfiles, optionssave, save, equipe, player];
-var fnames = ["main.hpp", "Initializer.hpp", "OpString.hpp", "StringKeys.hpp", "InternalFiles.hpp", "OptionsSave.hpp", "Save.hpp", "Equipe.hpp", "Player.hpp"];
+var attaque = [
+    {
+	name : "class Attaque",
+	shortName : "cAttaque",
+	description : "Contains the definition of an OpMon attack. This class is pure virtual and, to create an attack, a derivated class must be created, to overload the effetAvant and effetApres methods.",
+	elements : [
+	    {
+		name: "Attaque(std::string nom, int puissance, int type, int precision, bool special, bool status, int chanceDeCoups, bool rateJamais, int ppMax, int priorite, std::string className)",
+		shortName : "ctorAttaque",
+		description : "Constructs an attack with the given elements.",
+		elements : [
+		    {
+			name : "std::string name",
+			shortName : "ctorEname",
+			description : "The attack's name."
+		    },
+		    {
+			name : "int puissance",
+			shortName : "ctorEpuissance",
+			description : "The attack's power."
+		    },
+		    {
+			name : "int type",
+			shortName : "ctorEtype",
+			description : "The attack's type. Must be completed with an element of the enumeration Type."
+		    },
+		    {
+			name : "int precision",
+			shortName : "ctorEprecision",
+			description : "The attack's precision."
+		    },
+		    {
+			name : "bool special",
+			shortName : "ctorEspecial",
+			description : "Must be true if the attack is a special attack, false if the attack is a physical or status attack."
+		    },
+		    {
+			name : "bool status",
+			shortName : "ctorEStatus",
+			description : "True if the attack is a status attack and that no damage must be inflicted. False if the attack inflict damage."
+		    },
+		    {
+			name : "int chanceDeCoups",
+			shortName : "chanceDeCoups",
+			description : "Represents the chance to have a critical hit. The chance to have a critical hit is 1/chanceDeCoups. The most common value is 16."
+		    },
+		    {
+			name : "bool rateJamais",
+			shortName : "rateJamais",
+			description : "True if the attack never misses."
+		    },
+		    {
+			name : "int ppMax",
+			shortName : "ppMax",
+			description : "Defines the attack's maximum power points. A power point is equal to one attack use."
+		    },
+		    {
+			name : "int priorite",
+			shortName : "priorite",
+			description : "Defines the level of priority of the attack."
+		    },
+		    {
+			name : "std::string className",
+			shortName : "className",
+			description : "The name of the attack's class."
+		    }
+		    
+		]
+	    },
+	    {
+		name : "virtual int effetAvant(OpMon &atk, OpMon &def) = 0",
+		shortName : "effetAvant",
+		description : "Method executed before the damage calculation. This method must be redefined in a derived class."
+	    },
+	    {
+		name : "virtual int effetApres(OpMon &atk, OpMon &def) = 0",
+		shortName : "effetApres",
+		description : "Method executed after the damage calculation. This methode must be redefined in a derived class."
+	    },
+	    {
+		name : "void healPP()",
+		shortName : "healPP",
+		description : "Puts the attack's power points to the maximum."
+	    },
+	    {
+		name : "int getType()",
+		shortName : "getType",
+		description : "Returns the type, an int associated with the enumeration Type."
+	    },
+	    {
+		name : "int attack(OpMon &atk, OpMon &def)",
+		shortName : "attack",
+		description : "Make the OpMon atk attacks the OpMon def with this attack."
+	    },
+	    {
+		name : "void siEchoue(OpMon &atk, OpMon &def)",
+		shortName : "siEchoue",
+		description : "Empty method, must be overloaded if the attack have an effet when it fails. This method is called when the attack fails."
+	    },
+	    {
+		name : "Class&lt;Attaque&gt;* getClass()",
+		shortName : "getClass",
+		description : "Returns the attack's Class object."
+	    },
+	    {
+		name : "std::string getClassName()",
+		shortName : "getClassName",
+		description : "Returns the attack's class name."
+	    },
+	    {
+		name : "std::string save()",
+		shortName : "save",
+		description : "Saves this instance of Attack in Save::saveOutput."
+	    },
+	    {
+		name : "void setPP(int PP)",
+		shortName : "setPP",
+		description : "Changes the number of PP by the new one given in parameter."
+	    },
+	    {
+		name : "void setPPMax(int PPMax)",
+		shortName : "setPPMax",
+		description : "Changes the maximum number of PP by the new one given in parameter."
+	    }
+	]
+    },
+];
+
+var files = [main, initializer, opstring, stringkeys, internalfiles, optionssave, save, equipe, player, attaque];
+var fnames = ["main.hpp", "Initializer.hpp", "OpString.hpp", "StringKeys.hpp", "InternalFiles.hpp", "OptionsSave.hpp", "Save.hpp", "Equipe.hpp", "Player.hpp", "Attaque.hpp"];
