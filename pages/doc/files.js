@@ -711,5 +711,40 @@ var attaque = [
     },
 ];
 
-var files = [main, initializer, opstring, stringkeys, internalfiles, optionssave, save, equipe, player, attaque];
-var fnames = ["main.hpp", "Initializer.hpp", "OpString.hpp", "StringKeys.hpp", "InternalFiles.hpp", "OptionsSave.hpp", "Save.hpp", "Equipe.hpp", "Player.hpp", "Attaque.hpp"];
+var attaques = [
+    {
+	name : "ATK_CLASS(name)",
+	shortName : "ATK_CLASS",
+	description : "Macro used to make the attacks classes easier to create."
+    },
+    {
+	name : "EAv",
+	shortName : "EAv",
+	description : "Macro used to replace the prototype of effetAvant."
+    },
+    {
+	name : "EAp",
+	shortName : "EAp",
+	description : "Macro used to replace the prototype of effetApres"
+    },
+    {
+	name : "IF_ATK(NAME)",
+	shortName : "IF_ATK",
+	description : "Macro defining a bloc if, used in the function newAtk."
+    },
+    {
+	name : "namespace Attaques",
+	shortName : "nAttaques",
+	description : "Namespace containing all classes derivated from the class Attaque, and other tools associated with the attacks. The attacks won't be listed here, because there is no point to list the attacks here. If you really want to see these classes, go see the source code.",
+	elements : [
+	    {
+		name : "Attaque* newAtk(std::string name)",
+		shortName : "newAtk",
+		description : "Create an attack, chosing within the classes derived with the name given in parameter. If no classes exists with that name, returns NULL."
+	    },
+	]
+    }
+];
+
+var files = [main, initializer, opstring, stringkeys, internalfiles, optionssave, save, equipe, player, attaque, attaques];
+var fnames = ["main.hpp", "Initializer.hpp", "OpString.hpp", "StringKeys.hpp", "InternalFiles.hpp", "OptionsSave.hpp", "Save.hpp", "Equipe.hpp", "Player.hpp", "Attaque.hpp", "Attaques.hpp"];
