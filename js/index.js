@@ -48,6 +48,13 @@ const SEEISSUES        = document.getElementById("seeIssues");
 const CREATEISSUE      = document.getElementById("createIssue");
 const JLPPCROLE        = document.getElementById("jlppcRole");
 const NAVET56ROLE      = document.getElementById("navet56Role");
+const LINKS            = document.getElementById("links");
+const LOOKGITHUB       = document.getElementById("lookGithub");
+const LOOKSITEREPO     = document.getElementById("lookSiterepo");
+const LOOKYT           = document.getElementById("lookYT");
+const LOOKDISC         = document.getElementById("lookDisc");
+const LOOKDOC          = document.getElementById("lookDoc");
+const DISCLAMER        = document.getElementById("disclamer");
 
 var textFr = {
     langTitle : "Le jeu inspiré de Pokémon !",
@@ -97,6 +104,12 @@ var textFr = {
     catFight : "En combat",
     catCity : "Les villes",
     catInterface : "Interface du jeu",
+    links : "Liens",
+    lookGithub : "Voir le code source",
+    lookSiterepo : "Voir le code source du site",
+    lookYT : "Voir la chaine Youtube",
+    lookDisc : "Voir le chan Discord",
+    lookDoc : "Voir la documentation du code source",
     reportBugs : "Reportez des bugs ou donnez des suggestions !",
     goIssues : "Allez sur Github section Issues !",
     seeIssues : "Voir les Issues sur Github",
@@ -154,6 +167,12 @@ var textEn = {
     catFight : "In fight",
     catCity : "The cities",
     catInterface : "Game HUD",
+    links : "Liens",
+    lookGithub : "Voir le code source",
+    lookSiterepo : "Voir le code source du site",
+    lookYT : "Voir la chaine Youtube",
+    lookDisc : "Voir le chan Discord",
+    lookDoc : "Voir la documentation du code source",
     reportBugs : "To report bugs and make suggestions on GitHub :",
     goIssues : "Go on Github Issues",
     seeIssues : "See all OpMon's Issues on Github",
@@ -210,6 +229,12 @@ var textEs = {
     catFight : "In fight",
     catCity : "The cities",
     catInterface : "Game HUD",
+    links : "Liens",
+    lookGithub : "Voir le code source",
+    lookSiterepo : "Voir le code source du site",
+    lookYT : "Voir la chaine Youtube",
+    lookDisc : "Voir le chan Discord",
+    lookDoc : "Voir la documentation du code source",
     reportBugs : "To report bugs and make suggestions on GitHub :",
     goIssues : "Go on Github Issues",
     seeIssues : "See all OpMon's Issues on Github",
@@ -272,8 +297,12 @@ function printLang(id){
     CREATEISSUE.innerHTML = lang.createIssue;
     JLPPCROLE.innerHTML = lang.jlppcRole;
     NAVET56ROLE.innerHTML = lang.navet56Role;
+    LOOKGITHUB.innerHTML = lang.lookGithub;
+    LOOKSITEREPO.innerHTML = lang.lookSiterepo;
+    LOOKYT.innerHTML = lang.lookYT;
+    LOOKDISC.innerHTML = lang.lookDisc;
+    LOOKDOC.innerHTML = lang.LookDoc;
     if(id == 1){
-	const DISCLAMER = document.getElementById("disclamer");
 	DISCLAMER.innerHTML = "Este sitio no está completamente traducido, y algunos de sus pasajes se traducen gracias a un software de traducción. Si usted desea ayudar, puede contactar con nosotros jlppcprog@ntymail.com.";
     }
     
