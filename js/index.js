@@ -168,11 +168,11 @@ var textEn = {
     catCity : "The cities",
     catInterface : "Game HUD",
     links : "Liens",
-    lookGithub : "Voir le code source",
-    lookSiterepo : "Voir le code source du site",
-    lookYT : "Voir la chaine Youtube",
-    lookDisc : "Voir le chan Discord",
-    lookDoc : "Voir la documentation du code source",
+    lookGithub : "See the source code",
+    lookSiterepo : "See this site's source code",
+    lookYT : "Go to the Youtube channel",
+    lookDisc : "Go to the OpMon's discord server",
+    lookDoc : "Go to the OpMon's documentation",
     reportBugs : "To report bugs and make suggestions on GitHub :",
     goIssues : "Go on Github Issues",
     seeIssues : "See all OpMon's Issues on Github",
@@ -301,7 +301,7 @@ function printLang(id){
     LOOKSITEREPO.innerHTML = lang.lookSiterepo;
     LOOKYT.innerHTML = lang.lookYT;
     LOOKDISC.innerHTML = lang.lookDisc;
-    LOOKDOC.innerHTML = lang.LookDoc;
+    LOOKDOC.innerHTML = lang.lookDoc;
     if(id == 1){
 	DISCLAMER.innerHTML = "Este sitio no está completamente traducido, y algunos de sus pasajes se traducen gracias a un software de traducción. Si usted desea ayudar, puede contactar con nosotros jlppcprog@ntymail.com.";
     }
