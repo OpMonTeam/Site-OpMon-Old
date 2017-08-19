@@ -167,7 +167,7 @@ var textEn = {
     catFight : "In fight",
     catCity : "The cities",
     catInterface : "Game HUD",
-    links : "Liens",
+    links : "Links",
     lookGithub : "See the source code",
     lookSiterepo : "See this site's source code",
     lookYT : "Go to the Youtube channel",
@@ -229,7 +229,7 @@ var textEs = {
     catFight : "In fight",
     catCity : "The cities",
     catInterface : "Game HUD",
-    links : "Liens",
+    links : "Links",
     lookGithub : "Voir le code source",
     lookSiterepo : "Voir le code source du site",
     lookYT : "Voir la chaine Youtube",
@@ -298,6 +298,7 @@ function printLang(id){
     JLPPCROLE.innerHTML = lang.jlppcRole;
     NAVET56ROLE.innerHTML = lang.navet56Role;
     LOOKGITHUB.innerHTML = lang.lookGithub;
+    LINKS.innerHTML = lang.links;
     LOOKSITEREPO.innerHTML = lang.lookSiterepo;
     LOOKYT.innerHTML = lang.lookYT;
     LOOKDISC.innerHTML = lang.lookDisc;
