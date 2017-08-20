@@ -116,8 +116,8 @@ var initializer = [
 	description : "Namespace containing variables and functions that loads the resources in memory.",
 	elements : [
 	    {
-		name : "Espece *listeOp[OP_NUMBER]",
-		shortName : "listeOp",
+		name : "Espece *listOp[OP_NUMBER]",
+		shortName : "listOp",
 		description : "Array containing all the OpMons species."
 	    },
 	    {
@@ -583,15 +583,15 @@ var player = [
     },
 ];
 
-var attaque = [
+var attack = [
     {
-	name : "class Attaque",
-	shortName : "cAttaque",
+	name : "class Attack",
+	shortName : "cAttack",
 	description : "Contains the definition of an OpMon attack. This class is pure virtual and, to create an attack, a derivated class must be created, to overload the effetAvant and effetApres methods.",
 	elements : [
 	    {
-		name: "Attaque(std::string nom, int puissance, int type, int precision, bool special, bool status, int chanceDeCoups, bool rateJamais, int ppMax, int priorite, std::string className)",
-		shortName : "ctorAttaque",
+		name: "Attack(std::string nom, int puissance, int type, int precision, bool special, bool status, int chanceDeCoups, bool rateJamais, int ppMax, int priorite, std::string className)",
+		shortName : "ctorAttack",
 		description : "Constructs an attack with the given elements.",
 		elements : [
 		    {
@@ -683,7 +683,7 @@ var attaque = [
 		description : "Empty method, must be overloaded if the attack have an effet when it fails. This method is called when the attack fails."
 	    },
 	    {
-		name : "Class&lt;Attaque&gt;* getClass()",
+		name : "Class&lt;Attack&gt;* getClass()",
 		shortName : "getClass",
 		description : "Returns the attack's Class object."
 	    },
@@ -711,7 +711,7 @@ var attaque = [
     },
 ];
 
-var attaques = [
+var attacks = [
     {
 	name : "ATK_CLASS(name)",
 	shortName : "ATK_CLASS",
@@ -733,12 +733,12 @@ var attaques = [
 	description : "Macro defining a bloc if, used in the function newAtk."
     },
     {
-	name : "namespace Attaques",
-	shortName : "nAttaques",
-	description : "Namespace containing all classes derivated from the class Attaque, and other tools associated with the attacks. The attacks won't be listed here, because there is no point to list the attacks here. If you really want to see these classes, go see the source code.",
+	name : "namespace Attacks",
+	shortName : "nAttacks",
+	description : "Namespace containing all classes derivated from the class Attack, and other tools associated with the attacks. The attacks won't be listed here, because there is no point to list the attacks here. If you really want to see these classes, go see the source code.",
 	elements : [
 	    {
-		name : "Attaque* newAtk(std::string name)",
+		name : "Attack* newAtk(std::string name)",
 		shortName : "newAtk",
 		description : "Create an attack, chosing within the classes derived with the name given in parameter. If no classes exists with that name, returns NULL."
 	    },
@@ -746,5 +746,55 @@ var attaques = [
     }
 ];
 
-var files = [main, initializer, opstring, stringkeys, internalfiles, optionssave, save, equipe, player, attaque, attaques];
-var fnames = ["main.hpp", "Initializer.hpp", "OpString.hpp", "StringKeys.hpp", "InternalFiles.hpp", "OptionsSave.hpp", "Save.hpp", "Equipe.hpp", "Player.hpp", "Attaque.hpp", "Attaques.hpp"];
+var opmon = [
+    {
+	name : "namespace CalcCourbes",
+	shortName : "nCalcCourbes",
+	description : "Namespace containing functions to calculate the OpMon's experience courbs. See the source code if you want more information."
+    },
+    {
+	name : "class OpMon",
+	shortName : "cOpMon",
+	description : "Defines an OpMon."
+	elements : [
+	    {
+		name : "bool falsif",
+		shortName : "falsif",
+		description : "If true, the OpMon is not correctly initialized, and must not be used."
+	    },
+	    {
+		name : "bool confus",
+		shortName : "confus",
+		description : "If true, the OpMon is confused."
+	    },
+	    {
+		name : "bool peur",
+		shortName : "peur",
+		description : "If true, the OpMon is afraid."
+	    },
+	    {
+		name : "bool amour",
+		shortName : "amour",
+		description : "If true, the OpMon is in love.",
+	    },
+	    {
+		name : "bool vampigraine",
+		shortName : "vampigraine",
+		description : "If true, the OpMon has been attacked with vampigraine."
+	    },
+	    {
+		name : "bool malediction",
+		shortName : "malediction",
+		description : "If true, the OpMon has been attacked with curse."
+	    },
+	    {
+		name : "OpMon()",
+		shortName : "ctorOpMon",
+		description : "Default OpMon constructor. Leaves falsif true."
+	    },
+	]
+    },
+];
+
+var files = [main, initializer, opstring, stringkeys, internalfiles, optionssave, save, equipe, player, attack, attacks];
+var fnames = ["main.hpp", "Initializer.hpp", "OpString.hpp", "StringKeys.hpp", "InternalFiles.hpp", "OptionsSave.hpp", "Save.hpp", "Equipe.hpp", "Player.hpp", "Attack.hpp", "Attacks.hpp"];
