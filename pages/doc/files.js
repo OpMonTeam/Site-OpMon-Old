@@ -748,7 +748,7 @@ var attacks = [
 
 var opmon = [
     {
-	name : "namespace CalcCourbes",
+	name : "namespace CalcCourbs",
 	shortName : "nCalcCourbes",
 	description : "Namespace containing functions to calculate the OpMon's experience courbs. See the source code if you want more information."
     },
@@ -789,8 +789,95 @@ var opmon = [
 	    },
 	    {
 		name : "OpMon()",
-		shortName : "ctorOpMon",
+		shortName : "ctorOpMon1",
 		description : "Default OpMon constructor. Leaves falsif true."
+	    },
+	    {
+		name : "OpMon(std::string nickname, Species *species, int level, Attack *attack1, Attack *attack2, Attack *attack3, Attack *attack4, NatureClass nature)",
+		shortName : "ctorOpMon2",
+		description : "Constructs an Opmon with the given parameters.",
+		elements : [
+		    {
+			name : "std::string nickname",
+			shortName : "nickname",
+			description : "The OpMon's nickname."
+		    },
+		    {
+			name : "Species *species",
+			shortName : "species",
+			description : "The OpMon's species.",
+		    },
+		    {
+			name : "int level",
+			shortName : "level",
+			description : "The OpMon's level."
+		    },
+		    {
+			name : "Attack *attackX",
+			shortName : "attackX",
+			description : "Replace X by a number from 1 to 4. 4 parameters containing the 4 OpMon's attacks. If you want to leave some attack slots empty, put NULL or nullptr."
+		    },
+		    {
+			name : "NatureClass nature",
+			shortName : "nature",
+			description : "The OpMon's nature"
+		    }
+		]
+	    },
+	    {
+		name : "OpMon(std::ifstream &in)",
+		shortName : "ctorOpMon3",
+		description : "Constructs an OpMon from the data found in the file given."
+	    },
+	    {
+		name : "bool captured(I_Pokeball const& Opball)",
+		shortName : "captured",
+		description : "Calculate if the OpMon is captured or not and return the result in a boolean."
+	    },
+	    {
+		name : "void setStat(std::string const& stat, int newStat)",
+		shortName : "setStat",
+		description : "Sets a start to a new value. The stat is identified with the string given."
+	    },
+	    {
+		name : "void levelUp()",
+		shortName : "levelUp",
+		description : "Method called when the OpMon gains a level."
+	    },
+	    {
+		name : "bool isHoldingItem() const",
+		shortName : "isHoldingItem",
+		description : "Returns if the OpMon is holding an item or not."
+	    },
+	    {
+		name : "int win(OpMon const& beaten)"
+		shortName : "win",
+		description : "Method called when the OpMon wins a fight. The OpMon beaten is given to calculate the exp and evs won."
+	    },
+	    {
+		name : "void calcStats()",
+		shortName : "calcStats",
+		description : "Method recalculating the statistics."
+	    },
+	    {
+		name : "bool itemUsed(Item *used)",
+		shortName : "itemUsed",
+		description : "Methode called when using an item on the OpMon. Returns true if the item must be consumed."
+	    },
+	    {
+		name : "Item *hold(Item *item)",
+		shortName : "hold",
+		description : "Gives an item to the OpMon. Returns the old item held."
+	    },
+	    {
+		name : "void traded()",
+		shortName : "traded",
+		description : "Method called when the OpMon is traded."
+	    },
+	    {
+		name : "void evolve()",
+		shortName : "evolve",
+		description : "Method called during the OpMon's evolution."
 	    },
 	]
     },
