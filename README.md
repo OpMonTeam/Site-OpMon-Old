@@ -1,7 +1,7 @@
 # OPMon Lazuli Website
 
 ### General informations:<br/>
-This is the OPMon Lazuli's website repository, OPMon is a game who as create by Jlppc and Navet56
+This is the OPMon Lazuli's website repository, OPMon is a game who as create by Jlppc and Navet56.<br>
 To report website bugs or make suggestions, please click here :
 [Issues](https://github.com/jlppc/Site-OpMon/issues)<br/>
 
