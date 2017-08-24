@@ -1,7 +1,8 @@
-# Site de OpMon Lazuli
+# OPMon Lazuli Website
 
-Informations generales:<br/>
-Ce dépot est dédié au site du projet de jeu vidéo libre "OpMon Lazuli" créé par Jlppc<br/>
-Vous pouvez faire part des bugs du site dans l'onglet issue<br/>
-<a href="http://opmon-game.ga">Lien vers le site</a><br/>
-<a href="https://github.com/jlppc/OpMon"/>GitHub du jeu</a><br/>
+### Informations generales:<br/>
+This is the OPMon Lazuli's website repository, OPMon is a game who as create by Jlppc and Navet56
+To report website bugs or make suggestions, please click here :
+[Issues](https://github.com/jlppc/Site-OpMon/issues)<br/>
+[Website](opmon-game.ga)</a><br/>
+[Game Sources (Github)](https://github.com/jlppc/OpMon)
