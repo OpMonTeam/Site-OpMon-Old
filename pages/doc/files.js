@@ -755,7 +755,7 @@ var opmon = [
     {
 	name : "class OpMon",
 	shortName : "cOpMon",
-	description : "Defines an OpMon."
+	description : "Defines an OpMon.",
 	elements : [
 	    {
 		name : "bool falsif",
@@ -850,7 +850,7 @@ var opmon = [
 		description : "Returns if the OpMon is holding an item or not."
 	    },
 	    {
-		name : "int win(OpMon const& beaten)"
+		name : "int win(OpMon const& beaten)",
 		shortName : "win",
 		description : "Method called when the OpMon wins a fight. The OpMon beaten is given to calculate the exp and evs won."
 	    },
