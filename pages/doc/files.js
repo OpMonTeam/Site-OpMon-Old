@@ -146,12 +146,12 @@ var initializer = [
 		description : "Array containing the principal character's textures"
 	    },
 	    {
-		name : "sf::Texture marchePP[4]",
+		name : "sf::Texture walkingPP[4]",
 		shortName : "marchePP",
 		description : "Array containing the principal character's walking textures"
 	    },
 	    {
-		name : "sf::Texture marchePP2[4]",
+		name : "sf::Texture walkingPP2[4]",
 		shortName : "marchePP2",
 		description : "Array containing other principal character's walking textures"
 	    },
@@ -397,20 +397,20 @@ var save = [
     }
 ];
 
-var equipe = [
+var opteam = [
     {
-	name : "class Equipe",
-	shortName : "cEquipe",
+	name : "class OpTeam",
+	shortName : "cOpTeam",
 	description : "Class defining a OpMon team",
 	elements : [
 	    {
-		name : "Equipe(std::string const& nom)",
-		shortName : "ctorEquipe",
+		name : "OpTeam(std::string const& nom)",
+		shortName : "ctorOpTeam",
 		description : "Constructs a Equipe object with a name, and without any OpMons."
 	    },
 	    {
-		name : "OpMon** getEquipe()",
-		shortName : "getEquipe",
+		name : "OpMon** getOpTeam()",
+		shortName : "getOpTeam",
 		description : "Returns the OpMon team."
 	    },
 	    {
@@ -514,8 +514,8 @@ var player = [
 		description : "Changes the player's name by the name given in parameter."
 	    },
 	    {
-		name : "int getDressID() const",
-		shortName : "getDressID",
+		name : "int getTrainerID() const",
+		shortName : "getTrainerID",
 		description : "Returns the player's trainer ID"
 	    },
 	    {
@@ -883,5 +883,5 @@ var opmon = [
     },
 ];
 
-var files = [main, initializer, opstring, stringkeys, internalfiles, optionssave, save, equipe, player, attack, attacks];
+var files = [main, initializer, opstring, stringkeys, internalfiles, optionssave, save, opteam, player, attack, attacks];
 var fnames = ["main.hpp", "Initializer.hpp", "OpString.hpp", "StringKeys.hpp", "InternalFiles.hpp", "OptionsSave.hpp", "Save.hpp", "Equipe.hpp", "Player.hpp", "Attack.hpp", "Attacks.hpp"];
