@@ -37,7 +37,7 @@ function macDown(){
 }
 
 var textFr = {
-    instruction : "Si vous avez un autre système, vous pouvez très bien compiler le jeu grace au sources, si SFML et gcc sont disponibles pour votre système. Vous pouvez utiliser le projet Codeblocks, le makefile, ou directement compiler a la main.",
+    instruction : "Si vous avez un autre système, vous pouvez très bien compiler le jeu grace au sources, si SFML, gcc et cmake sont disponibles pour votre système.",
     macInstructions : "Sur les systèmes Mac, vous devez installer Wine pour faire fonctionner le jeu. Après avoir installé le logiciel Wine, lancez \"opmon-setup.exe\" avec ce logiciel. Vous pouvez aussi essayer de compiler le jeu sur Mac avec les sources (Voir autres systèmes)",
     menu : {
 	down : "Téléchargements",
@@ -66,7 +66,7 @@ var textFr = {
 };
 
 var textEn = {
-    instruction : "If you have an another system, you can build the game with the source files, if sfml and gcc are avilable for your system. You can use the Code::Blocks project, the Makefile, or directly the source files.",
+    instruction : "If you have an another system, you can build the game with the source files, if sfml, cmake and gcc are avilable for your system.",
     macInstuctions : "On mac systems, you must install Wine to run the game. When Wine is installed on your computer, launch \"opmon-setup.exe\" with it. You can try to build the game with the source files too.",
     menu : {
 	down : "Downloads",
@@ -92,7 +92,7 @@ var textEn = {
 };
 
 var textEs = {
-        instruction : "If you have an another system, you can build the game with the source files, if sfml and gcc are avilable for your system. You can use the Code::Blocks project, the Makefile, or directly the source files.",
+        instruction : "If you have an another system, you can build the game with the source files, if sfml, cmake and gcc are avilable for your system.",
     macInstuctions : "On mac systems, you must install Wine to run the game. When Wine is installed on your computer, launch \"opmon-setup.exe\" with it. You can try to build the game with the source files too.",
     menu : {
 	down : "Descargas",
