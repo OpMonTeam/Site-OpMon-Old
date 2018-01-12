@@ -105,7 +105,7 @@ $(document).ready(function() {
        "http://opmon-game.ga/images/home-bg-slideshow1.jpg", 
        "http://opmon-game.ga/images/home-bg-slideshow2.jpg",
        "http://opmon-game.ga/images/home-bg-slideshow3.jpg",
-        ],  {duration: 2000, fade: 750});
+        ],  {duration: 9000, fade: 1500});
     });
   })
 
