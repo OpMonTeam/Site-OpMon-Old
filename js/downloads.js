@@ -1,5 +1,5 @@
 ﻿function linuxDown(){
-    goTo("https://github.com/jlppc/OpMon/releases/download/alpha-v" + version + "/OpMon_" + version  + "-bin.deb");
+    goTo("https://github.com/cyrioncentori/OpMon/releases/download/alpha-v" + version + "/OpMon_" + version  + "-bin.deb");
 }
 
 const MENUDOWN         = document.getElementById("menuDown");
@@ -27,7 +27,7 @@ var macInstructions = "";
 
 function instruction(){
     alert(instructionAlert);
-    goTo("https://github.com/jlppc/OpMon/archive/master.zip");
+    goTo("https://github.com/cyrioncentori/OpMon/archive/master.zip");
 }
 
 
@@ -50,10 +50,10 @@ var textFr = {
     langTitle : "Téléchargement",
     langSubTitle : "Jeu en version Alpha " + version + date,
     winDown : "Télécharger pour Windows",
-    winNIDown : '<a href="https://github.com/jlppc/OpMon/releases/download/alpha-v' + version + '/OpMon-Win_NoInstall.zip" class="wow fadeInUp btn btn-default hvr-bounce-to-top smoothScroll" data-wow-delay="1.3s" id="winNIDown">Télécharger pour Windows (Sans installation)</a>',
+    winNIDown : '<a href="https://github.com/cyrioncentori/OpMon/releases/download/alpha-v' + version + '/OpMon-Win_NoInstall.zip" class="wow fadeInUp btn btn-default hvr-bounce-to-top smoothScroll" data-wow-delay="1.3s" id="winNIDown">Télécharger pour Windows (Sans installation)</a>',
     macDown : "Télécharger pour Mac",
-    debDown : '<a href="https://github.com/jlppc/OpMon/releases/download/alpha-v' + version + '/OpMon_' + version + '-bin.deb"  class="wow fadeInUp btn btn-default hvr-bounce-to-top smoothScroll" data-wow-delay="1.3s"> Télécharger .deb pour Debian</a>',
-    linDown : '<a href="https://github.com/jlppc/OpMon/releases/download/alpha-v' + version + '/OpMon-Linux_NoInstall.zip" class="wow fadeInUp btn btn-default hvr-bounce-to-top smoothScroll" data-wow-delay="1.3s"> Télécharger pour Linux</a>',
+    debDown : '<a href="https://github.com/cyrioncentori/OpMon/releases/download/alpha-v' + version + '/OpMon_' + version + '-bin.deb"  class="wow fadeInUp btn btn-default hvr-bounce-to-top smoothScroll" data-wow-delay="1.3s"> Télécharger .deb pour Debian</a>',
+    linDown : '<a href="https://github.com/cyrioncentori/OpMon/releases/download/alpha-v' + version + '/OpMon-Linux_NoInstall.zip" class="wow fadeInUp btn btn-default hvr-bounce-to-top smoothScroll" data-wow-delay="1.3s"> Télécharger pour Linux</a>',
     otherDown : "Autres versions",
     seeGithub : "Voir sur github",
     otherSystems : "Autres systèmes",
@@ -79,10 +79,10 @@ var textEn = {
     langTitle : "Download",
     langSubTitle : "Game version : Alpha " + version + date,
     winDown : "Download for Windows",
-    winNiDown : '<a href="https://github.com/jlppc/OpMon/releases/download/alpha-v' + version + '/OpMon-Win_NoInstall.zip" class="wow fadeInUp btn btn-default hvr-bounce-to-top smoothScroll" data-wow-delay="1.3s" id="winNIDown">Download for Windows (Without installation)</a>',
+    winNiDown : '<a href="https://github.com/cyrioncentori/OpMon/releases/download/alpha-v' + version + '/OpMon-Win_NoInstall.zip" class="wow fadeInUp btn btn-default hvr-bounce-to-top smoothScroll" data-wow-delay="1.3s" id="winNIDown">Download for Windows (Without installation)</a>',
     macDown : "Download for Mac",
-    debDown : '<a href="https://github.com/jlppc/OpMon/releases/download/alpha-v' + version + '/OpMon_' + version + '-bin.deb"  class="wow fadeInUp btn btn-default hvr-bounce-to-top smoothScroll" data-wow-delay="1.3s">Download for Debian</a>',
-    linDown : '<a href="https://github.com/jlppc/OpMon/releases/download/alpha-v' + version + '/OpMon-Linux_NoInstall.zip" class="wow fadeInUp btn btn-default hvr-bounce-to-top smoothScroll" data-wow-delay="1.3s">Download for Linux</a>',
+    debDown : '<a href="https://github.com/cyrioncentori/OpMon/releases/download/alpha-v' + version + '/OpMon_' + version + '-bin.deb"  class="wow fadeInUp btn btn-default hvr-bounce-to-top smoothScroll" data-wow-delay="1.3s">Download for Debian</a>',
+    linDown : '<a href="https://github.com/cyrioncentori/OpMon/releases/download/alpha-v' + version + '/OpMon-Linux_NoInstall.zip" class="wow fadeInUp btn btn-default hvr-bounce-to-top smoothScroll" data-wow-delay="1.3s">Download for Linux</a>',
     otherDown : "Other versions",
     seeGithub : "See on Github",
     otherSystems : "Other systems",
@@ -105,10 +105,10 @@ var textEs = {
     langTitle : "Descargas",
     langSubTitle : "Version del juego : Alpha " + version + date,
     winDown : "Download for Windows",
-    winNiDown : '<a href="https://github.com/jlppc/OpMon/releases/download/alpha-v' + version + '/OpMon-Win_NoInstall.zip" class="wow fadeInUp btn btn-default hvr-bounce-to-top smoothScroll" data-wow-delay="1.3s" id="winNIDown">Download for Windows (Without installation)</a>',
+    winNiDown : '<a href="https://github.com/cyrioncentori/OpMon/releases/download/alpha-v' + version + '/OpMon-Win_NoInstall.zip" class="wow fadeInUp btn btn-default hvr-bounce-to-top smoothScroll" data-wow-delay="1.3s" id="winNIDown">Download for Windows (Without installation)</a>',
     macDown : "Download for Mac",
-    debDown : '<a href="https://github.com/jlppc/OpMon/releases/download/alpha-v' + version + '/OpMon_' + version + '-bin.deb"  class="wow fadeInUp btn btn-default hvr-bounce-to-top smoothScroll" data-wow-delay="1.3s">Download for Debian</a>',
-    linDown : '<a href="https://github.com/jlppc/OpMon/releases/download/alpha-v' + version + '/OpMon-Linux_NoInstall.zip" class="wow fadeInUp btn btn-default hvr-bounce-to-top smoothScroll" data-wow-delay="1.3s">Download for Linux</a>',
+    debDown : '<a href="https://github.com/cyrioncentori/OpMon/releases/download/alpha-v' + version + '/OpMon_' + version + '-bin.deb"  class="wow fadeInUp btn btn-default hvr-bounce-to-top smoothScroll" data-wow-delay="1.3s">Download for Debian</a>',
+    linDown : '<a href="https://github.com/cyrioncentori/OpMon/releases/download/alpha-v' + version + '/OpMon-Linux_NoInstall.zip" class="wow fadeInUp btn btn-default hvr-bounce-to-top smoothScroll" data-wow-delay="1.3s">Download for Linux</a>',
     otherDown : "Other versions",
     seeGithub : "See on Github",
     otherSystems : "Other systems",
