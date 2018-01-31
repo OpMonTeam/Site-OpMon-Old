@@ -54,5 +54,29 @@ var AnimationCtrl = [{
 	]
 }];
 
-var files = [AGameScreen, AnimationCtrl];
-var fnames = ["Controller::AGameScreen", "Controller::AnimationCtrl"];
+var EventsCtrl = [{
+	name : "namespace EventsCtrl",
+	shortName : "EventsCtrl",
+	description : "Namespace containing the functions to update the events",
+	elements : [
+	{
+		name : "void updateEvents(std::vector<Model::Event*>& events, Model::Player& player, View::Overworld& overworld)",
+		shortName : "updateEvents",
+		description : "Calls the \"update\" method for all the events given in parameter."
+	},
+	{
+		name : "void actionEvents(std::vector<Model::Event*>& events, Model::Player& player, Model::Events::EventTrigger toTrigger, View::Overworld& overworld)",
+		shortName : "actionEvents",
+		description : "TODO"
+	},
+	{
+		name : "void checkAction(sf::Event const& event, Model::Player& player, View::Overworld& overworld)",
+		shortName : "checkAction",
+		description : "TODO"
+		
+	}
+	]
+}];
+
+var files = [AGameScreen, AnimationCtrl, EventsCtrl];
+var fnames = ["Controller::AGameScreen", "Controller::AnimationCtrl", "Controller::EventsCtrl"];
