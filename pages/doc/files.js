@@ -67,12 +67,12 @@ var EventsCtrl = [{
 	{
 		name : "void actionEvents(std::vector<Model::Event*>& events, Model::Player& player, Model::Events::EventTrigger toTrigger, View::Overworld& overworld)",
 		shortName : "actionEvents",
-		description : "TODO"
+		description : "Checks if the events can be activated, and calls the action method of Event. Function called by checkAction."
 	},
 	{
 		name : "void checkAction(sf::Event const& event, Model::Player& player, View::Overworld& overworld)",
 		shortName : "checkAction",
-		description : "TODO"
+		description : "Checks if an event must be actioned and calls actionEvent."
 		
 	}
 	]
