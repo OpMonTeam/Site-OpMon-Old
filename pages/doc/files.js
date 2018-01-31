@@ -78,5 +78,38 @@ var EventsCtrl = [{
 	]
 }];
 
-var files = [AGameScreen, AnimationCtrl, EventsCtrl];
-var fnames = ["Controller::AGameScreen", "Controller::AnimationCtrl", "Controller::EventsCtrl"];
+var MainMenuCtrl = [{
+    name : "class MainMenuCtrl : public AGameScreen",
+    shortName : "MainMenuCtrl",
+    description : "Main Menu's controller.",
+    elements : [
+	{
+	    name : "MainMenuCtrl()",
+	    shortName : "ctorMainMenuCtrl",
+	    description : "The constructor"
+	},
+	{
+	    name : "GameStatus checkEvent(sf::Event const& event) override",
+	    shortName : "checkEvent",
+	    description : "See AGameScreen::checkEvent"
+	},
+	{
+	    name : "GameStatus update() override",
+	    shortName : "update",
+	    description : "See AGameScreen::update"
+	},
+	{
+	    name : "void suspend() override",
+	    shortName : "suspend",
+	    description : "See AGameScreen::suspend"
+	},
+	{
+	    name : "void resume() override",
+	    shortName : "resume",
+	    description : "See AGameScreen::resume"
+	}
+    ]
+}];
+
+var files = [AGameScreen, AnimationCtrl, EventsCtrl, MainMenuCtrl];
+var fnames = ["Controller::AGameScreen", "Controller::AnimationCtrl", "Controller::EventsCtrl", "Controller::MainMenuCtrl"];
