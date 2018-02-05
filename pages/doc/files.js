@@ -111,7 +111,7 @@ var MainMenuCtrl = [{
     ]
 }];
 
-var MainMenuCtrl = [{
+var OptionsMenuCtrl = [{
     name : "class OptionsMenuCtrl : public AGameScreen",
     shortName : "OptionsMenuCtrl",
     description : "Options Menu's controller.",
@@ -144,5 +144,38 @@ var MainMenuCtrl = [{
     ]
 }];
 
-var files = [AGameScreen, AnimationCtrl, EventsCtrl, MainMenuCtrl, OptionsMenuCtrl];
-var fnames = ["Controller::AGameScreen", "Controller::AnimationCtrl", "Controller::EventsCtrl", "Controller::MainMenuCtrl", "Controller::OptionsMenuCtrl"];
+var OverworldCtrl = [{
+    name : "class OverworldCtrl : public AGameScreen",
+    shortName : "OverworldCtrl",
+    description : "The Overworld game screen",
+    elements : [
+	{
+	    name : "OverworldCtrl(Model::Player &player)",
+	    shortName : "ctorOverworldCtrl",
+	    description : "The OverworldCtrl controller needs a reference to the Player, used to move, get it coordinates or check the events."
+	},
+	{
+	    name : "GameStatus checkEvent(sf::Event const &event) override",
+	    shortName : "checkEvent",
+	    description : "See AGameScreen::checkEvent"
+	},
+	{
+	    name : "GameStatus checkEventsDialog(sf::Event const& events, View::Overworld& overworld)",
+	    shortName : "checkEventsDialog",
+	    description : "Method called by checkEvent if there is a dialog in Overworld."
+	},
+	{
+	    name : "GameStatus checkEventsNoDialog(sf::Event const& events, View::Overworld& overworld)",
+	    shortName : "checkEventsNoDialog",
+	    description : "Method called by checkEvent if there is not a dialog in Overworld."
+	},
+	{
+	    name : "GameStatus update() override",
+	    shortName : "update",
+	    description : "See AGameScreen::update"
+	}
+    ]
+}];
+
+var files = [AGameScreen, AnimationCtrl, EventsCtrl, MainMenuCtrl, OptionsMenuCtrl, OverworldCtrl];
+var fnames = ["Controller::AGameScreen", "Controller::AnimationCtrl", "Controller::EventsCtrl", "Controller::MainMenuCtrl", "Controller::OptionsMenuCtrl", "Controler::OverworldCtrl"];
