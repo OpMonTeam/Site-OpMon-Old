@@ -294,5 +294,132 @@ var Attack = [{
     ]
 }];
 
-var files = [AGameScreen, AnimationCtrl, EventsCtrl, MainMenuCtrl, OptionsMenuCtrl, OverworldCtrl, PlayerCtrl, StartSceneCtrl, Attack];
-var fnames = ["Controller::AGameScreen", "Controller::AnimationCtrl", "Controller::EventsCtrl", "Controller::MainMenuCtrl", "Controller::OptionsMenuCtrl", "Controler::OverworldCtrl", "Controller::PlayerCtrl", "Controller::StartSceneCtrl", "Model::Attack"];
+var Attacks = [
+{
+	name : "ATK_CLASS(name)",
+	shortName : "ATK_CLASS",
+	description : "Replaces <code>class name : public Attack { public : </code>"
+},
+{
+	name : "EB",
+	shortName : "EB",
+	description : "Replaces <code>int effectBefore(OpMon &atk, OpMon &def)</code>"
+},
+{
+	name : "EA",
+	shortName : "EA",
+	description : "Replaces <code>int effectAfter(OpMon &atk, OpMon &def)</code>"
+},
+{
+	name : "IF_ATK(NAME)",
+	shortName : "IF_ATK",
+	description : "Used in Attacks::newAtk. \"Registers\" an attack class."
+},
+{
+	name : "namespace Attacks",
+	shortName : "Attacks",
+	description : "Namespace containing all the attacks inherited from the Attack class.",
+	elements : [
+	{
+		name : "Attack* newAtk(std::string name)",
+		shortName : "newAtk",
+		description : "Returns a pointer to a new Attack object from the name given in parameters."
+	}
+	]
+}
+];
+
+var Enum = [
+{
+	name : "enum class Status",
+	shortName : "Status",
+	description : "Enumerates the different OpMon status",
+	elements : [
+	{
+		name : "BURNING",
+		shortName : "BURNING",
+		description : ""
+	},
+	{
+		name : "PARALYSED",
+		shortName : "PARALYSED",
+		description : ""
+	},
+	{
+		name : "SLEEPING",
+		shortName : "SLEEPING",
+		description : ""
+	},
+	{
+		name : "FROZEN",
+		shortName : "FROZEN",
+		description : ""
+	},
+	{
+		name : "POISONED",
+		shortName : "POISONED",
+		description : ""
+	},
+	{
+		name : "NOTHING",
+		shortName : "NOTHING",
+		description : ""
+	}
+	]
+},
+{
+	name : "enum class Stats : int",
+	shortName : "Stats",
+	description : "Enumerates the differents OpMon stats",
+	elements : [
+	{
+		name : "ATK",
+		shortName : "ATK",
+		description : "Value : 6"
+	},
+	{
+		name : "DEF",
+		shortName : "DEF",
+		description : "Value : 1"
+	},
+	{
+		name : "ATKSPE",
+		shortName : "ATKSPE",
+		description : "Value : 2"
+	},
+	{
+		name : "DEFSPE",
+		shortName : "DEFSPE",
+		description : "Value : 3"
+	},
+	{
+		name : "SPE",
+		shortName : "SPE",
+		description : "Value : 4"
+	},
+	{
+		name : "HP",
+		shortName : "HP",
+		description : "Value : 5"
+	},
+	{
+		name : "ACC",
+		shortName : "ACC",
+		description : "Value : 7"
+	},
+	{
+		name : "EVA",
+		shortName : "EVA",
+		description : "Value : 8"
+	},
+	{
+		name : "NOTHING",
+		shortName : "NOTHING",
+		description : "Value : 0"
+	}
+	]
+}
+];
+
+var files = [AGameScreen, AnimationCtrl, EventsCtrl, MainMenuCtrl, OptionsMenuCtrl, OverworldCtrl, PlayerCtrl, StartSceneCtrl, Attack, Attacks, Enum];
+var fnames = ["Controller::AGameScreen", "Controller::AnimationCtrl", "Controller::EventsCtrl", "Controller::MainMenuCtrl", "Controller::OptionsMenuCtrl", "Controler::OverworldCtrl", "Controller::PlayerCtrl", "Controller::StartSceneCtrl", "Model::Attack", "Model::Attacks", "Model - Enumerations"];
