@@ -248,9 +248,49 @@ var Attack = [{
 	    name : "virtual int effectAfter(OpMon & atk, OpMon & def)",
 	    shortName : "effectAfter",
 	    description : "Method called after the damages calculation. \"atk\" is the offensive OpMon, \"def\" is the defensive."
-	}//Unfinished
+	},
+	{
+		name : "void healPP()",
+		shortName : "healPP",
+		description : "Sets pp to the ppMax's value."
+	},
+	{
+		name : "Type getType()",
+		shortName : "getType()",
+		description : "Returns the attack's type"
+	},
+	{
+		name : "int attack(OpMon &atk, OpMon &def)",
+		shortName : "attack",
+		description : "Method executing the attack, where atk is the attack's laucher, and def is the OpMon receiving the attack."
+	},
+	{
+		name : "virtual void ifFails(OpMon &atk, OpMon &def)",
+		shortName : "ifFails",
+		description : "Method called if the attack fails."
+	},
+	{
+		name : "virtual std::string getClassName()",
+		shortName : "getClassName",
+		description : "Returns the class name (Used in Attacks::newAttack)."
+	},
+	{
+		name : "virtual std::string save()",
+		shortName : "save",
+		description : "Returns the string representation of the object, to be saved in a file."
+	},
+	{
+		name : "void setPP(int PP)",
+		shortName : "setPP",
+		description : "Sets the PP to the number given"
+	},
+	{
+		name : "void setPPMax(int PPMax)",
+		shortName : "setPPMax",
+		description : "Sets the max PP to the number given"
+	}
     ]
 }];
 
-var files = [AGameScreen, AnimationCtrl, EventsCtrl, MainMenuCtrl, OptionsMenuCtrl, OverworldCtrl, Playerctrl, StartSceneCtrl];
-var fnames = ["Controller::AGameScreen", "Controller::AnimationCtrl", "Controller::EventsCtrl", "Controller::MainMenuCtrl", "Controller::OptionsMenuCtrl", "Controler::OverworldCtrl", "Controller::PlayerCtrl", "Controller::StartSceneCtrl"];
+var files = [AGameScreen, AnimationCtrl, EventsCtrl, MainMenuCtrl, OptionsMenuCtrl, OverworldCtrl, PlayerCtrl, StartSceneCtrl, Attack];
+var fnames = ["Controller::AGameScreen", "Controller::AnimationCtrl", "Controller::EventsCtrl", "Controller::MainMenuCtrl", "Controller::OptionsMenuCtrl", "Controler::OverworldCtrl", "Controller::PlayerCtrl", "Controller::StartSceneCtrl", "Model::Attack"];
