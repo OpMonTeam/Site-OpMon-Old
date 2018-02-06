@@ -14,14 +14,9 @@ var AGameScreen = [{
 		description : "Process a new SFML input (keyboard, mouse, ...).",
 	},
 	{
-		name : "virtual GameStatus update() = 0",
-		shortName : "update",
-		description : "Update and draw the game. This method is called once per frame."
-	},
-	{
-		name : "virtual void suspend()",
-		shortName : "suspend",
-		description : "Suspend the game screen"
+		name : "AGameScreen *getNextGameScreen()",
+		shortName : "getNextGameScreen",
+		description : "Returns the next game screen that must be printed after this one. When the method checkEvent will return GameStatus::NEXT, this method will be called to get the next game screen."
 	},
 	{
 		name : "virtual void resume()",
@@ -29,9 +24,14 @@ var AGameScreen = [{
 		description : "Resume the game screen"
 	},
 	{
-		name : "AGameScreen *getNextGameScreen()",
-		shortName : "getNextGameScreen",
-		description : "Returns the next game screen that must be printed after this one. When the method checkEvent will return GameStatus::NEXT, this method will be called to get the next game screen."
+		name : "virtual void suspend()",
+		shortName : "suspend",
+		description : "Suspend the game screen"
+	},
+	{
+		name : "virtual GameStatus update() = 0",
+		shortName : "update",
+		description : "Update and draw the game. This method is called once per frame."
 	}
 	]
 }];
@@ -60,11 +60,6 @@ var EventsCtrl = [{
 	description : "Namespace containing the functions to update the events",
 	elements : [
 	{
-		name : "void updateEvents(std::vector<Model::Event*>& events, Model::Player& player, View::Overworld& overworld)",
-		shortName : "updateEvents",
-		description : "Calls the \"update\" method for all the events given in parameter."
-	},
-	{
 		name : "void actionEvents(std::vector<Model::Event*>& events, Model::Player& player, Model::Events::EventTrigger toTrigger, View::Overworld& overworld)",
 		shortName : "actionEvents",
 		description : "Checks if the events can be activated, and calls the action method of Event. Function called by checkAction."
@@ -74,7 +69,13 @@ var EventsCtrl = [{
 		shortName : "checkAction",
 		description : "Checks if an event must be actioned and calls actionEvent."
 		
+	},
+	{
+		name : "void updateEvents(std::vector<Model::Event*>& events, Model::Player& player, View::Overworld& overworld)",
+		shortName : "updateEvents",
+		description : "Calls the \"update\" method for all the events given in parameter."
 	}
+
 	]
 }];
 
@@ -94,9 +95,9 @@ var MainMenuCtrl = [{
 	    description : "See AGameScreen::checkEvent"
 	},
 	{
-	    name : "GameStatus update() override",
-	    shortName : "update",
-	    description : "See AGameScreen::update"
+	    name : "void resume() override",
+	    shortName : "resume",
+	    description : "See AGameScreen::resume"
 	},
 	{
 	    name : "void suspend() override",
@@ -104,9 +105,9 @@ var MainMenuCtrl = [{
 	    description : "See AGameScreen::suspend"
 	},
 	{
-	    name : "void resume() override",
-	    shortName : "resume",
-	    description : "See AGameScreen::resume"
+	    name : "GameStatus update() override",
+	    shortName : "update",
+	    description : "See AGameScreen::update"
 	}
     ]
 }];
@@ -127,9 +128,9 @@ var OptionsMenuCtrl = [{
 	    description : "See AGameScreen::checkEvent"
 	},
 	{
-	    name : "GameStatus update() override",
-	    shortName : "update",
-	    description : "See AGameScreen::update"
+	    name : "void resume() override",
+	    shortName : "resume",
+	    description : "See AGameScreen::resume"
 	},
 	{
 	    name : "void suspend() override",
@@ -137,9 +138,9 @@ var OptionsMenuCtrl = [{
 	    description : "See AGameScreen::suspend"
 	},
 	{
-	    name : "void resume() override",
-	    shortName : "resume",
-	    description : "See AGameScreen::resume"
+	    name : "GameStatus update() override",
+	    shortName : "update",
+	    description : "See AGameScreen::update"
 	}
     ]
 }];
@@ -211,9 +212,9 @@ var StartSceneCtrl = [{
 	    description : "See AGameScreen::checkEvent"
 	},
 	{
-	    name : "GameStatus update() override",
-	    shortName : "update",
-	    description : "See AGameScreen::update"
+	    name : "void resume() override",
+	    shortName : "resume",
+	    description : "See AGameScreen::resume"
 	},
 	{
 	    name : "void suspend() override",
@@ -221,10 +222,11 @@ var StartSceneCtrl = [{
 	    description : "See AGameScreen::suspend"
 	},
 	{
-	    name : "void resume() override",
-	    shortName : "resume",
-	    description : "See AGameScreen::resume"
+	    name : "GameStatus update() override",
+	    shortName : "update",
+	    description : "See AGameScreen::update"
 	}
+	
     ]
 }];
 
@@ -240,9 +242,9 @@ var Attack = [{
 	    description : "Attack's constructor. Ask for all the attack's informations to create the attack."
 	},
 	{
-	    name : "virtual int effectBefore(OpMon &atk, OpMon & def)",
-	    shortName : "effectBefore",
-	    description : "Method called before the damages calculation. \"atk\" is the offensive OpMon, \"def\" is the defensive."
+		name : "int attack(OpMon &atk, OpMon &def)",
+		shortName : "attack",
+		description : "Method executing the attack, where atk is the attack's laucher, and def is the OpMon receiving the attack."
 	},
 	{
 	    name : "virtual int effectAfter(OpMon & atk, OpMon & def)",
@@ -250,9 +252,14 @@ var Attack = [{
 	    description : "Method called after the damages calculation. \"atk\" is the offensive OpMon, \"def\" is the defensive."
 	},
 	{
-		name : "void healPP()",
-		shortName : "healPP",
-		description : "Sets pp to the ppMax's value."
+	    name : "virtual int effectBefore(OpMon &atk, OpMon & def)",
+	    shortName : "effectBefore",
+	    description : "Method called before the damages calculation. \"atk\" is the offensive OpMon, \"def\" is the defensive."
+	},
+	{
+		name : "virtual std::string getClassName()",
+		shortName : "getClassName",
+		description : "Returns the class name (Used in Attacks::newAttack)."
 	},
 	{
 		name : "Type getType()",
@@ -260,19 +267,14 @@ var Attack = [{
 		description : "Returns the attack's type"
 	},
 	{
-		name : "int attack(OpMon &atk, OpMon &def)",
-		shortName : "attack",
-		description : "Method executing the attack, where atk is the attack's laucher, and def is the OpMon receiving the attack."
+		name : "void healPP()",
+		shortName : "healPP",
+		description : "Sets pp to the ppMax's value."
 	},
 	{
 		name : "virtual void ifFails(OpMon &atk, OpMon &def)",
 		shortName : "ifFails",
 		description : "Method called if the attack fails."
-	},
-	{
-		name : "virtual std::string getClassName()",
-		shortName : "getClassName",
-		description : "Returns the class name (Used in Attacks::newAttack)."
 	},
 	{
 		name : "virtual std::string save()",
