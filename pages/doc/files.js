@@ -228,5 +228,29 @@ var StartSceneCtrl = [{
     ]
 }];
 
+
+var Attack = [{
+    name : "class Attack",
+    shortName : "Attack",
+    description : "Pure virtual class defining an attack. To create an attack, you must create a class inherited of Attack and fill the constructor. You can redefine the virtual methods.",
+    elements : [
+	{
+	    name : "Attack(std::string name, int power, Type type, int accuracy, bool special, bool status, int criticalRate, bool neverFails, int ppMax, int priority, std::string className)",
+	    shortName : "ctorAttack",
+	    description : "Attack's constructor. Ask for all the attack's informations to create the attack."
+	},
+	{
+	    name : "virtual int effectBefore(OpMon &atk, OpMon & def)",
+	    shortName : "effectBefore",
+	    description : "Method called before the damages calculation. \"atk\" is the offensive OpMon, \"def\" is the defensive."
+	},
+	{
+	    name : "virtual int effectAfter(OpMon & atk, OpMon & def)",
+	    shortName : "effectAfter",
+	    description : "Method called after the damages calculation. \"atk\" is the offensive OpMon, \"def\" is the defensive."
+	}//Unfinished
+    ]
+}];
+
 var files = [AGameScreen, AnimationCtrl, EventsCtrl, MainMenuCtrl, OptionsMenuCtrl, OverworldCtrl, Playerctrl, StartSceneCtrl];
 var fnames = ["Controller::AGameScreen", "Controller::AnimationCtrl", "Controller::EventsCtrl", "Controller::MainMenuCtrl", "Controller::OptionsMenuCtrl", "Controler::OverworldCtrl", "Controller::PlayerCtrl", "Controller::StartSceneCtrl"];
