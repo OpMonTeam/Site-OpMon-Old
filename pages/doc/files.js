@@ -177,5 +177,23 @@ var OverworldCtrl = [{
     ]
 }];
 
-var files = [AGameScreen, AnimationCtrl, EventsCtrl, MainMenuCtrl, OptionsMenuCtrl, OverworldCtrl];
-var fnames = ["Controller::AGameScreen", "Controller::AnimationCtrl", "Controller::EventsCtrl", "Controller::MainMenuCtrl", "Controller::OptionsMenuCtrl", "Controler::OverworldCtrl"];
+var PlayerCtrl = [{
+    name : "namespace PlayerCtrl",
+    shortName : "PlayerCtrl",
+    description : "Namespace containing the functions used to interact with the Player",
+    elements : [
+	{
+	    name : "void checkMove(Model::Player& player, sf::Event const& events, View::Overworld & overworld)",
+	    shortName : "checkMove",
+	    description : "Checks the SFML events and move the player if the key to move is pressed. To move, this functions calls PlayerCtrl::move() and not player.getPosition().move()."
+	},
+	{
+	    name : "void move(Model::Side direction, Model::Player& player, View::Overworld& overworld)",
+	    shortName : "move",
+	    description : "Moves the player and active the events with the EventTrigger GO_IN."
+	}
+    ]
+}];
+
+var files = [AGameScreen, AnimationCtrl, EventsCtrl, MainMenuCtrl, OptionsMenuCtrl, OverworldCtrl, Playerctrl];
+var fnames = ["Controller::AGameScreen", "Controller::AnimationCtrl", "Controller::EventsCtrl", "Controller::MainMenuCtrl", "Controller::OptionsMenuCtrl", "Controler::OverworldCtrl", "Controller::PlayerCtrl"];
