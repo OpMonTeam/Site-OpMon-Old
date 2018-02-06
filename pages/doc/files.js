@@ -195,5 +195,38 @@ var PlayerCtrl = [{
     ]
 }];
 
-var files = [AGameScreen, AnimationCtrl, EventsCtrl, MainMenuCtrl, OptionsMenuCtrl, OverworldCtrl, Playerctrl];
-var fnames = ["Controller::AGameScreen", "Controller::AnimationCtrl", "Controller::EventsCtrl", "Controller::MainMenuCtrl", "Controller::OptionsMenuCtrl", "Controler::OverworldCtrl", "Controller::PlayerCtrl"];
+var StartSceneCtrl = [{
+    name : "class StartSceneCtrl : public AGameScreen",
+    shortName : "StartSceneCtrl",
+    description : "The StartScene game screen",
+    elements : [
+	{
+	    name : "StartSceneCtrl()",
+	    shortName : "ctorStartSceneCtrl",
+	    description : "StartSceneCtrl's constructor."
+	},
+	{
+	    name : "GameStatus checkEvent(sf::Event const& event) override",
+	    shortName : "checkEvent",
+	    description : "See AGameScreen::checkEvent"
+	},
+	{
+	    name : "GameStatus update() override",
+	    shortName : "update",
+	    description : "See AGameScreen::update"
+	},
+	{
+	    name : "void suspend() override",
+	    shortName : "suspend",
+	    description : "See AGameScreen::suspend"
+	},
+	{
+	    name : "void resume() override",
+	    shortName : "resume",
+	    description : "See AGameScreen::resume"
+	}
+    ]
+}];
+
+var files = [AGameScreen, AnimationCtrl, EventsCtrl, MainMenuCtrl, OptionsMenuCtrl, OverworldCtrl, Playerctrl, StartSceneCtrl];
+var fnames = ["Controller::AGameScreen", "Controller::AnimationCtrl", "Controller::EventsCtrl", "Controller::MainMenuCtrl", "Controller::OptionsMenuCtrl", "Controler::OverworldCtrl", "Controller::PlayerCtrl", "Controller::StartSceneCtrl"];
