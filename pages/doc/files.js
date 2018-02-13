@@ -418,8 +418,65 @@ var Enum = [
 		description : "Value : 0"
 	}
 	]
+},
+{
+	name : "enum class BagCat",
+	shortName : "BagCat",
+	description : "Enumarates the bag categories",
+	elements : [
+	{
+		
+	}
+	]
 }
 ];
 
-var files = [AGameScreen, AnimationCtrl, EventsCtrl, MainMenuCtrl, OptionsMenuCtrl, OverworldCtrl, PlayerCtrl, StartSceneCtrl, Attack, Attacks, Enum];
-var fnames = ["Controller::AGameScreen", "Controller::AnimationCtrl", "Controller::EventsCtrl", "Controller::MainMenuCtrl", "Controller::OptionsMenuCtrl", "Controler::OverworldCtrl", "Controller::PlayerCtrl", "Controller::StartSceneCtrl", "Model::Attack", "Model::Attacks", "Model - Enumerations"];
+var Nature = [
+{
+	name : "class NatureClass",
+	shortName : "NatureClass",
+	description : "Defines a nature. A natures brings a malus and a bonus on a stat. Each OpMon have a nature chosen randomly.",
+	elements : [
+	{
+		name : "Stats bonus",
+		shortName : "bonus",
+		description : "The bonus brought by the nature"
+	},
+	{
+		name : "Stats malus",
+		shortName : "malus",
+		description : "The malus brought by the nature"
+	},
+	{
+		name : "int id",
+		shortName : "id",
+		description : "Nature's id"
+	},
+	{
+		name : "NatureClass(Stats bonus, Stats malus, int id)",
+		shortName : "ctorNatureClass",
+		description : "Constructs a nature"
+	}
+	]
+},
+{
+	name : "const NatureClass natures[25]",
+	shortName : "natures",
+	description : "Natures list"
+},
+{
+	name : "bool operator==(NatureClass const& one, NatureClass const &two)",
+	shortName : "operatorequalequal",
+	description : "Compares two natures"
+},
+{
+	name : "enum class Nature : unsigned int",
+	shortName : "Nature",
+	description : "Natures enumerations"
+}
+];
+
+var files = [AGameScreen, AnimationCtrl, EventsCtrl, MainMenuCtrl, OptionsMenuCtrl, OverworldCtrl, PlayerCtrl, StartSceneCtrl, Attack, Attacks, Enum,
+Nature];
+var fnames = ["Controller::AGameScreen", "Controller::AnimationCtrl", "Controller::EventsCtrl", "Controller::MainMenuCtrl", "Controller::OptionsMenuCtrl", "Controler::OverworldCtrl", "Controller::PlayerCtrl", "Controller::StartSceneCtrl", "Model::Attack", "Model::Attacks", "Model - Enumerations",
+"Nature & NatureClass"];
