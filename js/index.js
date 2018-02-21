@@ -12,6 +12,7 @@ const LANGGAMEVERS     = document.getElementById("langGameVers");
 const LANGDOWNWIN      = document.getElementById("langDownWin");
 const LANGDOWNMAC      = document.getElementById("langDownMac");
 const LANGDOWNLIN      = document.getElementById("langDownLin");
+const LANGDOWNLIN2     = document.getElementById("langDownLin2");
 const LANGODOWN        = document.getElementById("langODown");
 const LANGOSDOWN       = document.getElementById("langOSDown");
 const LANGALLDOWN      = document.getElementById("langAllDown");
@@ -72,7 +73,8 @@ var textFr = {
     langGameVers : "Jeu version Alpha " + version + date,
     langDownWin : "Télécharger pour Windows",
     langDownMac : "Télécharger pour Mac",
-    langDownLin : "Télécharger pour Debian Linux",
+    langDownLin : "Télécharger pour Debian & Ubuntu >= 16.10",
+    langDownLin2 : "Télécharger pour Mint & Ubuntu < 16.10",
     langODown : "Autres téléchargements",
     langOSDown : "Toutes plateformes",
     langAllDown : "Voir tous les téléchargements",
@@ -135,7 +137,8 @@ var textEn = {
     langGameVers : "Game version : Alpha " + version + date,
     langDownWin : "Download for Windows",
     langDownMac : "Download for Mac",
-    langDownLin : "Download for Debian Linux",
+    langDownLin : "Download for Debian & Ubuntu >= 16.10",
+    langDownLin2 : "Download for Mint & Ubuntu < 16.10",
     langODown : "Other downloads",
     langOSDown : "All platforms",
     langAllDown : "See all downloads",
@@ -197,7 +200,8 @@ var textEs = {
     langGameVers : "Juego versión Alpha " + version + date,
     langDownWin : "Descargar para Windows",
     langDownMac : "Descargar para Mac",
-    langDownLin : "Descargar para Debian Linux",
+    langDownLin : "Descargar para Debian & Ubuntu >= 16.10",
+    langDownLin2 : "Descargar para Mint & Ubuntu < 16.10",
     langODown : "Otras Descargas",
     langOSDown : "Todas las plataformas",
     langAllDown : "Ver todas las descargas",
@@ -261,6 +265,7 @@ function printLang(id){
     LANGDOWNWIN.innerHTML = lang.langDownWin;
     LANGDOWNMAC.innerHTML = lang.langDownMac;
     LANGDOWNLIN.innerHTML = lang.langDownLin;
+    LANGDOWNLIN2.innerHTML = lang.langDownLin2;
     LANGODOWN.innerHTML = lang.langODown;
     LANGOSDOWN.innerHTML = lang.langOSDown;
     LANGALLDOWN.innerHTML = lang.langAllDown;
