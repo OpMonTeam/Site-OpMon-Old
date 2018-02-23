@@ -476,7 +476,220 @@ var Nature = [
 }
 ];
 
-var files = [AGameScreen, AnimationCtrl, EventsCtrl, MainMenuCtrl, OptionsMenuCtrl, OverworldCtrl, PlayerCtrl, StartSceneCtrl, Attack, Attacks, Enum,
-Nature];
+var OpMon = [{
+	name : "namespace CalcCourbs",
+	shortName : "CalcCourbs",
+	description : "Namespace containing the function used to calculate the OpMon's exp. The different courbs are 'Erratic', 'fluctuating', 'slow', 'normal', 'parabolic' and 'quick'. More info on Bulbapedia."
+},
+{
+	name : "class OpMon",
+	shortName : "OpMon",
+	description : "Class defining an OpMon. This is NOT defining a species. Check the Species class instead.",
+	elements : [
+	{
+		name : "bool falsif",
+		shortName : "falsif",
+		description : "If true, the OpMon is not usable, the object is like \"empty\". Used to check if the OpMon have been correctly initialized."
+	},
+	{
+		name : "bool confused",
+		shortName : "confused",
+		description : "If true, the OpMon have the status 'confused'."
+	},
+	{
+		name : "bool afraid",
+		shortName : "afraid",
+		description : "If true, the OpMon have the status 'afraid'."
+	},
+	{
+		name : "bool inLove",
+		shortName : "inLove",
+		description : "If true, the OpMon have the status 'in love'."
+	},
+	{
+		name : "bool cursed",
+		shortName : "cursed",
+		description : "If true, the OpMon have the status 'cursed'."
+	},
+	{
+		name : "OpMon(const std::string &nickname, const Species &species, int level, const std::vector<Attack *> &attacks, Nature nature)",
+		shortName : "ctorOpMon",
+		description : "Contructs an OpMon with all the variables"
+	},
+	{
+		name : "OpMon(std::ifstream &in)",
+		shortName : "ctorOpMon2",
+		description : "Contructs an OpMon from data in a file."
+	},
+	{
+		name : "bool captured(I_OpBox const& OpBox)",
+		shortName : "captured",
+		description : "Tries to capture an OpMon with the ball given in parameter. Returns true if it succeeds."
+	},
+	{
+		name : "void setStat(Stats stat, int newStat)",
+		shortName : "setStat",
+		description : "Sets the statistic indicated in 'stat' to the new value given in 'newStat'."
+	},
+	{
+		name : "void levelUp()",
+		shortName : "levelUp",
+		description : "This method is called when the OpMon gain a level."
+	},
+	{
+		name : "bool isHoldingItem()",
+		shortName : "isHoldingItem",
+		description : "Returns true if the item held is not a nullptr."
+	},
+	{
+		name : "int win(OpMon &looser)",
+		shortName : "win",
+		description : "This method is called when the OpMon wins against another OpMon (looser)."
+	},
+	{
+		name : "void calcStats()",
+		shortName : "calcStats",
+		description : "When called, this method recalcs the statistics from the EV, IV and species."
+	},
+	{
+		name : "bool itemUsed(Item *used)",
+		shortName : "itemUsed",
+		description : "This method is called when an item is used on the OpMon. Returns true if the item must be removed from the player's bag.",
+	},
+	{
+		name : "Item* hold(Item *item)",
+		shortName : "hold",
+		description : "Replaces the old held item by the new given in parameter. Returns the old item."
+	},
+	{
+		name : "void traded()",
+		shortName : "traded",
+		description : "This method is called when the OpMon is traded against another OpMon"
+	},
+	{
+		name : "void toolEvTrade()",
+		shortName : "toolEvTrade",
+		description : "(THIS METHOD WILL BE REMOVED) This method was used for a secret thing in the game. But now it is useless."
+	},
+	{
+		name : "void evolve()",
+		shortName : "evolve",
+		description : "This method is called when the OpMon evolves."
+	},
+	{
+		name : "void setStats(int stats[], Attack *attacks[], const Species &species, Type types[])",
+		shortName : "setStats",
+		description : "Sets all the stats given. Useful to set everything in one line."
+	},
+	{
+		name : "void attacked(int hpLost)",
+		shortName : "attacked",
+		description : "This method is called when the OpMon is attacked by an another OpMon. It lost the number of HP given in hpLost."
+	},
+	{
+		name : "bool change<i>STAT</i>(int power)",
+		shortName : "changeSTAT",
+		description : "In the code, there is one method like this for each stat : changeATK, changeACC, changeEVA, changeDEF, changeATKSPE, changeDEFSPE, changeSPE. When called, this method decreases or increases by the number of level given in parameter the of the method. Give a negative number to decrease, and a positive number to increase."
+	},
+	{
+		name : "Status getStatus()",
+		shortName : "getStatus",
+		description : "Returns the OpMon's status"
+	},
+	{
+		name : "void setStatus(Status status",
+		shortName : "setStatus",
+		description : "Sets the OpMon's status"
+	},
+	{
+		name : "int getStatHP()",
+		shortName : "getStatHP",
+		description : "Returns the OpMon's max HP"
+	},
+	{
+		name : "int getStatLove()",
+		shortName : "getStatLove",
+		description : "Return the OpMon's love stat"
+	},
+	{
+		name : "std::string getNickname()",
+		shortName : "getNickname",
+		description : "Returns the OpMon's nickname"
+	},
+	{
+		name : "void heal(int HP)",
+		shortName : "heal",
+		description : "Heals the OpMon by the number of HP given in parameter"
+	},
+	{
+		name : "int getLevel()",
+		shortName : "getLevel",
+		description : "Returns the OpMon's level"
+	},
+	{
+		name : "std::vector<Attack *> getAttcks()",
+		shortName : "getAttacks",
+		description : "Returns the OpMon's attacks"
+	},
+	{
+		name : "int getStatEVA()",
+		shortName : "getStatEVA",
+		description : "Returns the OpMon's evasion stat"
+	},
+	{
+		name : "int getStatACC()",
+		shortName : "getStatACC",
+		description : "Returns the OpMon's accuracy stat"
+	},
+	{
+		name : "void getEvs(OpMon const &looser)",
+		shortName : "getEvs",
+		description : "Add the EV given by the looser OpMon to the current OpMon's EVs"
+	},
+	{
+		name : "int getType1()",
+		shortName : "getType1",
+		description : "Returns the OpMon's first type."
+	},
+	{
+		name : "int getType2()",
+		shortName : "getType2",
+		description : "Returns the OpMon's secondary typ.e"
+	},
+	{
+		name : "void setType1(Type type)",
+		shortName : "setType1",
+		description : "Sets the OpMon's first type."
+	},
+	{
+		name : "void setType2(Type type)",
+		shortName : "setType2",
+		description : "Sets the OpMon's secondary type."
+	},
+	{
+		name : "int getStat<i>STAT</i>()",
+		shortName : "getStatSTAT",
+		description : "Returns a stat. The differents methods are : getStatATK, getStatATKSPE, getStatDEF, getStatDEFSPE, getStatSPE."
+	},
+	{
+		name : "Species& getSpecies()",
+		shortName : "getSpecies",
+		description : "Returns the OpMon's species."
+	},
+	{
+		name : "Item* itemHeld()",
+		shortName : "itemHeld",
+		description : "Returns the item held."
+	},
+	{
+		name : "std::string save()",
+		shortName : "save",
+		description : "Put all the OpMon's data in a string, ready to be put in a file. The constructor with std::ifstream can decode the string."
+	}
+	]
+}
+];
+
+var files = [AGameScreen, AnimationCtrl, EventsCtrl, MainMenuCtrl, OptionsMenuCtrl, OverworldCtrl, PlayerCtrl, StartSceneCtrl, Attack, Attacks, Enum, Nature, OpMon];
 var fnames = ["Controller::AGameScreen", "Controller::AnimationCtrl", "Controller::EventsCtrl", "Controller::MainMenuCtrl", "Controller::OptionsMenuCtrl", "Controler::OverworldCtrl", "Controller::PlayerCtrl", "Controller::StartSceneCtrl", "Model::Attack", "Model::Attacks", "Model - Enumerations",
-"Nature & NatureClass"];
+"Model::Nature & Model::NatureClass", "Model::OpMon"];
