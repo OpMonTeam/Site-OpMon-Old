@@ -37,7 +37,7 @@ function instruction(){
 
 function macDown(){
     alert(macInstructions);
-    goTo("http://downloads.opmon-game.ga/pages/last.html");
+    goTo("http://downloads.opmon.ga/pages/last.html");
 }
 
 var textFr = {
