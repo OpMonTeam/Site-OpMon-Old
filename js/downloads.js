@@ -14,6 +14,7 @@ const MENUDOC          = document.getElementById("menuDoc");
 const LANGTITLE        = document.getElementById("langTitle");
 const LANGSUBTITLE     = document.getElementById("langSubTitle");
 const WINDOWN          = document.getElementById("winDown");
+const UNSTABLEDOWN     = document.getElementById("unstableDown");
 const WINNIDOWN        = document.getElementById("winNIDown");
 const MACDOWN          = document.getElementById("macDown");
 const DEBDOWN          = document.getElementById("debDown");
@@ -64,8 +65,8 @@ var textFr = {
     otherSystems : "Autres systèmes",
     repoDown : "Télécharger le dépot (.zip)",
     jlppcRole : "Programmation et aide sur le projet",
-    navet56Role : "Aide graphique, fan-arts"
-    
+    navet56Role : "Aide graphique, fan-arts",
+    unstableDown : "Télécharger OpMon instable"
     
     
 };
@@ -94,7 +95,8 @@ var textEn = {
     otherSystems : "Other systems",
     repoDown : "Download the repository (.zip)",
     jlppcRole : "Programmation and questions about the project",
-    navet56Role : "Game-designer and graphist"
+    navet56Role : "Game-designer and graphist",
+    unstableDown : "Download OpMon unstable"
 };
 
 var textEs = {
@@ -121,7 +123,8 @@ var textEs = {
     otherSystems : "Other systems",
     repoDown : "Download the repository (.zip)",
     jlppcRole : "Programmation and questions about the project",
-    navet56Role : "Game-designer and graphist"
+    navet56Role : "Game-designer and graphist",
+    unstableDown : "Descargar OpMon unstable"
 };
 
 var txtLang = [textFr, textEs, textEn];
@@ -142,6 +145,7 @@ function printLang(id){
     DEBDOWN.innerHTML = lang.debDown;
     DEBDOWN2.innerHTML = lang.debDown2;
     LINDOWN.innerHTML = lang.linDown;
+    UNSTABLEDOWN.innerHTML = lang.unstableDown;
     OTHERDOWN.innerHTML = lang.otherDown;
     SEEGITHUB.innerHTML = lang.seeGithub;
     OTHERSYSTEMS.innerHTML = lang.otherSystems;
