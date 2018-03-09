@@ -28,22 +28,15 @@ const JLPPCROLE        = document.getElementById("jlppcRole");
 const NAVET56ROLE      = document.getElementById("navet56Role");
 
 var instructionAlert = "";
-var macInstructions = "";
 
 function instruction(){
     alert(instructionAlert);
     goTo("https://github.com/cyrioncentori/OpMon/archive/master.zip");
 }
 
-
-function macDown(){
-    alert(macInstructions);
-    goTo("http://downloads.opmon.ga/pages/last.html");
-}
-
 var textFr = {
     instruction : "Si vous avez un autre système, vous pouvez très bien compiler le jeu grace au sources, si SFML, gcc et cmake sont disponibles pour votre système.",
-    macInstructions : "Sur les systèmes Mac, vous devez installer Wine pour faire fonctionner le jeu. Après avoir installé le logiciel Wine, lancez \"opmon-setup.exe\" avec ce logiciel. Vous pouvez aussi essayer de compiler le jeu sur Mac avec les sources (Voir autres systèmes)",
+    macDown : '<a href="https://github.com/cyrioncentori/OpMon/releases/download/alpha-v' + version + '/OpMon-Mac_' + version + '.dmg"  class="wow fadeInUp btn btn-default hvr-bounce-to-top smoothScroll" data-wow-delay="1.3s"> Télécharger pour macOS</a>',
     menu : {
 	down : "Téléchargements",
 	features : "Fonctionnalitées",
@@ -56,7 +49,7 @@ var textFr = {
     langSubTitle : "Jeu en version Alpha " + version + date,
     winDown : "Télécharger pour Windows",
     winNIDown : '<a href="https://github.com/cyrioncentori/OpMon/releases/download/alpha-v' + version + '/OpMon-Win_NoInstall.zip" class="wow fadeInUp btn btn-default hvr-bounce-to-top smoothScroll" data-wow-delay="1.3s" id="winNIDown">Télécharger pour Windows (Sans installation)</a>',
-    macDown : "Télécharger pour Mac",
+    macDown : '<a href="https://github.com/cyrioncentori/OpMon/releases/download/alpha-v' + version + '/OpMon-Mac_' + version + '.dmg"  class="wow fadeInUp btn btn-default hvr-bounce-to-top smoothScroll" data-wow-delay="1.3s"> Télécharger pour macOS</a>',
     debDown : '<a href="https://github.com/cyrioncentori/OpMon/releases/download/alpha-v' + version + '/OpMon-' + version + '-sfml2.4.deb"  class="wow fadeInUp btn btn-default hvr-bounce-to-top smoothScroll" data-wow-delay="1.3s"> Télécharger .deb pour Debian & Ubuntu >= 16.10</a>',
     debDown2 : '<a href="https://github.com/cyrioncentori/OpMon/releases/download/alpha-v' + version + '/OpMon-' + version + '-sfml2.3.deb"  class="wow fadeInUp btn btn-default hvr-bounce-to-top smoothScroll" data-wow-delay="1.3s"> Télécharger .deb pour Mint & Ubuntu < 16.10</a>',
     linDown : '<a href="https://github.com/cyrioncentori/OpMon/releases/download/alpha-v' + version + '/OpMon-Linux_NoInstall.zip" class="wow fadeInUp btn btn-default hvr-bounce-to-top smoothScroll" data-wow-delay="1.3s"> Télécharger pour Linux</a>',
@@ -73,7 +66,7 @@ var textFr = {
 
 var textEn = {
     instruction : "If you have an another system, you can build the game with the source files, if sfml, cmake and gcc are avilable for your system.",
-    macInstuctions : "On mac systems, you must install Wine to run the game. When Wine is installed on your computer, launch \"opmon-setup.exe\" with it. You can try to build the game with the source files too.",
+    macDown : '<a href="https://github.com/cyrioncentori/OpMon/releases/download/alpha-v' + version + '/OpMon-Mac_' + version + '.dmg"  class="wow fadeInUp btn btn-default hvr-bounce-to-top smoothScroll" data-wow-delay="1.3s"> Download for macOS</a>',
     menu : {
 	down : "Downloads",
 	features : "Features",
@@ -86,7 +79,7 @@ var textEn = {
     langSubTitle : "Game version : Alpha " + version + date,
     winDown : "Download for Windows",
     winNIDown : '<a href="https://github.com/cyrioncentori/OpMon/releases/download/alpha-v' + version + '/OpMon-Win_NoInstall.zip" class="wow fadeInUp btn btn-default hvr-bounce-to-top smoothScroll" data-wow-delay="1.3s" id="winNIDown">Download for Windows (Without installation)</a>',
-    macDown : "Download for Mac",
+    macDown : '<a href="https://github.com/cyrioncentori/OpMon/releases/download/alpha-v' + version + '/OpMon-Mac_' + version + '.dmg"  class="wow fadeInUp btn btn-default hvr-bounce-to-top smoothScroll" data-wow-delay="1.3s"> Download for macOS</a>',
     debDown : '<a href="https://github.com/cyrioncentori/OpMon/releases/download/alpha-v' + version + '/OpMon-' + version + '-sfml2.4.deb"  class="wow fadeInUp btn btn-default hvr-bounce-to-top smoothScroll" data-wow-delay="1.3s">Download for Debian & Ubuntu >= 16.10 </a>',
     debDown2 : '<a href="https://github.com/cyrioncentori/OpMon/releases/download/alpha-v' + version + '/OpMon-' + version + '-sfml2.3.deb"  class="wow fadeInUp btn btn-default hvr-bounce-to-top smoothScroll" data-wow-delay="1.3s">Download for Mint & Ubuntu < 16.10</a>',
     linDown : '<a href="https://github.com/cyrioncentori/OpMon/releases/download/alpha-v' + version + '/OpMon-Linux_NoInstall.zip" class="wow fadeInUp btn btn-default hvr-bounce-to-top smoothScroll" data-wow-delay="1.3s">Download for Linux</a>',
@@ -101,7 +94,7 @@ var textEn = {
 
 var textEs = {
         instruction : "If you have an another system, you can build the game with the source files, if sfml, cmake and gcc are avilable for your system.",
-    macInstuctions : "On mac systems, you must install Wine to run the game. When Wine is installed on your computer, launch \"opmon-setup.exe\" with it. You can try to build the game with the source files too.",
+    macDown : '<a href="https://github.com/cyrioncentori/OpMon/releases/download/alpha-v' + version + '/OpMon-Mac_' + version + '.dmg"  class="wow fadeInUp btn btn-default hvr-bounce-to-top smoothScroll" data-wow-delay="1.3s"> Download for macOS</a>',
     menu : {
 	down : "Descargas",
 	features : "Funcionalidades",
@@ -114,7 +107,7 @@ var textEs = {
     langSubTitle : "Version del juego : Alpha " + version + date,
     winDown : "Download for Windows",
     winNIDown : '<a href="https://github.com/cyrioncentori/OpMon/releases/download/alpha-v' + version + '/OpMon-Win_NoInstall.zip" class="wow fadeInUp btn btn-default hvr-bounce-to-top smoothScroll" data-wow-delay="1.3s" id="winNIDown">Download for Windows (Without installation)</a>',
-    macDown : "Download for Mac",
+    macDown : '<a href="https://github.com/cyrioncentori/OpMon/releases/download/alpha-v' + version + '/OpMon-Mac_' + version + '.dmg"  class="wow fadeInUp btn btn-default hvr-bounce-to-top smoothScroll" data-wow-delay="1.3s"> Download for macOS</a>',
     debDown : '<a href="https://github.com/cyrioncentori/OpMon/releases/download/alpha-v' + version + '/OpMon-' + version + '-sfml2.4.deb"  class="wow fadeInUp btn btn-default hvr-bounce-to-top smoothScroll" data-wow-delay="1.3s">Download for Debian & Ubuntu >= 16.10</a>',
     debDown2 : '<a href="https://github.com/cyrioncentori/OpMon/releases/download/alpha-v' + version + '/OpMon-' + version + '-sfml2.3.deb"  class="wow fadeInUp btn btn-default hvr-bounce-to-top smoothScroll" data-wow-delay="1.3s">Download for Mint & Ubuntu < 16.10</a>',
     linDown : '<a href="https://github.com/cyrioncentori/OpMon/releases/download/alpha-v' + version + '/OpMon-Linux_NoInstall.zip" class="wow fadeInUp btn btn-default hvr-bounce-to-top smoothScroll" data-wow-delay="1.3s">Download for Linux</a>',
@@ -153,7 +146,6 @@ function printLang(id){
     JLPPCROLE.innerHTML = lang.jlppcRole;
     NAVET56ROLE.innerHTML = lang.navet56Role;
     instructionAlert = lang.inscrution;
-    macInstructions = lang.macInstructions;
     
 }
 
