@@ -485,11 +485,11 @@ var OpMon = [{
 	name : "class OpMon",
 	shortName : "OpMon",
 	description : "Class defining an OpMon. This is NOT defining a species. Check the Species class instead.",
-	elements : [
+    elements : [
 	{
-		name : "bool falsif",
-		shortName : "falsif",
-		description : "If true, the OpMon is not usable, the object is like \"empty\". Used to check if the OpMon have been correctly initialized."
+		name : "bool afraid",
+		shortName : "afraid",
+		description : "If true, the OpMon have the status 'afraid'."
 	},
 	{
 		name : "bool confused",
@@ -497,19 +497,19 @@ var OpMon = [{
 		description : "If true, the OpMon have the status 'confused'."
 	},
 	{
-		name : "bool afraid",
-		shortName : "afraid",
-		description : "If true, the OpMon have the status 'afraid'."
+		name : "bool cursed",
+		shortName : "cursed",
+		description : "If true, the OpMon have the status 'cursed'."
+	},
+	{
+		name : "bool falsif",
+		shortName : "falsif",
+		description : "If true, the OpMon is not usable, the object is like \"empty\". Used to check if the OpMon have been correctly initialized."
 	},
 	{
 		name : "bool inLove",
 		shortName : "inLove",
 		description : "If true, the OpMon have the status 'in love'."
-	},
-	{
-		name : "bool cursed",
-		shortName : "cursed",
-		description : "If true, the OpMon have the status 'cursed'."
 	},
 	{
 		name : "OpMon(const std::string &nickname, const Species &species, int level, const std::vector<Attack *> &attacks, Nature nature)",
@@ -521,15 +521,31 @@ var OpMon = [{
 		shortName : "ctorOpMon2",
 		description : "Contructs an OpMon from data in a file."
 	},
+	//___________________________________ Methods
+	{
+		name : "void attacked(int hpLost)",
+		shortName : "attacked",
+		description : "This method is called when the OpMon is attacked by an another OpMon. It lost the number of HP given in hpLost."
+	},
+	{
+		name : "void calcStats()",
+		shortName : "calcStats",
+		description : "When called, this method recalcs the statistics from the EV, IV and species."
+	},
 	{
 		name : "bool captured(I_OpBox const& OpBox)",
 		shortName : "captured",
 		description : "Tries to capture an OpMon with the ball given in parameter. Returns true if it succeeds."
 	},
 	{
-		name : "void setStat(Stats stat, int newStat)",
-		shortName : "setStat",
-		description : "Sets the statistic indicated in 'stat' to the new value given in 'newStat'."
+		name : "bool change<i>STAT</i>(int power)",
+		shortName : "changeSTAT",
+		description : "In the code, there is one method like this for each stat : changeATK, changeACC, changeEVA, changeDEF, changeATKSPE, changeDEFSPE, changeSPE. When called, this method decreases or increases by the number of level given in parameter the of the method. Give a negative number to decrease, and a positive number to increase."
+	},
+	{
+		name : "void evolve()",
+		shortName : "evolve",
+		description : "This method is called when the OpMon evolves."
 	},
 	{
 		name : "void levelUp()",
@@ -546,11 +562,7 @@ var OpMon = [{
 		shortName : "win",
 		description : "This method is called when the OpMon wins against another OpMon (looser)."
 	},
-	{
-		name : "void calcStats()",
-		shortName : "calcStats",
-		description : "When called, this method recalcs the statistics from the EV, IV and species."
-	},
+
 	{
 		name : "bool itemUsed(Item *used)",
 		shortName : "itemUsed",
@@ -571,26 +583,14 @@ var OpMon = [{
 		shortName : "toolEvTrade",
 		description : "(THIS METHOD WILL BE REMOVED) This method was used for a secret thing in the game. But now it is useless."
 	},
-	{
-		name : "void evolve()",
-		shortName : "evolve",
-		description : "This method is called when the OpMon evolves."
-	},
+
 	{
 		name : "void setStats(int stats[], Attack *attacks[], const Species &species, Type types[])",
 		shortName : "setStats",
 		description : "Sets all the stats given. Useful to set everything in one line."
 	},
-	{
-		name : "void attacked(int hpLost)",
-		shortName : "attacked",
-		description : "This method is called when the OpMon is attacked by an another OpMon. It lost the number of HP given in hpLost."
-	},
-	{
-		name : "bool change<i>STAT</i>(int power)",
-		shortName : "changeSTAT",
-		description : "In the code, there is one method like this for each stat : changeATK, changeACC, changeEVA, changeDEF, changeATKSPE, changeDEFSPE, changeSPE. When called, this method decreases or increases by the number of level given in parameter the of the method. Give a negative number to decrease, and a positive number to increase."
-	},
+	
+	
 	{
 		name : "Status getStatus()",
 		shortName : "getStatus",
@@ -680,6 +680,11 @@ var OpMon = [{
 		name : "Item* itemHeld()",
 		shortName : "itemHeld",
 		description : "Returns the item held."
+	},
+	{
+		name : "void setStat(Stats stat, int newStat)",
+		shortName : "setStat",
+		description : "Sets the statistic indicated in 'stat' to the new value given in 'newStat'."
 	},
 	{
 		name : "std::string save()",
