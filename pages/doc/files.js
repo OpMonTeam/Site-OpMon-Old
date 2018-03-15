@@ -548,58 +548,44 @@ var OpMon = [{
 		description : "This method is called when the OpMon evolves."
 	},
 	{
-		name : "void levelUp()",
-		shortName : "levelUp",
-		description : "This method is called when the OpMon gain a level."
+		name : "std::vector<Attack *> getAttcks()",
+		shortName : "getAttacks",
+		description : "Returns the OpMon's attacks"
 	},
 	{
-		name : "bool isHoldingItem()",
-		shortName : "isHoldingItem",
-		description : "Returns true if the item held is not a nullptr."
+		name : "void getEvs(OpMon const &looser)",
+		shortName : "getEvs",
+		description : "Add the EV given by the looser OpMon to the current OpMon's EVs"
 	},
 	{
-		name : "int win(OpMon &looser)",
-		shortName : "win",
-		description : "This method is called when the OpMon wins against another OpMon (looser)."
-	},
-
-	{
-		name : "bool itemUsed(Item *used)",
-		shortName : "itemUsed",
-		description : "This method is called when an item is used on the OpMon. Returns true if the item must be removed from the player's bag.",
+		name : "int getLevel()",
+		shortName : "getLevel",
+		description : "Returns the OpMon's level"
 	},
 	{
-		name : "Item* hold(Item *item)",
-		shortName : "hold",
-		description : "Replaces the old held item by the new given in parameter. Returns the old item."
+		name : "std::string getNickname()",
+		shortName : "getNickname",
+		description : "Returns the OpMon's nickname"
 	},
 	{
-		name : "void traded()",
-		shortName : "traded",
-		description : "This method is called when the OpMon is traded against another OpMon"
+		name : "Species& getSpecies()",
+		shortName : "getSpecies",
+		description : "Returns the OpMon's species."
 	},
 	{
-		name : "void toolEvTrade()",
-		shortName : "toolEvTrade",
-		description : "(THIS METHOD WILL BE REMOVED) This method was used for a secret thing in the game. But now it is useless."
-	},
-
-	{
-		name : "void setStats(int stats[], Attack *attacks[], const Species &species, Type types[])",
-		shortName : "setStats",
-		description : "Sets all the stats given. Useful to set everything in one line."
-	},
-	
-	
-	{
-		name : "Status getStatus()",
-		shortName : "getStatus",
-		description : "Returns the OpMon's status"
+		name : "int getStat<i><strong>STAT</strong></i>()",
+		shortName : "getStatSTAT",
+		description : "Returns a stat. The differents methods are : getStatATK, getStatATKSPE, getStatDEF, getStatDEFSPE, getStatSPE."
 	},
 	{
-		name : "void setStatus(Status status",
-		shortName : "setStatus",
-		description : "Sets the OpMon's status"
+		name : "int getStatACC()",
+		shortName : "getStatACC",
+		description : "Returns the OpMon's accuracy stat"
+	},
+	{
+		name : "int getStatEVA()",
+		shortName : "getStatEVA",
+		description : "Returns the OpMon's evasion stat"
 	},
 	{
 		name : "int getStatHP()",
@@ -612,39 +598,9 @@ var OpMon = [{
 		description : "Return the OpMon's love stat"
 	},
 	{
-		name : "std::string getNickname()",
-		shortName : "getNickname",
-		description : "Returns the OpMon's nickname"
-	},
-	{
-		name : "void heal(int HP)",
-		shortName : "heal",
-		description : "Heals the OpMon by the number of HP given in parameter"
-	},
-	{
-		name : "int getLevel()",
-		shortName : "getLevel",
-		description : "Returns the OpMon's level"
-	},
-	{
-		name : "std::vector<Attack *> getAttcks()",
-		shortName : "getAttacks",
-		description : "Returns the OpMon's attacks"
-	},
-	{
-		name : "int getStatEVA()",
-		shortName : "getStatEVA",
-		description : "Returns the OpMon's evasion stat"
-	},
-	{
-		name : "int getStatACC()",
-		shortName : "getStatACC",
-		description : "Returns the OpMon's accuracy stat"
-	},
-	{
-		name : "void getEvs(OpMon const &looser)",
-		shortName : "getEvs",
-		description : "Add the EV given by the looser OpMon to the current OpMon's EVs"
+		name : "Status getStatus()",
+		shortName : "getStatus",
+		description : "Returns the OpMon's status"
 	},
 	{
 		name : "int getType1()",
@@ -657,6 +613,58 @@ var OpMon = [{
 		description : "Returns the OpMon's secondary typ.e"
 	},
 	{
+	    name : "void heal(int HP)",
+	    shortName : "heal",
+	    description : "Heals the OpMon by the number of HP given in parameter"
+	},
+	{
+	    name : "Item* hold(Item *item)",
+	    shortName : "hold",
+	    description : "Replaces the old held item by the new given in parameter. Returns the old item."
+	},
+	{
+		name : "bool isHoldingItem()",
+		shortName : "isHoldingItem",
+		description : "Returns true if the item held is not a nullptr."
+	},
+	{
+	    name : "Item* itemHeld()",
+	    shortName : "itemHeld",
+	    description : "Returns the item held."
+	},
+	{
+	    name : "bool itemUsed(Item *used)",
+	    shortName : "itemUsed",
+	    description : "This method is called when an item is used on the OpMon. Returns true if the item must be removed from the player's bag.",
+	},
+	
+	{
+		name : "void levelUp()",
+		shortName : "levelUp",
+		description : "This method is called when the OpMon gain a level."
+	},
+	
+	{
+		name : "std::string save()",
+		shortName : "save",
+		description : "Put all the OpMon's data in a string, ready to be put in a file. The constructor with std::ifstream can decode the string."
+	},
+	{
+		name : "void setStat(Stats stat, int newStat)",
+		shortName : "setStat",
+		description : "Sets the statistic indicated in 'stat' to the new value given in 'newStat'."
+	},
+	{
+		name : "void setStats(int stats[], Attack *attacks[], const Species &species, Type types[])",
+		shortName : "setStats",
+		description : "Sets all the stats given. Useful to set everything in one line."
+	},
+	{
+		name : "void setStatus(Status status)",
+		shortName : "setStatus",
+		description : "Sets the OpMon's status"
+	},
+	{
 		name : "void setType1(Type type)",
 		shortName : "setType1",
 		description : "Sets the OpMon's first type."
@@ -667,29 +675,19 @@ var OpMon = [{
 		description : "Sets the OpMon's secondary type."
 	},
 	{
-		name : "int getStat<i>STAT</i>()",
-		shortName : "getStatSTAT",
-		description : "Returns a stat. The differents methods are : getStatATK, getStatATKSPE, getStatDEF, getStatDEFSPE, getStatSPE."
+		name : "void toolEvTrade()",
+		shortName : "toolEvTrade",
+		description : "(THIS METHOD WILL BE REMOVED) This method was used for a secret thing in the game. But now it is useless."
 	},
 	{
-		name : "Species& getSpecies()",
-		shortName : "getSpecies",
-		description : "Returns the OpMon's species."
+		name : "void traded()",
+		shortName : "traded",
+		description : "This method is called when the OpMon is traded against another OpMon"
 	},
 	{
-		name : "Item* itemHeld()",
-		shortName : "itemHeld",
-		description : "Returns the item held."
-	},
-	{
-		name : "void setStat(Stats stat, int newStat)",
-		shortName : "setStat",
-		description : "Sets the statistic indicated in 'stat' to the new value given in 'newStat'."
-	},
-	{
-		name : "std::string save()",
-		shortName : "save",
-		description : "Put all the OpMon's data in a string, ready to be put in a file. The constructor with std::ifstream can decode the string."
+		name : "int win(OpMon &looser)",
+		shortName : "win",
+		description : "This method is called when the OpMon wins against another OpMon (looser)."
 	}
 	]
 }
