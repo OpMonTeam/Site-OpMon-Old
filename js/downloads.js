@@ -49,7 +49,7 @@ var textFr = {
 	contact : "Contact",
 	doc : "Documentation"
     },
-    langTitle : "Téléchargement",
+    langTitle : "Téléchargements",
     langSubTitle : "Jeu en version Alpha " + version + date,
     winDown : "Télécharger pour Windows",
     winNIDown : '<a href="https://github.com/cyrioncentori/OpMon/releases/download/alpha-v' + version + '/OpMon-Win_NoInstall.zip" class="wow fadeInUp btn btn-default hvr-bounce-to-top smoothScroll" data-wow-delay="1.3s" id="winNIDown">Télécharger pour Windows (Sans installation)</a>',
@@ -79,7 +79,7 @@ var textEn = {
 	contact : "Contacts",
 	doc : "Documentation"
     },
-    langTitle : "Download",
+    langTitle : "Downloads",
     langSubTitle : "Game version : Alpha " + version + date,
     winDown : "Download for Windows",
     winNIDown : '<a href="https://github.com/cyrioncentori/OpMon/releases/download/alpha-v' + version + '/OpMon-Win_NoInstall.zip" class="wow fadeInUp btn btn-default hvr-bounce-to-top smoothScroll" data-wow-delay="1.3s" id="winNIDown">Download for Windows (Without installation)</a>',
