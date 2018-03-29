@@ -102,9 +102,9 @@ $(document).ready(function() {
   $(function(){
     jQuery(document).ready(function() {
     $('#home').backstretch([
-       "http://opmon-game.ga/images/home-bg-slideshow1.jpg", 
-       "http://opmon-game.ga/images/home-bg-slideshow2.jpg",
-       "http://opmon-game.ga/images/home-bg-slideshow3.jpg",
+       "https://opmon-game.ga/images/home-bg-slideshow1.jpg", 
+       "https://opmon-game.ga/images/home-bg-slideshow2.jpg",
+       "https://opmon-game.ga/images/home-bg-slideshow3.jpg",
         ],  {duration: 9000, fade: 1500});
     });
   })
