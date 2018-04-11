@@ -693,6 +693,19 @@ var OpMon = [{
 }
 ];
 
+var Species = [
+	{
+		name : "enum class CurveExp",
+		shortName : "CurveExp",
+		description : "Enumerates the differents experience curves. Currently, there is : ERRATIC, FLUCTUATING, SLOW, AVERAGE, PARABOLIC, QUICK"
+	},
+	{
+		name : "class Species",
+		shortName : "Species",
+		description : "Class defining an OpMon species. This class do not defines an OpMon (see <a href=\"javascript:printDoc(12)\">OpMon</a>).",
+		elements : []//TODO, after the translation
+	}
+];
 var files = [AGameScreen, AnimationCtrl, EventsCtrl, MainMenuCtrl, OptionsMenuCtrl, OverworldCtrl, PlayerCtrl, StartSceneCtrl, Attack, Attacks, Enum, Nature, OpMon];
 var fnames = ["Controller::AGameScreen", "Controller::AnimationCtrl", "Controller::EventsCtrl", "Controller::MainMenuCtrl", "Controller::OptionsMenuCtrl", "Controler::OverworldCtrl", "Controller::PlayerCtrl", "Controller::StartSceneCtrl", "Model::Attack", "Model::Attacks", "Model - Enumerations",
 "Model::Nature & Model::NatureClass", "Model::OpMon"];
