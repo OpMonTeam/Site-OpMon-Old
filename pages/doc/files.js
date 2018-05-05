@@ -502,8 +502,8 @@ var OpMon = [{
 		description : "If true, the OpMon have the status 'cursed'."
 	},
 	{
-		name : "bool falsif",
-		shortName : "falsif",
+		name : "bool initialized",
+		shortName : "initialized",
 		description : "If true, the OpMon is not usable, the object is like \"empty\". Used to check if the OpMon have been correctly initialized."
 	},
 	{
