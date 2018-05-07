@@ -548,7 +548,7 @@ var OpMon = [{
 		description : "This method is called when the OpMon evolves."
 	},
 	{
-		name : "std::vector<Attack *> getAttcks()",
+		name : "std::vector&lt;Attack *&gt; getAttcks()",
 		shortName : "getAttacks",
 		description : "Returns the OpMon's attacks"
 	},
