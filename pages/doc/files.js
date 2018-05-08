@@ -682,7 +682,7 @@ var OpMon = [{
 	{
 		name : "void traded()",
 		shortName : "traded",
-		description : "This method is called when the OpMon is traded against another OpMon"
+		description : "This method is called when the OpMon is traded for an another OpMon"
 	},
 	{
 		name : "int win(OpMon &looser)",
@@ -691,7 +691,36 @@ var OpMon = [{
 	}
 	]
 }
-];
+	    ];
+
+var Species = [
+    {
+	name : "enum class CurveExp",
+	shortName : "CurveExp",
+	description : "Enumeration of the differents experience curves. List : ERRATIC, FLUCTUATING, SLOW, AVERAGE, PARABOLIC, QUICK"
+    },
+    {
+	name : "class Species",
+	shortName : "Species",
+	description : "Class defining an OpMon species.",
+	elements : [
+	    {
+		name : "Species(Species &&other)",
+		shortName : "cpCtorSpecies",
+		description : "The class's copy constructor"
+	    },
+	    {
+		name : "Species(unsigned int atk, unsigned int def, unsigned int atkSpe, unsigned int defSpe, unsigned int spe, unsigned int hp, std::string name, Type type1, Type type2, int evolutionWay, int evolLevel, Evolution *evolType, std::vector<Stats> EVGiven, float taille, float poids, std::string opdexEntry, unsigned int expGiven, int expMax, int captureRate, int opdexNumber)",
+		shortName : "CtorSpecies",
+		description : "Species's constructor. I hope the names are explicit enough."
+	    },
+	    {
+		name : "void checkEvol()",
+		shortName : "checkEvol"
+	    }
+	]
+    }
+]:
 
 var Species = [
 	{
