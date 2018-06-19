@@ -34,7 +34,6 @@ const TEAMTITLE        = document.getElementById("teamTitle");
 const TEAMSUBTITLE     = document.getElementById("teamSubTitle");
 const JLPPCDESC        = document.getElementById("jlppcDesc");
 const NAVET56DESC      = document.getElementById("navet56Desc");
-const AERZIADESC       = document.getElementById("aerziaDesc");
 const GITHUBHELP       = document.getElementById("githubHelp");
 const CREDITSTITLE     = document.getElementById("creditsTitle");
 const FULLCREDITS      = document.getElementById("fullCredits");
@@ -287,7 +286,6 @@ function printLang(id){
     ABOUTTEXT.innerHTML = lang.aboutText;
     JLPPCDESC.innerHTML = lang.jlppcDesc;
     NAVET56DESC.innerHTML = lang.navet56Desc;
-    AERZIADESC.innerHTML = lang.aerziaDesc;
     GITHUBHELP.innerHTML = lang.githubHelp;
     CREDITSTITLE.innerHTML = lang.creditsTitle;
     FULLCREDITS.innerHTML = lang.fullCredits;
