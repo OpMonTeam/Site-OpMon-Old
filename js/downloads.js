@@ -1,11 +1,9 @@
-﻿function linuxDownOld(){
-    goTo("https://github.com/cyrioncentori/OpMon/releases/download/alpha-v" + version + "/OpMon-" + version  + "-sfml2.3.deb");
-}
 function linuxDown(){
-    goTo("https://github.com/cyrioncentori/OpMon/releases/download/alpha-v" + version + "/OpMon-" + version  + "-sfml2.4.deb");
+    goTo("https://github.com/cyrioncentori/OpMon/releases/download/alpha-v" + version + "/OpMon-" + version  + "-Linux.deb");
 }
 function macDown(){
-    goTo("https://github.com/cyrioncentori/OpMon/releases/download/alpha-v" + version + "/OpMon-Mac_" + version + ".dmg");
+	alert("Warning : 0.15 is not released on MacOS yet. You can download the 0.14 by clicking on \"Other versions\"\nAttention : La 0.15 n'est pas encore sortie sur MacOS. Vous pouvez télécharger la 0.14 en cliquant sur \"Autres versions\"");
+    //goTo("https://github.com/cyrioncentori/OpMon/releases/download/alpha-v" + version + "/OpMon-Mac_" + version + ".dmg");
 }
 
 
@@ -40,7 +38,6 @@ function instruction(){
 
 var textFr = {
     instruction : "Si vous avez un autre système, vous pouvez très bien compiler le jeu grace au sources, si SFML, gcc et cmake sont disponibles pour votre système.",
-    macDown : '<a href="https://github.com/cyrioncentori/OpMon/releases/download/alpha-v' + version + '/OpMon-Mac_' + version + '.dmg"  class="wow fadeInUp btn btn-default hvr-bounce-to-top smoothScroll" data-wow-delay="1.3s"> Télécharger pour macOS</a>',
     menu : {
 	down : "Téléchargements",
 	features : "Fonctionnalitées",
@@ -53,10 +50,10 @@ var textFr = {
     langSubTitle : "Jeu en version Alpha " + version + date,
     winDown : "Télécharger pour Windows",
     winNIDown : '<a href="https://github.com/cyrioncentori/OpMon/releases/download/alpha-v' + version + '/OpMon-Win_NoInstall.zip" class="wow fadeInUp btn btn-default hvr-bounce-to-top smoothScroll" data-wow-delay="1.3s" id="winNIDown">Télécharger pour Windows (Sans installation)</a>',
-    macDown : '<a href="javascript:macDown();" class="wow fadeInUp btn btn-default hvr-bounce-to-top smoothScroll" data-wow-delay="1.3s"> Télécharger pour macOS</a>',
-    debDown : '<a href="https://github.com/cyrioncentori/OpMon/releases/download/alpha-v' + version + '/OpMon-' + version + '-sfml2.4.deb"  class="wow fadeInUp btn btn-default hvr-bounce-to-top smoothScroll" data-wow-delay="1.3s"> Télécharger .deb pour Debian & Ubuntu >= 16.10</a>',
-    debDown2 : '<a href="https://github.com/cyrioncentori/OpMon/releases/download/alpha-v' + version + '/OpMon-' + version + '-sfml2.3.deb"  class="wow fadeInUp btn btn-default hvr-bounce-to-top smoothScroll" data-wow-delay="1.3s"> Télécharger .deb pour Mint & Ubuntu < 16.10</a>',
-    linDown : '<a href="https://github.com/cyrioncentori/OpMon/releases/download/alpha-v' + version + '/OpMon-Linux_NoInstall.zip" class="wow fadeInUp btn btn-default hvr-bounce-to-top smoothScroll" data-wow-delay="1.3s"> Télécharger pour Linux</a>',
+    macDown : '<a href="javascript:macDown();" class="wow fadeInUp btn btn-default hvr-bounce-to-top smoothScroll" data-wow-delay="1.3s"> Télécharger la <b>0.14</b> pour macOS</a>',
+    debDown : '<a href="javascript:linuxDown();"  class="wow fadeInUp btn btn-default hvr-bounce-to-top smoothScroll" data-wow-delay="1.3s"> Télécharger .deb pour Debian et dérivés (SFML 2.4)</a>',
+    debDown2 : '<a href="javascript:linuxDownScript();"  class="wow fadeInUp btn btn-default hvr-bounce-to-top smoothScroll" data-wow-delay="1.3s">Télécharger script d\'installation (SFML 2.3 ou 2.5)</a>',
+    linDown : '<a href="https://github.com/cyrioncentori/OpMon/releases/download/alpha-v' + version + '/OpMon-Linux_NoInstall.zip" class="wow fadeInUp btn btn-default hvr-bounce-to-top smoothScroll" data-wow-delay="1.3s"> Télécharger pour Linux (SFML 2.5)</a>',
     otherDown : "Autres versions",
     seeGithub : "Voir sur github",
     otherSystems : "Autres systèmes",
@@ -70,7 +67,6 @@ var textFr = {
 
 var textEn = {
     instruction : "If you have an another system, you can build the game with the source files, if sfml, cmake and gcc are avilable for your system.",
-    macDown : '<a href="https://github.com/cyrioncentori/OpMon/releases/download/alpha-v' + version + '/OpMon-Mac_' + version + '.dmg"  class="wow fadeInUp btn btn-default hvr-bounce-to-top smoothScroll" data-wow-delay="1.3s"> Download for macOS</a>',
     menu : {
 	down : "Downloads",
 	features : "Features",
@@ -83,10 +79,10 @@ var textEn = {
     langSubTitle : "Game version : Alpha " + version + date,
     winDown : "Download for Windows",
     winNIDown : '<a href="https://github.com/cyrioncentori/OpMon/releases/download/alpha-v' + version + '/OpMon-Win_NoInstall.zip" class="wow fadeInUp btn btn-default hvr-bounce-to-top smoothScroll" data-wow-delay="1.3s" id="winNIDown">Download for Windows (Without installation)</a>',
-    macDown : '<a href="https://github.com/cyrioncentori/OpMon/releases/download/alpha-v' + version + '/OpMon-Mac_' + version + '.dmg"  class="wow fadeInUp btn btn-default hvr-bounce-to-top smoothScroll" data-wow-delay="1.3s"> Download for macOS</a>',
-    debDown : '<a href="https://github.com/cyrioncentori/OpMon/releases/download/alpha-v' + version + '/OpMon-' + version + '-sfml2.4.deb"  class="wow fadeInUp btn btn-default hvr-bounce-to-top smoothScroll" data-wow-delay="1.3s">Download for Debian & Ubuntu >= 16.10 </a>',
-    debDown2 : '<a href="https://github.com/cyrioncentori/OpMon/releases/download/alpha-v' + version + '/OpMon-' + version + '-sfml2.3.deb"  class="wow fadeInUp btn btn-default hvr-bounce-to-top smoothScroll" data-wow-delay="1.3s">Download for Mint & Ubuntu < 16.10</a>',
-    linDown : '<a href="https://github.com/cyrioncentori/OpMon/releases/download/alpha-v' + version + '/OpMon-Linux_NoInstall.zip" class="wow fadeInUp btn btn-default hvr-bounce-to-top smoothScroll" data-wow-delay="1.3s">Download for Linux</a>',
+    macDown : '<a href="javascript:macDown();"  class="wow fadeInUp btn btn-default hvr-bounce-to-top smoothScroll" data-wow-delay="1.3s"> Download <b>0.14</b> for macOS</a>',
+    debDown : '<a href="javascript:linuxDown();"  class="wow fadeInUp btn btn-default hvr-bounce-to-top smoothScroll" data-wow-delay="1.3s">Download for Debian based distributions (SFML 2.4)</a>',
+    debDown2 : '<a href="javascript:linuxDownScript()"  class="wow fadeInUp btn btn-default hvr-bounce-to-top smoothScroll" data-wow-delay="1.3s">Download installation script (SFML 2.3 or 2.5)</a>',
+    linDown : '<a href="https://github.com/cyrioncentori/OpMon/releases/download/alpha-v' + version + '/OpMon-Linux_NoInstall.zip" class="wow fadeInUp btn btn-default hvr-bounce-to-top smoothScroll" data-wow-delay="1.3s">Download for Linux (SFML 2.5)</a>',
     otherDown : "Other versions",
     seeGithub : "See on Github",
     otherSystems : "Other systems",
@@ -98,7 +94,6 @@ var textEn = {
 
 var textEs = {
         instruction : "If you have an another system, you can build the game with the source files, if sfml, cmake and gcc are avilable for your system.",
-    macDown : '<a href="https://github.com/cyrioncentori/OpMon/releases/download/alpha-v' + version + '/OpMon-Mac_' + version + '.dmg"  class="wow fadeInUp btn btn-default hvr-bounce-to-top smoothScroll" data-wow-delay="1.3s"> Download for macOS</a>',
     menu : {
 	down : "Descargas",
 	features : "Funcionalidades",
@@ -111,10 +106,10 @@ var textEs = {
     langSubTitle : "Version del juego : Alpha " + version + date,
     winDown : "Download for Windows",
     winNIDown : '<a href="https://github.com/cyrioncentori/OpMon/releases/download/alpha-v' + version + '/OpMon-Win_NoInstall.zip" class="wow fadeInUp btn btn-default hvr-bounce-to-top smoothScroll" data-wow-delay="1.3s" id="winNIDown">Download for Windows (Without installation)</a>',
-    macDown : '<a href="https://github.com/cyrioncentori/OpMon/releases/download/alpha-v' + version + '/OpMon-Mac_' + version + '.dmg"  class="wow fadeInUp btn btn-default hvr-bounce-to-top smoothScroll" data-wow-delay="1.3s"> Download for macOS</a>',
-    debDown : '<a href="https://github.com/cyrioncentori/OpMon/releases/download/alpha-v' + version + '/OpMon-' + version + '-sfml2.4.deb"  class="wow fadeInUp btn btn-default hvr-bounce-to-top smoothScroll" data-wow-delay="1.3s">Download for Debian & Ubuntu >= 16.10</a>',
-    debDown2 : '<a href="https://github.com/cyrioncentori/OpMon/releases/download/alpha-v' + version + '/OpMon-' + version + '-sfml2.3.deb"  class="wow fadeInUp btn btn-default hvr-bounce-to-top smoothScroll" data-wow-delay="1.3s">Download for Mint & Ubuntu < 16.10</a>',
-    linDown : '<a href="https://github.com/cyrioncentori/OpMon/releases/download/alpha-v' + version + '/OpMon-Linux_NoInstall.zip" class="wow fadeInUp btn btn-default hvr-bounce-to-top smoothScroll" data-wow-delay="1.3s">Download for Linux</a>',
+    macDown : '<a href="javascript:macDown();"  class="wow fadeInUp btn btn-default hvr-bounce-to-top smoothScroll" data-wow-delay="1.3s">Download <b>0.14</b> for macOS</a>',
+    debDown : '<a href="javascript:linuxDown();"  class="wow fadeInUp btn btn-default hvr-bounce-to-top smoothScroll" data-wow-delay="1.3s">Download for Debian based distributions (SFML 2.4)</a>',
+    debDown2 : '<a href="javascript:linuxDownScript();"  class="wow fadeInUp btn btn-default hvr-bounce-to-top smoothScroll" data-wow-delay="1.3s">Download installation script for Debian based distributions (SFML 2.3 or 2.5)</a>',
+    linDown : '<a href="https://github.com/cyrioncentori/OpMon/releases/download/alpha-v' + version + '/OpMon-Linux_NoInstall.zip" class="wow fadeInUp btn btn-default hvr-bounce-to-top smoothScroll" data-wow-delay="1.3s">Download for Linux (SFML 2.5)</a>',
     otherDown : "Other versions",
     seeGithub : "See on Github",
     otherSystems : "Other systems",
