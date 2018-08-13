@@ -3,15 +3,16 @@ function goTo(url){
     reload();
 }
 
-var version = "0.14";
-var date = " (21/02/2018)";
+var version = "0.15";
+var date = " (13/08/2018)";
 
-function linuxDownOld(){
-    goTo("https://github.com/cyrioncentori/OpMon/releases/download/alpha-v" + version + "/OpMon-" + version  + "-sfml2.3.deb");
-}
 function linuxDown(){
-    goTo("https://github.com/cyrioncentori/OpMon/releases/download/alpha-v" + version + "/OpMon-" + version  + "-sfml2.4.deb");
+    goTo("https://github.com/cyrioncentori/OpMon/releases/download/alpha-v" + version + "/OpMon-" + version  + "-Linux.deb");
 }
 function macDown(){
-    goTo("https://github.com/cyrioncentori/OpMon/releases/download/alpha-v" + version + "/OpMon-Mac_" + version + ".dmg");
+	alert("Warning : 0.15 is not released on MacOS yet. You can download the 0.14 by clicking on \"Other versions\"\nAttention : La 0.15 n'est pas encore sortie sur MacOS. Vous pouvez télécharger la 0.14 en cliquant sur \"Autres versions\"");
+    //goTo("https://github.com/cyrioncentori/OpMon/releases/download/alpha-v" + version + "/OpMon-Mac_" + version + ".dmg");
+}
+function linuxDownScript(){
+    goTo("https://github.com/OpMonTeam/OpMon/releases/download/alpha-v" + version + "/source.sh");
 }
