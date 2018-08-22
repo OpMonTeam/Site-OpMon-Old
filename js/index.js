@@ -12,7 +12,6 @@ const LANGGAMEVERS     = document.getElementById("langGameVers");
 const LANGDOWNWIN      = document.getElementById("langDownWin");
 const LANGDOWNMAC      = document.getElementById("langDownMac");
 const LANGDOWNLIN      = document.getElementById("langDownLin");
-const LANGDOWNLIN2     = document.getElementById("langDownLin2");
 const LANGODOWN        = document.getElementById("langODown");
 const LANGOSDOWN       = document.getElementById("langOSDown");
 const LANGALLDOWN      = document.getElementById("langAllDown");
@@ -73,7 +72,6 @@ var textFr = {
     langDownWin : "Télécharger pour Windows",
     langDownMac : "Télécharger pour Mac",
     langDownLin : "Télécharger pour Debian 9/Ubuntu 18.04/Mint 19",
-    langDownLin2 : "Télécharger script d'installation Debian & dérivés (SFML toutes versions)",
     langODown : "Autres téléchargements",
     langOSDown : "Toutes plateformes",
     langAllDown : "Voir tous les téléchargements",
@@ -137,7 +135,6 @@ var textEn = {
     langDownWin : "Download for Windows",
     langDownMac : "Download for Mac",
     langDownLin : "Download for Debian 9/Ubuntu 18.04/Mint 19)",
-    langDownLin2 : "Download installation script for Debian based system (All SFML versions)",
     langODown : "Other downloads",
     langOSDown : "All platforms",
     langAllDown : "See all downloads",
@@ -200,7 +197,6 @@ var textEs = {
     langDownWin : "Descargar para Windows",
     langDownMac : "Descargar para Mac",
     langDownLin : "Descargar para Debian 9/Ubuntu 18.04/Mint 19",
-    langDownLin2 : "Descargar programma de instalación (Todos SFML versiónes)",
     langODown : "Otras Descargas",
     langOSDown : "Todas las plataformas",
     langAllDown : "Ver todas las descargas",
@@ -264,7 +260,6 @@ function printLang(id){
     LANGDOWNWIN.innerHTML = lang.langDownWin;
     LANGDOWNMAC.innerHTML = lang.langDownMac;
     LANGDOWNLIN.innerHTML = lang.langDownLin;
-    LANGDOWNLIN2.innerHTML = lang.langDownLin2;
     LANGODOWN.innerHTML = lang.langODown;
     LANGOSDOWN.innerHTML = lang.langOSDown;
     LANGALLDOWN.innerHTML = lang.langAllDown;
