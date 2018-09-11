@@ -720,7 +720,7 @@ var Species = [
 	    }
 	]
     }
-]:
+];
 
 var Species = [
 	{
