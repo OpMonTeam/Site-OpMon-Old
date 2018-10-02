@@ -78,7 +78,7 @@ var textFr = {
 
     featuresTitle : "Des nouveautés attendues depuis longtemps",
     featuresSubTitle : "par les fans des jeux Pokemons",
-    feature1T : "Créer par une équipe bénévole",
+    feature1T : "Créé par une équipe bénévole",
     feature1 : "OpMon est développé par une équipe formée a 100% de bénévoles! Nous ne demandons rien a part votre bonheur!",
     feature2T : "Un jeu libre",
     feature2 : "OpMon est un jeu totalement libre open source, l'équipe est bénévole et nous utilisons même des logiciels libres pour le créer: Linux, Cmake, Gimp, Git ect...",
