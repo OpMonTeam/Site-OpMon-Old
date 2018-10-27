@@ -1,4 +1,5 @@
-﻿const LANGTITLE        = document.getElementById("langTitle");
+const LANGTITLE        = document.getElementById("langTitle");
+const CONTACTTITLE     = document.getElementById("contactTitle");
 const LANGDESC         = document.getElementById("langDesc");
 const LANGDOWNTITLE    = document.getElementById("langDownTitle");
 const MENUDOWN         = document.getElementById("menuDown");
@@ -59,13 +60,14 @@ var textFr = {
     langTitle : "Le jeu inspiré de Pokémon !",
     langDesc : "Prenez place dans cette aventure faites de monstres et d'explorations, dans la jolie region de Regimys !",
     langDownTitle : "Télécharger le jeu",
+	contactTitle : "Contact (Discord / IRC / Github)",
     menu : {
-	down : "Téléchargements",
-	features : "Fonctionnalitées",
-	about : "A propos du jeu",
-	team : "Le Team OPMon",
-	contact : "Contact",
-	doc : "Documentation"
+		down : "Téléchargements",
+		features : "Fonctionnalitées",
+		about : "A propos du jeu",
+		team : "Le Team OPMon",
+		contact : "Contact",
+		doc : "Documentation"
     },
     langDown : "Téléchargement",
     langGameVers : "Jeu version Alpha " + version + date,
@@ -122,6 +124,7 @@ var textEn = {
     langTitle : "A game inspired by Pokemon !",
     langDesc : "Go for an adventure with exploration and many monsters, in the wonderful region of Regimys !",
     langDownTitle : "Download the game",
+	contactTitle : "Contact (Discord / IRC / Github)",
     menu : {
 	down : "Downloads",
 	features : "Features",
@@ -184,6 +187,7 @@ var textEs = {
     langTitle : "Un juego inspirado de Pokemon !",
     langDesc : "Venid a la aventura donde hay muchos de monstruos y explorad la bonita región de Regimys!",
     langDownTitle : "Descargar el juego",
+	contactTitle : "Contacto (Discord / IRC / Github)",
     menu : {
 	down : "Descargas",
 	features : "Funcionalidades",
@@ -249,6 +253,7 @@ function printLang(id){
     LANGTITLE.innerHTML = lang.langTitle;
     LANGDESC.innerHTML = lang.langDesc;
     LANGDOWNTITLE.innerHTML = lang.langDownTitle;
+	CONTACTTITLE.innerHTML = lang.contactTitle;
     MENUDOWN.innerHTML = lang.menu.down;
     MENUFEATURES.innerHTML = lang.menu.features;
     MENUABOUT.innerHTML = lang.menu.about;
