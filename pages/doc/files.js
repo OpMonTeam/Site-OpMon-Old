@@ -8,6 +8,10 @@ function linkGen(destination, name){
 	return '<a href="files.html?=' + destination + '">' + name + '</a>';
 }
 
+function primitive(type){
+	return '<span style="color: blue;">' + type + '</span>';
+}
+
 files.set("AGameScreen", {
 	otype : "file",
 	id : "",
@@ -42,17 +46,74 @@ files.set("AGameScreen", {
 			id : "AGameScreen_checkEvent",
 			type : {
 				name : "GameStatus",
-				id : "GameStatus_GameStatus"
+				id : "GameStatus#GameStatus"
 			},
 			parameters : [
 			{
 				type : {
 					name : "sf::Event"
 				},
-				mods : [{txt : "const", keyword : true}, {txt : "&", keyword : false}],
-				name : "event"
+				mods : [{txt : "const", keyword : true}, {txt : "&", keyword : false}]
 			}
 			]
+		},
+		{
+			otype : "method",
+			keywords : ["virtual"],
+			name : "update",
+			id : "AGameScreen_update",
+			purev : true,
+			type : {
+				name : "GameStatus",
+				id : "GameStatus#GameStatus"
+			},
+			parameters : [
+			{
+				type : {
+					name : "sf::RenderTexture"
+				},
+				mods : [{txt : "&", keyword : false}]
+			}
+			]
+		},
+		{
+			otype : "method",
+			keywords : ["virtual"],
+			name : "suspend",
+			id : "AGameScreen_suspend",
+			type: {
+				name : primitive("void")
+			}
+		},
+		{
+			otype : "method",
+			keywords : ["virtual"],
+			name : "resume",
+			id : "AGameScreen_resume",
+			type: {
+				name : primitive("void")
+			}
+		},
+		{
+			otype : "method",
+			keywords : ["virtual"],
+			name : "loadNextScreen",
+			id : "AGameScreen_loadNextScreen",
+			type: {
+				name : primitive("void")
+			}
+		},
+		{
+			otype : "method",
+			name : "getNextGameScreen",
+			id : "AGameScreen_getNextGameScreen",
+			type : {
+				name : "std::unique_ptr",
+				template : {
+					name : "AGameScreen",
+					id : "AGameScreen"
+				}
+			}
 		}
 		]
 	}
