@@ -141,5 +141,14 @@ files.set("AGameScreen", {
 });
 
 files.set("AnimationCtrl", {
-    otype : "file"
+    otype : "file",
+    id : "",
+    name : "AnimationCtrl.hpp"
+    content : [
+	{
+	    otype : "class",
+	    id : "AnimationCtrl"
+	    inherits : linkGen("AGameScreen#AGameScreen", "AGameScreen")
+	}
+    ]
 });
