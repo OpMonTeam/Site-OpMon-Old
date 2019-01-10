@@ -57,7 +57,7 @@ const DISCLAMER        = document.getElementById("disclamer");
 
 var textFr = {
     langTitle : "Le jeu inspiré de Pokémon !",
-    langDesc : "Prenez place dans cette aventure faites de monstres et d'explorations, dans la jolie region de Regimys !",
+    langDesc : "Prenez place dans cette aventure faite de monstres et d'explorations, dans la jolie région de Regimys !",
     langDownTitle : "Télécharger le jeu",
 	contactTitle : "Contact (Discord / IRC / Github)",
     menu : {
