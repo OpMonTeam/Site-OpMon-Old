@@ -96,9 +96,6 @@ function writeInList(tab){
 	    }else if(tab[i].otype == "constructor"){
 		linkTxt = tab[i].name + "(";
 		if(tab[i].parameters != undefined){
-		    if(param.constkw){
-			linkTxt += '<span style="color: blue; font-weight: bold;">const</span> ';
-		    }
 		    var counter = 0;
 		    for(var param of tab[i].parameters){
 			linkTxt += writeType(param.type, false);

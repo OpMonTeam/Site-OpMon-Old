@@ -45,8 +45,8 @@ files.set("AGameScreen", {
 		    name : "checkEvent",
 		    id : "AGameScreen_checkEvent",
 		    type : {
-			name : "GameStatus",
-			id : "GameStatus#GameStatus"
+				name : "GameStatus",
+				id : "GameStatus#GameStatus"
 		    },
 		    parameters : [
 			{
@@ -67,8 +67,8 @@ files.set("AGameScreen", {
 		    id : "AGameScreen_update",
 		    purev : true,
 		    type : {
-			name : "GameStatus",
-			id : "GameStatus#GameStatus"
+				name : "GameStatus",
+				id : "GameStatus#GameStatus"
 		    },
 		    parameters : [
 			{
@@ -127,12 +127,12 @@ files.set("AGameScreen", {
 			name : "std::unique_ptr",
 			template : {
 			    name : "AGameScreen",
-			    id : "AGameScreen"
+			    id : "AGameScreen#AGameScreen"
 			}
 		    },
 		    documentation : [
-			"Returns the next game screen. Returns nullptr if the game screen isn't loaded with ",
-			linkGen("AGameScreen#AGameScreen_loadNextScreen", "loadNextScreen()")
+				"Returns the next game screen. Returns nullptr if the game screen isn't loaded with ",
+				linkGen("AGameScreen#AGameScreen_loadNextScreen", "loadNextScreen()")
 		    ]
 		}
 	    ]
@@ -148,7 +148,33 @@ files.set("AnimationCtrl", {
 	{
 	    otype : "class",
 	    id : "AnimationCtrl",
-	    inherits : linkGen("AGameScreen#AGameScreen", "AGameScreen")
+		name : "AnimationCtrl",
+	    inherits : linkGen("AGameScreen#AGameScreen", "AGameScreen"),
+		documentation : [
+			"AnimationCtrl is a special game screen which can call all types of ",
+			linkGen("Animations#Animations_Animation", "Animations"),
+			"."
+		],
+		content : [
+			{
+				otype : "constructor",
+				id : "AnimationCtrl_constructor",
+				name : "AnimationCtrl",
+				parameters : [
+					{
+						type : {
+							name : "std::unique_ptr",
+							template : {
+								name : "Animations::Animation",
+								id : "Animations#Animations_Animation"
+							}
+						},
+						name : "view"
+					}
+				]
+				
+			}
+		]
 	}
     ]
 });
