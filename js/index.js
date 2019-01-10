@@ -256,7 +256,6 @@ function printLang(id){
     MENUFEATURES.innerHTML = lang.menu.features;
     MENUABOUT.innerHTML = lang.menu.about;
     MENUTEAM.innerHTML = lang.menu.team;
-    MENUCONTACT.innerHTML = lang.menu.contact;
     MENUDOC.innerHTML = lang.menu.doc;
     LANGDOWN.innerHTML = lang.langDown;
     LANGGAMEVERS.innerHTML = lang.langGameVers;
