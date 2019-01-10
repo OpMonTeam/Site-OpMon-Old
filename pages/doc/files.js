@@ -141,4 +141,5 @@ files.set("AGameScreen", {
 });
 
 files.set("AnimationCtrl", {
+    otype : "file"
 });
