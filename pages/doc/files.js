@@ -143,7 +143,7 @@ files.set("AGameScreen", {
 files.set("AnimationCtrl", {
     otype : "file",
     id : "",
-    name : "AnimationCtrl.hpp"
+    name : "AnimationCtrl.hpp",
     content : [
 	{
 	    otype : "class",
