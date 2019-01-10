@@ -838,6 +838,7 @@ font-weight: 300;
 line-height: 50px;
 -webkit-transition: all 0.4s ease-in-out;
 transition: all 0.4s ease-in-out;
+background-color: white;
 }
 .menu:hover {
 color: #c21500 !important;
