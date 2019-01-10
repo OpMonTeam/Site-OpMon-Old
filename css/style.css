@@ -4,6 +4,7 @@ Template 2083 Steak House
 
 http://www.tooplate.com/view/2083-steak-house
 
+Updated by Navet56
 */
 
 .blue{
@@ -823,4 +824,38 @@ footer strong {
 
   footer {text-align: center;}
 
+}
+
+.menu {
+border: none;
+cursor: pointer;
+padding:15px;
+font-size: 30px;
+line-height: 30px;
+color: #757575;
+font-size: 19px;
+font-weight: 300;
+line-height: 50px;
+-webkit-transition: all 0.4s ease-in-out;
+transition: all 0.4s ease-in-out;
+}
+.menu:hover {
+color: #c21500 !important;
+}
+.dropdown {
+position: relative;
+display: inline-block;
+}
+.dropdown-child {
+display: none;
+background-color: white;
+}
+.dropdown-child a {
+color: black;
+padding: 20px;
+text-decoration: none;
+display: block;
+}
+.dropdown:hover .dropdown-child {
+display: block;
 }
