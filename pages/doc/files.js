@@ -147,7 +147,7 @@ files.set("AnimationCtrl", {
     content : [
 	{
 	    otype : "class",
-	    id : "AnimationCtrl"
+	    id : "AnimationCtrl",
 	    inherits : linkGen("AGameScreen#AGameScreen", "AGameScreen")
 	}
     ]
