@@ -12,6 +12,9 @@ function primitive(type){
     return '<span style="color: blue;">' + type + '</span>';
 }
 
+const pointer = {txt : "&lowast;", keyword : false};
+const reference = {txt : "&", keyword : false};
+
 files.set("AGameScreen", {
     otype : "file",
     id : "",
@@ -53,7 +56,7 @@ files.set("AGameScreen", {
 			    type : {
 				name : "sf::Event"
 			    },
-			    mods : [{txt : "const", keyword : true}, {txt : "&", keyword : false}]
+			    mods : [{txt : " const", keyword : true}, {txt : "&", keyword : false}]
 			}
 		    ],
 		    documentation : [
@@ -209,4 +212,171 @@ files.set("AnimationCtrl", {
 		]
 	}
     ]
+});
+
+files.set("BattleCtrl", {
+	otype : "file",
+	id : "",
+	name : "BattleCtrl.hpp",
+	content : [
+	{
+		otype : "class",
+		id : "BattleCtrl",
+		name : "BattleCtrl",
+		inherits : linkGen("AGameScreen#AGameScreen", "AGameScreen"),
+		documentation : [
+			"Controller for the ",
+			linkGen("Battle#Battle", "Battle"),
+			" view. Handles everything calculated during a battle, like the turns, the damage, and all the other things."
+		],
+		content : [
+			{
+				otype : "constructor",
+				id : "BattleCtrl_constructor1",
+				name : "BattleCtrl",
+				parameters : [
+				{
+					type : {
+						name : "Model::OpTeam",
+						id : "OpTeam#OpTeam",
+					},
+					name : "one",
+					mods : [pointer],
+					documentation : [
+						"The front OpMon Team (most likely the Player's)."
+					]
+				},
+				{
+					type : {
+						name : "Model::OpTeam",
+						id : "OpTeam#OpTeam",
+					},
+					mods : [pointer],
+					name : "two",
+					documentation : [
+						"The opponent OpMon Team."
+					]
+				},
+				{
+					type : {
+						name : "Model::UiData",
+						id : "UiData#UiData",
+					},
+					mods : [pointer],
+					name : "uidata"
+				},
+				{
+					type : {
+						name : "Model::Player",
+						id : "Player#Player",
+					},
+					mods : [pointer],
+					name : "player"
+				}
+				],
+				documentation : [
+					"The OpTeam BattleCtrl constructor, initializes the battle with two OpTeam, one against the other."
+				]
+			},
+			{
+				otype : "constructor",
+				id : "BattleCtrl_constructor2",
+				name : "BattleCtrl",
+				parameters : [
+				{
+					type : {
+						name : "Model::OpTeam",
+						id : "OpTeam#OpTeam",
+					},
+					mods : [pointer],
+					name : "one",
+					documentation : [
+						"The front OpMon Team (most likely the Player's)."
+					]
+				},
+				{
+					type : {
+						name : "Model::Events::TrainerEvent",
+						id : "Events#Events_TrainerEvent",
+					},
+					mods : [pointer],
+					name : "two",
+					documentation : [
+						"The opponent trainer's event."
+					]
+				},
+				{
+					type : {
+						name : "Model::UiData",
+						id : "UiData#UiData",
+					},
+					mods : [pointer],
+					name : "uidata"
+				},
+				{
+					type : {
+						name : "Model::Player",
+						id : "Player#Player",
+					},
+					mods : [pointer],
+					name : "player"
+				}
+				],
+				documentation : [
+					"The TrainerEvent BattleCtrl constructor, initializes the battle with one OpTeam and a trainer, represented by it's event."
+				]
+			},
+			{
+				otype : "method",
+				id : "BattleCtrl_checkEvent",
+				name : "checkEvent",
+				type : {
+					name : "GameStatus",
+					id : "GameStatus#GameStatus"
+				},
+				overrides : {
+					obj : linkGen("AGameScreen#AGameScreen_checkEvent", "checkEvent()"),
+					orig : linkGen("AGameScreen#AGameScreen", "AGameScreen")
+				},
+				parameters : [
+				{
+					type : {
+						name : "sf::Event"
+					},
+					mods : [{txt : " const", keyword : true}, reference]
+				}
+				],
+				documentation : [
+					"Processes a new SFML Input (keyboard, mouse, ...)."
+				]
+			},
+			{
+				otype : "method",
+				id : "BattleCtrl_update",
+				name : "update",
+				type : {
+					name : "GameStatus",
+					id : "GameStatus#GameStatus"
+				},
+				overrides : {
+					obj : linkGen("AGameScreen#AGameScreen_update", "update()"),
+					orig : linkGen("AGameScreen#AGameScreen", "AGameScreen")
+				},
+				parameters : [
+				{
+					type : {
+						name : "sf::RenderTexture"
+					},
+					mods : [reference],
+					name : "frame"
+				}
+				],
+				documentation : [
+					"Updates and draws the game screen.",nl,
+					"This method is called once per frame."
+				]
+			},
+		]
+	}
+	]
 });

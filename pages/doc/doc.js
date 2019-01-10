@@ -21,7 +21,7 @@ function writeType(type, doLink){
 	str += writeType(type.template, doLink);
 	str += "&gt ";
     }else if(typeD == 1){
-	str += " ";
+	 //str += " ";
     }
     typeD--;
     return str;
@@ -55,6 +55,7 @@ function writeInList(tab){
 			    linkTxt += '<span style="color: blue; font-weight: bold;">const</span> ';
 			}
 			linkTxt += writeType(param.type, false);
+			linkTxt += " ";
 			if(param.mods != undefined){
 			    for(var mod of param.mods){
 				if(mod.keyword){
@@ -85,6 +86,7 @@ function writeInList(tab){
 		    linkTxt += '<span style="color: blue; font-weight: bold;">const</span> ';
 		}
 		linkTxt += writeType(tab[i].type, false);
+		linkTxt += " ";
 		if(tab[i].mods != undefined){
 		    for(var mod of tab[i].mods){
 			linkTxt += mod;
@@ -98,22 +100,23 @@ function writeInList(tab){
 		if(tab[i].parameters != undefined){
 		    var counter = 0;
 		    for(var param of tab[i].parameters){
-			linkTxt += writeType(param.type, false);
-			if(param.mods != undefined){
-			    for(var mod of param.mods){
-				if(mod.keyword){
-				    linkTxt += '<span style="color: blue; font-weight: bold;">';
+				linkTxt += writeType(param.type, false);
+				if(param.mods != undefined){
+					for(var mod of param.mods){
+						if(mod.keyword){
+							linkTxt += '<span style="color: blue; font-weight: bold;">';
+						}
+						linkTxt += mod.txt;
+						if(mod.keyword){
+							linkTxt += '</span>';
+						}
+					}
+					
 				}
-				linkTxt += mod.txt;
-				if(mod.keyword){
-				    linkTxt += '</span>';
+				counter++;
+				if(counter < tab[i].parameters.length){
+					linkTxt += ", ";
 				}
-			    }
-			    counter++;
-			    if(counter < tab[i].parameters.length){
-				linkTxt += ", ";
-			    }
-			}
 		    }
 		}
 		linkTxt += ")";
@@ -154,7 +157,7 @@ function writeInDesc(tab){
 			}
 			
 			oname += writeType(tab[i].type, true);
-			
+			oname += " ";
 			oname += '</span>' + tab[i].name + "(";
 			if(tab[i].parameters != undefined){
 				var counter = 0;
@@ -205,7 +208,7 @@ function writeInDesc(tab){
 			}
 			
 			oname += writeType(tab[i].type, true);
-			
+			oname += " ";
 			if(tab[i].mods != undefined){
 				for(var mod of param.mods){
 				if(mod.keyword){
