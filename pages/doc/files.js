@@ -79,7 +79,7 @@ files.set("AGameScreen", {
 			}
 		    ],
 		    documentation : [
-			"Update and draw the game.",nl,
+			"Updates and draws the game screen.",nl,
 			"This method is called once per frame."
 		    ]
 		},
@@ -169,10 +169,42 @@ files.set("AnimationCtrl", {
 								id : "Animations#Animations_Animation"
 							}
 						},
-						name : "view"
+						name : "view",
+						documentation : [
+							"The Animation's view. Can be any animation that heritates from Animations::Animation."
+						]
 					}
+				],
+				documentation : [
+					"AnimationCtrl's constructor."
 				]
 				
+			},
+			{
+				otype : "method",
+				id : "AnimationCtrl_update",
+				name : "update",
+				type : {
+					name : "GameStatus",
+					id : "GameStatus#GameStatus"
+				},
+				overrides : {
+					obj : linkGen("AGameScreen#AGameScreen_update", "update()"),
+					orig : linkGen("AGameScreen#AGameScreen", "AGameScreen")
+				},
+				parameters : [
+					{
+						type : {
+							name : "sf::RenderTexture"
+						},
+						name : "frame",
+						mods : [{ txt : "&", keyword : false}]
+					}
+				],
+				documentation : [
+					"Updates and draws the game screen.",nl,
+					"This method is called once per frame."
+				]
 			}
 		]
 	}

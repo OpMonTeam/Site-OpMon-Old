@@ -140,143 +140,171 @@ function writeInDesc(tab){
 	console.log("Files");
 	descStr += writeInDesc(tab.content);
     }else{
-	for(var i = 0; i < tab.length; i++){
-	    var oname = "";
-	    if(tab[i].otype == "class"){
-		oname = '<span style="color: blue; font-weight: bold;">class</span> ' + tab[i].name;
-	    }else if(tab[i].otype == "method"){
-		oname = '<span style="color: blue; font-weight: bold;">';
-		if(tab[i].keywords != undefined){
-		    for(var keyword of tab[i].keywords){
-			oname += keyword;
-			oname += " ";
-		    }
-		}
-		
-		oname += writeType(tab[i].type, true);
-		
-		oname += '</span>' + tab[i].name + "(";
-		if(tab[i].parameters != undefined){
-		    var counter = 0;
-		    for(var param of tab[i].parameters){
-			if(param.constkw){
-			    oname += '<span style="color: blue; font-weight: bold;">const</span> ';
+		for(var i = 0; i < tab.length; i++){
+			var oname = "";
+			if(tab[i].otype == "class"){
+			oname = '<span style="color: blue; font-weight: bold;">class</span> ' + tab[i].name;
+			}else if(tab[i].otype == "method"){
+			oname = '<span style="color: blue; font-weight: bold;">';
+			if(tab[i].keywords != undefined){
+				for(var keyword of tab[i].keywords){
+				oname += keyword;
+				oname += " ";
+				}
 			}
 			
-			oname += writeType(param.type, true)
+			oname += writeType(tab[i].type, true);
 			
-			if(param.mods != undefined){
-			    for(var mod of param.mods){
+			oname += '</span>' + tab[i].name + "(";
+			if(tab[i].parameters != undefined){
+				var counter = 0;
+				for(var param of tab[i].parameters){
+				if(param.constkw){
+					oname += '<span style="color: blue; font-weight: bold;">const</span> ';
+				}
+				
+				oname += writeType(param.type, true) + " ";
+				
+				if(param.mods != undefined){
+					for(var mod of param.mods){
+					if(mod.keyword){
+						oname += '<span style="color: blue; font-weight: bold;">';
+					}
+					oname += mod.txt;
+					if(mod.keyword){
+						oname += '</span>';
+					}
+					}
+				}
+				
+				if(param.name){
+					
+					oname += param.name;
+					
+					if(param.dvalue != undefined){
+					oname += " = " + param.dvalue;
+					}
+				}
+				
+				counter++;
+				if(counter < tab[i].parameters.length){
+					oname += ", ";
+				}
+				}
+			}
+			oname += ")";
+			if(tab[i].constkw){
+				oname += ' <span style="color: blue; font-weight: bold;">const</span>';
+			}
+			if(tab[i].purev){
+				oname += " = 0";
+			}
+			}else if(tab[i].otype == "variable"){
+			if(tab[i].constkw){
+				oname += '<span style="color: blue; font-weight: bold;">const</span> ';
+			}
+			
+			oname += writeType(tab[i].type, true);
+			
+			if(tab[i].mods != undefined){
+				for(var mod of param.mods){
 				if(mod.keyword){
-				    oname += '<span style="color: blue; font-weight: bold;">';
+					oname += '<span style="color: blue; font-weight: bold;">';
 				}
 				oname += mod.txt;
 				if(mod.keyword){
-				    oname += '</span>';
+					oname += '</span>';
 				}
-			    }
-			}
-			
-			if(param.name){
-			    
-			    oname += " " + param.name;
-			    
-			    if(param.dvalue != undefined){
-				oname += " = " + param.dvalue;
-			    }
-			}
-			
-			counter++;
-			if(counter < tab[i].parameters.length){
-			    oname += ", ";
-			}
-		    }
-		}
-		oname += ")";
-		if(tab[i].constkw){
-		    oname += ' <span style="color: blue; font-weight: bold;">const</span>';
-		}
-		if(tab[i].purev){
-		    oname += " = 0";
-		}
-	    }else if(tab[i].otype == "variable"){
-		if(tab[i].constkw){
-		    oname += '<span style="color: blue; font-weight: bold;">const</span> ';
-		}
-		
-		oname += writeType(tab[i].type, true);
-		
-		if(tab[i].mods != undefined){
-		    for(var mod of param.mods){
-			if(mod.keyword){
-			    oname += '<span style="color: blue; font-weight: bold;">';
-			}
-			oname += mod.txt;
-			if(mod.keyword){
-			    oname += '</span>';
-			}
-		    }
-		}
-		oname += tab[i].name;
-		if(tab[i].dvalue != undefined){
-		    oname += " = " + tab[i].dvalue;
-		}
-	    }else if(tab[i].otype == "namespace"){
-		oname = '<span style="color: blue; font-weight: bold;">namespace</span> ' + tab[i].name;
-	    }else if(tab[i].otype == "constructor"){
-		oname = tab[i].name + "(";
-		if(tab[i].parameters != undefined){
-		    var counter = 0;
-		    for(var param of tab[i].parameters){
-			oname += writeType(param.type, true)
-			if(param.mods != undefined){
-			    for(var mod of param.mods){
-				if(mod.keyword){
-				    oname += '<span style="color: blue; font-weight: bold;">';
 				}
-				oname += mod.txt;
-				if(mod.keyword){
-				    oname += '</span>';
+			}
+			oname += tab[i].name;
+			if(tab[i].dvalue != undefined){
+				oname += " = " + tab[i].dvalue;
+			}
+			}else if(tab[i].otype == "namespace"){
+			oname = '<span style="color: blue; font-weight: bold;">namespace</span> ' + tab[i].name;
+			}else if(tab[i].otype == "constructor"){
+			oname = tab[i].name + "(";
+			if(tab[i].parameters != undefined){
+				var counter = 0;
+				for(var param of tab[i].parameters){
+				oname += writeType(param.type, true) + " ";
+				if(param.mods != undefined){
+					for(var mod of param.mods){
+					if(mod.keyword){
+						oname += '<span style="color: blue; font-weight: bold;">';
+					}
+					oname += mod.txt;
+					if(mod.keyword){
+						oname += '</span>';
+					}
+					}
 				}
-			    }
+				if(param.dvalue != undefined){
+					oname += " = " + param.dvalue;
+				}
+				
+				if(param.name){
+					
+					oname += param.name;
+					
+					if(param.dvalue != undefined){
+					oname += " = " + param.dvalue;
+					}
+				}
+				
+				counter++;
+				if(counter < tab[i].parameters.length){
+					oname += ", ";
+				}
+				
+				}
 			}
-			if(param.dvalue != undefined){
-			    oname += " = " + param.dvalue;
+			oname += ")";
 			}
-			
-			if(param.name){
-			    
-			    oname += " " + param.name;
-			    
-			    if(param.dvalue != undefined){
-				oname += " = " + param.dvalue;
-			    }
+			descStr += '<li><span class="likeH" id="' + tab[i].id + '"><code>' + oname + '</code></span>' + (tab[i].inherits ? '<span style="display: flex;font-size:0.85em; margin-left: 10px; margin-bottom: -35px;"><br/> ↳ Inherits from <code>' + tab[i].inherits + '</code></span><br/>' : "") + (tab[i].overrides ? '<span style="display: flex; font-size: 0.85em; margin-left: 10px; margin-bottom: -35px;"><br/> ↳ Overrides <code>' + tab[i].overrides.obj + '</code> from <code>' + tab[i].overrides.orig + '</code></span><br/>' : "") + '<p>';
+			if(tab[i].documentation){
+			for(var descLines of tab[i].documentation){
+				descStr += descLines;
 			}
-			
-			counter++;
-			if(counter < tab[i].parameters.length){
-			    oname += ", ";
+			}else{
+				descStr += "Missing documentation";
 			}
-			
-		    }
+			descStr += "<br/>";
+			if(tab[i].parameters){
+				var checkDesc = false;
+				for(var param of tab[i].parameters){
+					if(param.documentation){
+						checkDesc = true;
+						break;
+					}
+				}
+				if(checkDesc){
+					descStr += 'Parameters : ';
+					descStr += '<ul style="margin-top: -15px;">';
+					for(var param of tab[i].parameters){
+						if(param.documentation){
+							descStr += "<li>";
+							descStr += param.name;
+							descStr += " : ";
+							for(var descLines of param.documentation){
+								descStr += descLines;
+							}
+							descStr += "</li>";
+						}
+					}
+					descStr += "</ul>";
+				}
+				
+			}
+			descStr += '</p>';
+			descStr += '</li>';
+			if(tab[i].content){
+				descStr += "<ul>";
+				descStr += writeInDesc(tab[i].content);
+				descStr += '</ul>'
+			}
 		}
-		oname += ")";
-	    }
-	    descStr += '<li><span class="likeH" id="' + tab[i].id + '"><code>' + oname + '</code></span>' + (tab[i].inherits ? '<br/>Inherits from <code>' + tab[i].inherits + '</code><br/>' : "") + '<p>';
-	    if(tab[i].documentation){
-		for(var descLines of tab[i].documentation){
-		    descStr += descLines;
-		}
-	    }else{
-		descStr += "Missing documentation";
-	    }
-	    descStr += '</p></li>';
-	    if(tab[i].content){
-		descStr += "<ul>";
-		descStr += writeInDesc(tab[i].content);
-		descStr += '</ul>'
-	    }
-	}
     }
     depth--;
     return descStr;
@@ -289,11 +317,11 @@ function printDoc(id){
 	TITLE.innerHTML = file.name;
 	var titleStr = "";
 	var descStr = "";
-	titleStr = "<code><ul>";
+	titleStr = '<ul style="font-family: Consolas; font-size: 85%; margin: 0px;">';
 
 	titleStr += writeInList(file);
 	
-	titleStr += "</ul></code>";
+	titleStr += "</ul>";
 	LIST.innerHTML = titleStr;
 	
 	descStr += writeInDesc(file);
